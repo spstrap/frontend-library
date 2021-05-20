@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Boxed</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">layout</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--width" style="color:#fff;background:#333;text-align:center;padding:30px;">
+                                --width
+                            </div>
+                            <div class="sp--width" scope="box" style="color:#fff;background:#666;text-align:center;padding:30px;">
+                                --width-box[scope="box"]
+                            </div>
+                            <div class="sp--width" scope="case" style="color:#fff;background:#999;text-align:center;padding:30px;">
+                                --width-case[scope="case"]
+                            </div>
+                            <div class="sp--width" scope="card" style="color:#333;background:#eaeaea;text-align:center;padding:30px;">
+                                --width-card[scope="card"]
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">alert</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--desc" theme="lg" gap="xl">
+                                white box
+                            </div>
+
+                            <br />
+                            <div class="sp--desc" theme="lg-light" gap="2xl">
+                                light box
+                            </div>
+
+                            <br />
+                            <div class="sp--desc" theme="lg-gray" gap="2xl">
+                                gray box
+                            </div>
+
+                            <br />
+                            <div class="sp--desc" theme="lg-dark" gap="2xl">
+                                dark box
+                            </div>
+
+                            <br />
+                            <div class="sp--desc" theme="lg-primary" gap="2xl">
+                                primary box
+                            </div>
+                        </textarea>
+                    </div>
+                    
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">alert - round</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--desc" theme="lg-primary-round" gap="xs">
+                                round type xs
+                            </div>
+                            <div class="sp--desc" theme="lg-primary-round" gap="sm">
+                                round type sm
+                            </div>
+                            <div class="sp--desc" theme="lg-primary-round" gap="md">
+                                round type md
+                            </div>
+                            <div class="sp--desc" theme="lg-primary-round" gap="lg">
+                                round type lg
+                            </div>
+                            <div class="sp--desc" theme="lg-primary-round" gap="xl">
+                                round type xl
+                            </div>
+                            <div class="sp--desc" theme="lg-primary-round" gap="2xl">
+                                round type 2xl
+                            </div>
+                            <div class="sp--desc" theme="lg-primary-round" gap="3xl">
+                                round type 3xl
+                            </div>
+                        </textarea>
+                    </div>
+                    
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">alert - fill</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--desc" theme="lg-light-round" fill="light" gap="2xl">
+                                fill light type
+                            </div>
+
+                            <br />
+                            <div class="sp--desc" theme="lg-round" fill="gray" gap="2xl">
+                                fill gray type
+                            </div>
+
+                            <br />
+                            <div class="sp--desc" theme="lg-round" fill="dark" gap="2xl">
+                                fill dark type
+                            </div>
+
+                            <br />
+                            <div class="sp--desc" theme="lg-round" fill="primary" gap="2xl">
+                                fill primary type
+                            </div>
+
+                            <br />
+                            <div class="sp--desc" theme="lg-primary-bright-round" fill="primary-bright" gap="2xl">
+                                fill primary type
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject"> bullet (with attribute)</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                같은 사이즈 ( css table )
+                            -->
+                            <div class="sp--desc" theme="md">
+                                <div class="sp--bullet" bullet="sameattr" gap="xs">
+                                    <div class="sp--bullet-list" head="타이틀 1">
+                                        내용
+                                    </div>
+                                    <div class="sp--bullet-list" head="타이틀 222">
+                                        내용
+                                    </div>
+                                    <div class="sp--bullet-list" head="타이틀 333333">
+                                        내용
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <!--
+                                다른 사이즈 ( without table )
+                            -->
+                            <div class="sp--desc" theme="md">
+                                <div class="sp--bullet" bullet="attr" gap="xs">
+                                    <div class="sp--bullet-list" head="타이틀 1">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+                                    </div>
+                                    <div class="sp--bullet-list" head="타이틀 222">
+                                        나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                    </div>
+                                    <div class="sp--bullet-list" head="타이틀 333333">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 모든 국민은 거주·이전의 자유를 가진다. 나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                        <br />
+                                        국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다. 환경권의 내용과 행사에 관하여는 법률로 정한다.
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">alert - bullet (number)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--desc" theme="lg-light-round" gap="2xl">
+                                <div class="sp--bullet" bullet="number" theme="dark" gap="md">
+                                    <div class="sp--bullet-list">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+                                    </div>
+                                    <div class="sp--bullet-list">
+                                        나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                    </div>
+                                    <div class="sp--bullet-list">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 모든 국민은 거주·이전의 자유를 가진다. 나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                        <br />
+                                        국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다. 환경권의 내용과 행사에 관하여는 법률로 정한다.
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">alert - bullet (base)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--desc" theme="lg" gap="lg">
+                                <div class="sp--bullet" bullet="circle" theme="dark" gap="xl">
+                                    <div class="sp--bullet-list">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+                                    </div>
+                                    <div class="sp--bullet-list">
+                                        나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                    </div>
+                                    <div class="sp--bullet-list">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 모든 국민은 거주·이전의 자유를 가진다. 나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                        <br />
+                                        국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다. 환경권의 내용과 행사에 관하여는 법률로 정한다.
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">alert - bullet (circle)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--desc" theme="lg-primary-bright-round" fill="primary-bright" gap="2xl">
+                                <div class="sp--bullet" bullet="circle" theme="dark" gap="md">
+                                    <div class="sp--bullet-list">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+                                    </div>
+                                    <div class="sp--bullet-list">
+                                        나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                    </div>
+                                    <div class="sp--bullet-list">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 모든 국민은 거주·이전의 자유를 가진다. 나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                        <br />
+                                        국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다. 환경권의 내용과 행사에 관하여는 법률로 정한다.
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">alert - bullet (line)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--desc" theme="lg-light-round" fill="light" gap="2xl">
+                                <div class="sp--bullet" bullet="line" theme="dark" gap="md">
+                                    <div class="sp--bullet-list">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+                                    </div>
+                                    <div class="sp--bullet-list">
+                                        나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                    </div>
+                                    <div class="sp--bullet-list">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 모든 국민은 거주·이전의 자유를 가진다. 나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                        <br />
+                                        국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다. 환경권의 내용과 행사에 관하여는 법률로 정한다.
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">bullet sample design</div>
+                        <textarea class="sp--document-preview">
+
+                            <div class="sp--desc" theme="md-light-round" gap="2xl">
+
+                                <div class="sp--box" vertical="bottom">
+                                    <ul>
+                                        <li flex="1">
+                                            <div class="sp--title" theme="inline-baseline" scale="xl-nude">
+                                                <div class="sp--title-inner">
+                                                    <strong>이용안내</strong>
+                                                    &nbsp;<i class="sp--icon" icon="line-45" scale="xs"></i> &nbsp;
+                                                    <p class="sp--title-subtext" opacity="medium">장바구니 이용안내</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="sp--btn" scale="md-nude">더보기</a>
+                                        </li>
+                                    </ul>
+                                    <hr class="sp--hr" theme="dash-md-light" space="md" />
+                                </div>
+
+                                <br />
+
+                                <div class="sp--bullet" bullet="number" theme="dark" gap="md">
+                                    <div class="sp--bullet-list">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+                                    </div>
+                                    <div class="sp--bullet-list">
+                                        나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                    </div>
+                                    <div class="sp--bullet-list">
+                                        민주평화통일자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 모든 국민은 거주·이전의 자유를 가진다. 나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.
+                                        <br />
+                                        국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다. 환경권의 내용과 행사에 관하여는 법률로 정한다.
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box Grid ( with --gap : global )</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                grid = 4 // 4개씩 정렬 ( 1 ~ 10 ) ( 고정사이즈 )
+                                mobile = 2 // 모바일 크기가 되면 2개로 나열
+                                tablet = 3 // 타블렛 크기가 되면 3개로 나열
+                            -->
+                            <div [class="sp--box"] grid="[4]" gap="[xl]" mobile="[2]" tablet="[3]">
+                                <ul>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x400/eaeaea/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x400/cacaca/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x400/dadada/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x400/bababa/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x400/eaeaea/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x400/cacaca/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x400/dadada/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x400/bababa/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x400/eaeaea/fff">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box Cover</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                박스 커버형
+                            -->
+                            <div class="sp--box" fill="full" gap="3xl-box" theme="white" round="md" shadow="darktop">
+                                <ul>
+                                    <li>
+                                        그리드 형태가 아닌 일반 패딩 형태가 된다.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <br />
+                            <div class="sp--box" fill="full" gap="3xl-box" theme="white" line="light" round="md" shadow="darktop">
+                                <ul>
+                                    <li>
+                                        그리드 형태가 아닌 일반 패딩 형태가 된다.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <br />
+                            <div class="sp--box" fill="full" gap="3xl-box" theme="light" line="light" round="md">
+                                <ul>
+                                    <li>
+                                        그리드 형태가 아닌 일반 패딩 형태가 된다.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <br />
+                            <div class="sp--box" fill="full" gap="3xl-box" theme="primary" line="light" round="md" shadow="dark">
+                                <ul>
+                                    <li>
+                                        그리드 형태가 아닌 일반 패딩 형태가 된다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box column row</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                li 요소가 flex="1" 속성을 가지면
+                                해당 요소는 자유로는 크기를 가지게 된다.
+                            -->
+                            <div class="sp--box" direction="column" vertical="max">
+                                <ul>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/eaeaea/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/1200x300/cacaca/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/eaeaea/fff">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box fix - left</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                li 요소가 flex="1" 속성을 가지면
+                                해당 요소는 자유로는 크기를 가지게 된다.
+                            -->
+                            <div class="sp--box" vertical="middle">
+                                <ul>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/eaeaea/fff">
+                                    </li>
+                                    <li [flex="1"]>
+                                        <img src="https://placeholder.pics/svg/1200x300/cacaca/fff">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box fix - right</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--box" vertical="middle">
+                                <ul>
+                                    <li [flex="1"]>
+                                        <img src="https://placeholder.pics/svg/1200x300/cacaca/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/eaeaea/fff">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box fix - left, right</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--box" vertical="middle">
+                                <ul>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/cacaca/fff">
+                                    </li>
+                                    <li [flex="1"]>
+                                        <img src="https://placeholder.pics/svg/1200x400/eaeaea/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/cacaca/fff">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box fix - multiple</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--box" vertical="middle">
+                                <ul>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/cacaca/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/bababa/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/1200x300/eaeaea/fff">
+                                    </li>
+                                    <li [flex="1"]>
+                                        <img src="https://placeholder.pics/svg/200x200/cacaca/fff">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box fix - multiple (both)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--box" vertical="middle">
+                                <ul>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/cacaca/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/bababa/fff">
+                                    </li>
+                                    <li [flex="1"]>
+                                        <img src="https://placeholder.pics/svg/1200x300/eaeaea/fff">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/cacaca/fff">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box full fix</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--box" fill="full">
+                                <ul>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x200/cacaca/fff" style="width:100%;">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x200/bababa/fff" style="width:100%;">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x200/cacaca/fff" style="width:100%;">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/400x200/eaeaea/fff" style="width:100%;">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box auto grid ( container : fix size )</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                * grid="auto" 타입은 컨테이너의 크기가 UI를 결정한다.
+                                * 내부 요소의 크기의 합 자체가 미디어 쿼리가 된다.
+                                * 예를 들어 컨테이너가 1000이고 자식요소가 300 * 3 이다.
+                                * 그럼 자식은 50 * 300 * 300 * 300 * 50 의 형태가 아닌,
+                                * 333 * 333 * 333 형태가 된다. 
+                                * flex-grow: 1; 화면 보다 작은경우에 대응
+                                * flex-shrink: 1; 화면 보다 큰 경우에 대응
+                                * 총 좌우 크기가 1000이지만, 1000에서는 반응하지 않으며,
+                                * 원본 요소의 합인 900에서 코드가 반응한다.
+
+                                * 화면을 줄여서 테스트 해보자.
+                            -->
+                            <div class="sp--box" [grid="auto"] vertical="middle" style="width:800px;">
+                                <ul>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/cacaca/fff" style="width:100%;">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/bababa/fff" style="width:100%;">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/cacaca/fff" style="width:100%;">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/1200x300/eaeaea/fff" style="width:100%;">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box auto grid - multiple ( container : fix size )</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                * grid를 복합적으로 사용하는 예시다.
+                                * 기본적으로 2단계 그리드 고정으로 하고,
+                                * 모바일에서는 1단으로 보여주도록 마크업 한다. ( 최상단 컨테이너 )
+
+                                * 내부의 컨테이너는 자동으로 만들어준다. 
+                                * 그럼 최상단 컨테이너의 반응과 동시에 내부 컨테이너도 반응한다.
+                                * 결론적으로 복합적인 플렉스 박스가 되는데, 이는 masonry 외 모든 레이아웃을 표현할 수 있다.
+
+                                * 단언컨데 이 라이브러리는 최강입니다 ㅋㅋ
+                            -->
+                            <!-- 컨테이너 -->
+                            <div class="sp--box" [grid="2"] mobile="[1]" vertical="middle" style="width:800px;">
+                                <ul>
+                                    <li>
+                                        <!-- 좌측 -->
+                                        <div class="sp--box" [grid="auto"] vertical="middle">
+                                            <ul>
+                                                <li>
+                                                    <img src="https://placeholder.pics/svg/400x400/bbbbbb/fff" style="width:100%;">
+                                                </li>
+                                                <li>
+                                                    <img src="https://placeholder.pics/svg/200x200/aaaaaa/fff" style="width:100%;">
+                                                </li>
+                                                <li>
+                                                    <img src="https://placeholder.pics/svg/200x200/bbbbbb/fff" style="width:100%;">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- 우측 -->
+                                        <div class="sp--box" [grid="auto"] vertical="middle">
+                                            <ul>
+                                                <li>
+                                                    <img src="https://placeholder.pics/svg/200x200/ff3300/fff" style="width:100%;">
+                                                </li>
+                                                <li>
+                                                    <img src="https://placeholder.pics/svg/200x200/ff6600/fff" style="width:100%;">
+                                                </li>
+                                                <li>
+                                                    <img src="https://placeholder.pics/svg/400x400/ff9900/fff" style="width:100%;">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box left and right ( only 2 element )</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                * 기본적으로 좌우 정렬한다.
+                                * mobile = 1 을 넣어주면서 모바일에서는 grid 상태가 1이 되도록 한다.
+                            -->
+                            <div class="sp--box" [fill="justify"] mobile="1" vertical="middle">
+                                <ul>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/cacaca/fff" style="width:100%;">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/bababa/fff" style="width:100%;">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Box left and right ( multiple element )</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                * justify 형태가 아닌 margin 형태의 좌우 정렬
+                                * 큰 레이아웃에서는 이 형태가 유리하다.
+                                * 마찬가지로 mobile="1" 을 넣어서
+                            -->
+                            <div class="sp--box" mobile="1" vertical="middle">
+                                <ul>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/aaaaaa/fff" style="width:100%;">
+                                    </li>
+                                    <li>
+                                        <img src="https://placeholder.pics/svg/200x200/bbbbbb/fff" style="width:100%;">
+                                    </li>
+                                    <li float="right">
+                                        <img src="https://placeholder.pics/svg/200x200/cccccc/fff" style="width:100%;">
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--box
+                                </td>
+                                <td>
+                                    박스 최상위 컨테이너
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    grid
+                                </td>
+                                <td>
+                                    박스를 나눌 단위<br />
+                                    mobile, tablet 옵션과 함께 사용해서 반응형 코드로 제작 가능.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    vertical
+                                </td>
+                                <td>
+                                    top, middle, bottom<br />
+                                    박스 내부 내용들의 세로 정렬
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    flex
+                                </td>
+                                <td>
+                                    박스 내부의 요소의 크기를 풀어준다.
+                                    flex 기능은 써보는게 가장 좋겠다. 설명이 어렵다.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

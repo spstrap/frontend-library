@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Modal</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Preview</div>
+                        <textarea class="sp--document-preview">
+                            <style>
+                                .sp--modal-0001 .sp--modal-contents {
+                                    width: 500px;
+                                    height: 400px;
+                                    margin: 0 auto;
+                                    background-color:#eaeaea;
+                                }
+                            </style>
+                            <div class="sp--modal sp--modal-0001">
+                                <div class="sp--modal-contents sp--animate-to-slideup">
+                                    <button class="sp--modal-closebtn" theme="left">닫기</button>
+                                    모달 실제 컨텐츠
+                                </div>
+                            </div>
+                            <button class="sp--modal-btn" data-target=".sp--modal-0001" data-url="/_sp/document/sample/sample.html">모달창 띄우기</button>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--modal
+                                </td>
+                                <td>
+                                    모달창 컨테이너
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--modal-contents
+                                </td>
+                                <td>
+                                    모달창 컨텐츠 영역
+                                    <p class="sp--document-message">
+                                        애니메이션 코드와 연결해서 사용이 가능하다. <br />
+                                        <a href="/_sp/doc/demo/animation.html" class="document">css - animation document</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--modal-btn
+                                </td>
+                                <td>
+                                    모달창 띄우기 버튼 * with attribute
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--modal-closebtn
+                                </td>
+                                <td>
+                                    모달창 닫기 버튼 ( 모달 창 안에 종속되어야 한다. )
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    data-target
+                                </td>
+                                <td>
+                                    default: (string)<br />
+                                    타켓으로 설정된 클래스를 동작시킨다.<br />
+                                    .sp--modal-on 이 생성된다.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            <a href="/_sp/doc/demo/animation.html" class="document">ajax document</a> 와 연결해서 사용이 가능하다.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

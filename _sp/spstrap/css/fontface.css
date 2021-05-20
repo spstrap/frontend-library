@@ -1,0 +1,61 @@
+/*
+** web font
+** https://fonts.googleapis.com/
+** https://www.barenakedcoder.com/blog/2020/03/font-awesome-material-icons/
+** no material : @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap');
+** material : @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&family=Noto+Sans+KR:wght@400&family=Material+Icons+Round&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap');
+body, button, input, select, table, textarea {
+    font-family: 'Roboto', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', helvetica, 'Apple SD Gothic Neo', sans-serif;
+}
+b, strong {
+    font-weight: bold;
+    
+}
+
+/*
+** material font icon
+** https://material.io/resources/icons/?style=outline
+** https://github.com/google/material-design-icons
+** Material+Icons
+** Material+Icons+Outlined
+** Material+Icons+Two+Tone
+** Material+Icons+Round
+** Material+Icons+Sharp
+*/
+/*
+@font-face {
+    font-family: 'Material Icons Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/_sp/css/material/MaterialIconsOutlined-Regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/_sp/css/material/MaterialIconsRound-Regular.woff2) format('woff2');
+}
+*/
+.sp--material {
+    font-family: 'Material Icons Round';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.125em;
+    line-height: inherit;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    vertical-align: middle;
+    top: .0315em;
+    position: relative;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    width: 1em; /* from inherit font size */
+}

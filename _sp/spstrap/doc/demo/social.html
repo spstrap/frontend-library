@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Social Icon</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Preview icon - sm</div>
+                        <textarea class="sp--document-preview">
+                            <i class="sp--icon" ico="facebook" scale="3xl"></i>
+                            <i class="sp--icon" ico="kakao" scale="3xl"></i>
+                            <i class="sp--icon" ico="kakaotalk" scale="3xl"></i>
+                            <i class="sp--icon" ico="kakaostory" scale="3xl"></i>
+                            <i class="sp--icon" ico="naver" scale="3xl"></i>
+                            <i class="sp--icon" ico="line" scale="3xl"></i>
+                            <i class="sp--icon" ico="google" scale="3xl"></i>
+                            <i class="sp--icon" ico="apple" scale="3xl"></i>
+                            <i class="sp--icon" ico="youtube" scale="3xl"></i>
+                            <i class="sp--icon" ico="vimeo" scale="3xl"></i>
+                            <i class="sp--icon" ico="instagram" scale="3xl"></i>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">With color</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                SVG의 색상은 fill:currentColor; 구조이다.
+                                즉 부모의 color에 따라서 함께 색상이 변경되는 폰트의 구조이다.
+                            -->
+                            <div style="[color:#ff3300;]">
+                                <i class="sp--icon" ico="facebook" scale="3xl"></i>
+                                <i class="sp--icon" ico="kakao" scale="3xl"></i>
+                                <i class="sp--icon" ico="kakaotalk" scale="3xl"></i>
+                                <i class="sp--icon" ico="kakaostory" scale="3xl"></i>
+                                <i class="sp--icon" ico="naver" scale="3xl"></i>
+                                <i class="sp--icon" ico="line" scale="3xl"></i>
+                                <i class="sp--icon" ico="google" scale="3xl"></i>
+                                <i class="sp--icon" ico="apple" scale="3xl"></i>
+                                <i class="sp--icon" ico="youtube" scale="3xl"></i>
+                                <i class="sp--icon" ico="vimeo" scale="3xl"></i>
+                                <i class="sp--icon" ico="instagram" scale="3xl"></i>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">With color - circle</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group">
+                                <div class="sp--btn-gap" gap="md">
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="xs" social="facebook">
+                                        <i class="sp--icon" ico="facebook"></i>
+                                    </a>
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="sm" social="kakao">
+                                        <i class="sp--icon" ico="kakao"></i>
+                                    </a>
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="md" social="kakao">
+                                        <i class="sp--icon" ico="kakaotalk"></i>
+                                    </a>
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="lg" social="kakao">
+                                        <i class="sp--icon" ico="kakaostory"></i>
+                                    </a>
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="xl" social="naver">
+                                        <i class="sp--icon" ico="naver"></i>
+                                    </a>
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="2xl" social="line">
+                                        <i class="sp--icon" ico="line"></i>
+                                    </a>
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="3xl" social="google">
+                                        <i class="sp--icon" ico="google"></i>
+                                    </a>
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="3xl" social="apple">
+                                        <i class="sp--icon" ico="apple"></i>
+                                    </a>
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="3xl" social="youtube">
+                                        <i class="sp--icon" ico="youtube"></i>
+                                    </a>
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="3xl" social="vimeo">
+                                        <i class="sp--icon" ico="vimeo"></i>
+                                    </a>
+                                    <a href="#!" class="sp--btn sp--social" theme="circle-roundmax" scale="3xl" social="instagram">
+                                        <i class="sp--icon" ico="instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+                    
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">
+                            With Button module
+                            <a href="/_sp/doc/demo/button.html" class="sp--btn" theme="under-dark" scale="lg-nude">버튼 라이브러리</a>
+                        </div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                SVG의 색상은 fill:currentColor; 구조이다.
+                                즉 부모의 color에 따라서 함께 색상이 변경되는 폰트의 구조이다.
+                            -->
+                            <a href="#!" [class="sp--btn" scale="md"]>
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                            <a href="#!" class="sp--btn" theme="box-white" scale="md">
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                            <a href="#!" class="sp--btn" theme="box-light" scale="md">
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                            <a href="#!" class="sp--btn" theme="box-gray" scale="md">
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                            <a href="#!" class="sp--btn" theme="box-dark" scale="md">
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                            
+                            <a href="#!" class="sp--btn" theme="box-primary" scale="md">
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                            <a href="#!" class="sp--btn" theme="box-dark-roundmax" scale="md">
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                            <a href="#!" class="sp--btn" theme="border-dark" scale="md">
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                            <a href="#!" class="sp--btn" theme="fill-gray-left" scale="lg">
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                            <a href="#!" class="sp--btn" theme="fill-dark-left" scale="lg">
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                            <a href="#!" class="sp--btn" theme="fill-primary-left" scale="lg">
+                                <span><i class="sp--icon" ico="vimeo"></i>&nbsp;비메오</span>
+                            </a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">
+                            With Button Group
+                            <a href="/_sp/doc/demo/button.html" class="sp--btn" theme="under-dark" scale="lg-nude">버튼 라이브러리</a>
+                        </div>
+                        <textarea class="sp--document-preview">
+                            <style>
+                                /*
+                                    소셜아이콘 + 버튼 조합을 담을 컨테이너
+                                    크기를 지정하지 않으면 100% 형태로 표시된다.
+                                */
+                                .sample-container-block {
+                                    [width: 250px;]
+                                    margin: 0 auto;
+                                }
+                            </style>
+                            <div class="[sample-container-block]">
+                                <div class="[sp--btn-group]" fill="[block]">
+                                    <div class="sp--btn-gap" gap="md">
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="facebook">
+                                            <span><i class="sp--icon" ico="facebook"></i></span>
+                                            <span float="right">페이스북 로그인</span>
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="kakao">
+                                            <span><i class="sp--icon" ico="kakao"></i></span>
+                                            <span float="right">카카오</span>
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="kakao">
+                                            <span><i class="sp--icon" ico="kakaotalk"></i></span>
+                                            <span float="right">카카오톡</span>
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="kakao">
+                                            <span><i class="sp--icon" ico="kakaostory"></i></span>
+                                            <span float="right">카카오 스토리</span>
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="naver">
+                                            <span><i class="sp--icon" ico="naver"></i></span>
+                                            <span float="right">네이버 로그인</span>
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="line">
+                                            <span><i class="sp--icon" ico="line"></i></span>
+                                            <span float="right">라인 로그인</span>
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="google">
+                                            <span><i class="sp--icon" ico="google"></i></span>
+                                            <span float="right">구글 로그인</span>
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="apple">
+                                            <span><i class="sp--icon" ico="apple"></i></span>
+                                            <span float="right">애플 로그인</span>
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="youtube">
+                                            <span><i class="sp--icon" ico="youtube"></i></span>
+                                            <span float="right">유튜브 로그인</span>
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="vimeo">
+                                            <span><i class="sp--icon" ico="vimeo"></i></span>
+                                            <span float="right">비메오 로그인</span>
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="instagram">
+                                            <span><i class="sp--icon" ico="instagram"></i></span>
+                                            <span float="right">인스타그램 로그인</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">
+                            With Button Group
+                            <a href="/_sp/doc/demo/button.html" class="sp--btn" theme="under-dark" scale="lg-nude">버튼 라이브러리</a>
+                        </div>
+                        <textarea class="sp--document-preview">
+                            <style>
+                                /*
+                                    소셜아이콘 + 버튼 조합을 담을 컨테이너
+                                    크기를 지정하지 않으면 100% 형태로 표시된다.
+                                */
+                                .sample-container-block {
+                                    [width: 250px;]
+                                    margin: 0 auto;
+                                }
+                            </style>
+                            <div class="[sample-container-block]">
+                                <div class="[sp--btn-group]" fill="[block]">
+                                    <div class="sp--btn-gap" gap="md">
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="facebook">
+                                            <i class="sp--icon" ico="facebook"></i>&nbsp; 페이스북 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="kakao">
+                                            <i class="sp--icon" ico="kakao"></i>&nbsp; 카카오 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="kakao">
+                                            <i class="sp--icon" ico="kakaotalk"></i>&nbsp; 카카오톡 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="kakao">
+                                            <i class="sp--icon" ico="kakaostory"></i>&nbsp; 카카오스토리 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="naver">
+                                            <i class="sp--icon" ico="naver"></i>&nbsp; 네이버 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="line">
+                                            <i class="sp--icon" ico="line"></i>&nbsp; 라인 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="google">
+                                            <i class="sp--icon" ico="google"></i>&nbsp; 구글 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="apple">
+                                            <i class="sp--icon" ico="apple"></i>&nbsp; 애플 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="youtube">
+                                            <i class="sp--icon" ico="youtube"></i>&nbsp; 유튜브 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="vimeo">
+                                            <i class="sp--icon" ico="vimeo"></i>&nbsp; 비메오 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-round-both" scale="lg" social="instagram">
+                                            <i class="sp--icon" ico="instagram"></i>&nbsp; 인스타그램 로그인
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">
+                            With Button Group ( 2 colume responsive )
+                            <a href="/_sp/doc/demo/button.html" class="sp--btn" theme="under-dark" scale="lg-nude">버튼 라이브러리</a>
+                        </div>
+                        <textarea class="sp--document-preview">
+                            <style>
+                                /*
+                                    반응형 코드를 위한 기본 크기 지정
+                                    이 크기는 gap 사이즈를 고려해야 한다.
+                                    이 예제는 컨테이너가 600px이고, gap이 1px 이므로
+                                    2개의 엘리먼트를 가지기 위해 298px을 min 사이즈로 설정한 예시이다.
+                                */
+                                .sample-conainer-col2 {
+                                    [width: 600px;]
+                                    margin: 0 auto;
+                                }
+                                .sample-conainer-col2 .sp--btn {
+                                    [flex-basis: 298px;]
+                                }
+                            </style>
+                            <div class="[sample-conainer-col2]">
+                                <div class="[sp--btn-group]" fill="[full]">
+                                    <div class="sp--btn-gap" gap="xs">
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="facebook">
+                                            <i class="sp--icon" ico="facebook"></i>&nbsp; 페이스북 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="kakao">
+                                            <i class="sp--icon" ico="kakao"></i>&nbsp; 카카오 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="kakao">
+                                            <i class="sp--icon" ico="kakaotalk"></i>&nbsp; 카카오톡 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="kakao">
+                                            <i class="sp--icon" ico="kakaostory"></i>&nbsp; 카카오스토리 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="naver">
+                                            <i class="sp--icon" ico="naver"></i>&nbsp; 네이버 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="line">
+                                            <i class="sp--icon" ico="line"></i>&nbsp; 라인 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="google">
+                                            <i class="sp--icon" ico="google"></i>&nbsp; 구글 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="apple">
+                                            <i class="sp--icon" ico="apple"></i>&nbsp; 애플 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="youtube">
+                                            <i class="sp--icon" ico="youtube"></i>&nbsp; 유튜브 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="vimeo">
+                                            <i class="sp--icon" ico="vimeo"></i>&nbsp; 비메오 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="instagram">
+                                            <i class="sp--icon" ico="instagram"></i>&nbsp; 인스타그램 로그인
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">
+                            With Button Group ( 3 colume responsive )
+                            <a href="/_sp/doc/demo/button.html" class="sp--btn" theme="under-dark" scale="lg-nude">버튼 라이브러리</a>
+                        </div>
+                        <textarea class="sp--document-preview">
+                            <style>
+                                /*
+                                    반응형 코드를 위한 기본 크기 지정
+                                    이 크기는 gap 사이즈를 고려해야 한다.
+                                    이 예제는 컨테이너가 600px이고, gap이 1px 이므로
+                                    2개의 엘리먼트를 가지기 위해 298px을 min 사이즈로 설정한 예시이다.
+                                */
+                                .sample-conainer-col3 {
+                                    [width: 600px;]
+                                    margin: 0 auto;
+                                }
+                                .sample-conainer-col3 .sp--btn {
+                                    [flex-basis: 198px;]
+                                }
+                            </style>
+                            <div class="[sample-conainer-col3]">
+                                <div class="[sp--btn-group]" fill="[full]">
+                                    <div class="sp--btn-gap" gap="xs">
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="facebook">
+                                            <i class="sp--icon" ico="facebook" scale="xl"></i>&nbsp; 페이스북 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="kakao">
+                                            <i class="sp--icon" ico="kakao" scale="xl"></i>&nbsp; 카카오톡 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="kakao">
+                                            <i class="sp--icon" ico="kakaotalk" scale="xl"></i>&nbsp; 카카오톡 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="kakao">
+                                            <i class="sp--icon" ico="kakaostory" scale="xl"></i>&nbsp; 카카오톡 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="naver">
+                                            <i class="sp--icon" ico="naver" scale="xl"></i>&nbsp; 네이버 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="line">
+                                            <i class="sp--icon" ico="line" scale="xl"></i>&nbsp; 라인 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="google">
+                                            <i class="sp--icon" ico="google" scale="xl"></i>&nbsp; 구글 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="apple">
+                                            <i class="sp--icon" ico="apple" scale="xl"></i>&nbsp; 애플 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="youtube">
+                                            <i class="sp--icon" ico="youtube" scale="xl"></i>&nbsp; 유튜브 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="vimeo">
+                                            <i class="sp--icon" ico="vimeo" scale="xl"></i>&nbsp; 비메오 로그인
+                                        </a>
+                                        <a href="#!" class="sp--btn sp--social" theme="box-both" scale="lg" social="instagram">
+                                            <i class="sp--icon" ico="instagram" scale="xl"></i>&nbsp; 인스타그램 로그인
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--social
+                                </td>
+                                <td>
+                                    소셜 아이콘 컨테이너
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            단일로는 사용을 할일이 별로 없다.<br />
+                            class="sp--btn" 속성과 함께 사용하는것이 좋겠다.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

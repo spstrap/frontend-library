@@ -1,0 +1,3 @@
+<svg id="diagonal" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" style="fill:currentColor;">
+    <path d='M0,30 l30,-30' stroke='#333' stroke-width='1'/>
+</svg>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Video library</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Youtube base</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                * 유튜브, 비메오를 지원할 예정.
+                                * 카페24는 mp4를 재생하는 판매자를 본적이 없다.
+                            -->
+                            <div class="sp--video sp--css-notready"
+                                [data-flatform]="[youtube]"     // flatform name
+                                [data-videoid]="[25I3I3kn5fU]"  // youtube ID
+                            ></div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Youtube - Mute</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                * 이 기능은 PC에서만 지원한다.
+                            -->
+                            <div class="sp--video sp--css-notready"
+                                data-flatform="youtube"
+                                data-videoid="25I3I3kn5fU"
+                                [data-mute="true"]
+                            ></div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Youtube - Auto Play & Volume</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                * [이 라이브러리는 동시에 두개를 재생할 수 없다.]
+                                * 영상을 플레이하면, 한 화면에 존재하는 다른 영상은 멈추게 된다.
+                                * autoplay 기능은 간헐적인 멈춤 현상이 있다.
+                                * autoplay 기능은 모바일에서는 지원되지 않는다.
+                                * volume의 기본값은 50이다. 플레이어의 볼륨 영역을 제어한다.
+                            -->
+                            <div class="sp--video sp--css-notready"
+                                data-flatform="youtube"
+                                data-videoid="25I3I3kn5fU"
+                                [data-autoplay="true"]
+                                [data-volume="5"]
+                            ></div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Youtube - Loop</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                * loop 기능은 playlist를 만드는 역할을 한다.
+                                * 스스로가 반복하는 기능을 가진다.
+                                * 플레이리스트를 만드는건 코드 낭비라 생각.
+                            -->
+                            <div class="sp--video sp--css-notready"
+                                data-flatform="youtube"
+                                data-videoid="25I3I3kn5fU"
+                                [data-loop="true"]
+                            ></div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Youtube - Controler</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                * 디자인을 위해 컨트롤러를 생성한다.
+                                * play, mute, seek, progress bar 기능을 지원한다.
+                            -->
+                            <div class="sp--video sp--css-notready"
+                                [data-controller="true"]
+                                data-flatform="youtube"
+                                data-videoid="25I3I3kn5fU"
+                            ></div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Youtube - With Slider</div>
+                        <textarea class="sp--document-preview">
+                            <!-- 
+                                슬라이더 영역
+                                * 안타깝게도 loop = true 옵션은 사용할 수 없다.
+                                * 슬라이더가 duplicate 될 때, 영상이 두개가 될 수 있으므로 
+                                * 영상을 명시적으로 정의할 수 없고, 플레이가 초기화 된다.
+                                * without duplicate 기능은 아직 지원하지 않는 듯 하다.
+
+                                * 기본적으로 current slider 일때 재생된다.
+                                * 즉 autoplay 옵션은 첫번째 슬라이더에 동영상이 있는 경우만 활성화된다.
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                data-type="default"
+                                data-swiper="
+                                    slidesPerView = 1
+                                    slidesPerColumn = 1
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        
+                                        <!--
+                                            내부 동영상
+                                            layout 부분은 cover로 설정할 경우
+                                            슬라이더의 다른 박스들의 크기에 맞추도록 되어 있다.
+                                            값이 없다면, 슬라이더의 최소 높이는 영상의 높이인 16:9 비율을 가지게 된다.
+                                        -->
+                                        <div class="sp--video"
+                                            [layout="cover"]
+                                            data-flatform="youtube"
+                                            data-controller="true"
+                                            data-videoid="l3Vom3ISCNI"
+                                            data-volume="10"
+                                            data-loop="true"
+                                        ></div>
+
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1000x500/f5f5f5/333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1000x500/f5f5f5/333&text=3"></div>
+                                    <div class="swiper-slide">
+                                        
+                                        <!-- 내부 동영상 -->
+                                        <div class="sp--video"
+                                            [layout="cover"]
+                                            data-flatform="youtube"
+                                            data-controller="true"
+                                            data-videoid="7uyw8IdRylM"
+                                            data-volume="10"
+                                            data-loop="true"
+                                        ></div>
+
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1000x500/f5f5f5/333&text=4"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1000x500/f5f5f5/333&text=5"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--video
+                                </td>
+                                <td>
+                                    비디오 컨테이너
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--video-btn
+                                </td>
+                                <td>
+                                    비디오 컨트롤 버튼 ( 내, 외부 )
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--video-controller
+                                </td>
+                                <td>
+                                    비디오 컨트롤 전체영역
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--video-remote
+                                </td>
+                                <td>
+                                    비디오 컨트롤 버튼영역 ( 내부 )
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--video-progress
+                                </td>
+                                <td>
+                                    프로그래스바 영역
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--video-progress-current
+                                </td>
+                                <td>
+                                    현재 재생된 영역을 표시하는 바
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--video-progress-loaded
+                                </td>
+                                <td>
+                                    로드가 완료된 영역을 표시하는 바
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--video-progress-total
+                                </td>
+                                <td>
+                                    전체 영역을 표시하는 바
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .data-flatform
+                                </td>
+                                <td>
+                                    default: '' ( string )<br />
+                                    youtube, vimeo 를 서비스 할 예정 ( 현재는 youtube만 가능 )
+                                    플랫폼을 지정해주는 영역이다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .data-controller=
+                                </td>
+                                <td>
+                                    default : 'false' ( boolean )
+                                    true 는 컨트롤러를 화면에 표시한다.
+                                    <p class="sp--document-message">
+                                        시작, 중지, 음소거, 프로그래스바 지원
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .data-videoid
+                                </td>
+                                <td>
+                                    비디오의 ID를 입력하는 구간이다.
+                                    <p class="sp--document-message">
+                                        혹시 모르니, url 전체를 입력해도 가져올 수 있도록 개발했다.
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .data-loop
+                                </td>
+                                <td>
+                                    default: 'false' ( boolean )<br />
+                                    true일 경우 비디오가 반복 재생된다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .data-mute
+                                </td>
+                                <td>
+                                    default: 'false' ( boolean )<br />
+                                    true일 경우 음소거된다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .data-volume
+                                </td>
+                                <td>
+                                    default: '50' ( number )<br />
+                                    볼륨의 크기를 설정한다. ( 숫자만 입력 가능 0 - 100 )
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Useage</div>
+                        <pre><code class="js"><textarea>
+/*
+ * import class
+ */
+import { 
+    SP_VIDEO,
+} from './modules.js';
+
+/*
+ * extends class
+ */
+_.video = SP_VIDEO;
+                        </textarea></code></pre>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            이제 한 화면에 아주 많은 영상을 넣어도 괜찮을 것 같다.<br />
+                            어짜피 재생은 한개만 되고, 프로그래스 마찬가지 이므로 여러모로 활용하자.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

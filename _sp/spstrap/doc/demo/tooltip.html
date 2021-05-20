@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Tooltip</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Preview icon - xs</div>
+                        <textarea class="sp--document-preview">
+                            
+                            <!--
+                                /css/tooltip.css 30번 라인
+                                color: var(--dark-color);
+                                background-color: var(--dark-color);
+                                에서 컬러를 수정 할 수 있다. 전역으로 두기엔 변경할일이 적다.
+                            -->
+                            <table class="sp--table" gap="3xl" solid="light-nude">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <button 
+                                                tooltip-label="top-left"
+                                                tooltip-position="top-left">top-left</button>
+                                        </td>
+                                        <td>
+                                            <button 
+                                                tooltip-label="top"
+                                                tooltip-position="top">top</button>
+                                        </td>
+                                        <td>
+                                            <button 
+                                                tooltip-label="top-right"
+                                                tooltip-position="top-right">top-right</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button 
+                                                tooltip-label="left"
+                                                tooltip-position="left">left</button>
+                                        </td>
+                                        <td>-</td>
+                                        <td>
+                                            <button 
+                                                tooltip-label="right"
+                                                tooltip-position="right">right</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button 
+                                                tooltip-label="bottom-left"
+                                                tooltip-position="bottom-left">bottom-left</button>
+                                        </td>
+                                        <td>
+                                            <button 
+                                                tooltip-label="bottom"
+                                                tooltip-position="bottom">bottom</button>
+                                        </td>
+                                        <td>
+                                            <button 
+                                                tooltip-label="bottom-right"
+                                                tooltip-position="bottom-right">bottom-right</button>
+                                        </td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
+
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    tooltip-label
+                                </td>
+                                <td>
+                                    툴팁의 컨텐츠
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    tooltip-position
+                                </td>
+                                <td>
+                                    툴팁의 포지션
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

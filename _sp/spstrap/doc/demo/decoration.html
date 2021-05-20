@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Decoration</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Document</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                pc : 1204 이상
+                                tablet : 600 이상
+                                mobile : 600 미만
+                                이 수치는 러프한 방식의 계산이다.
+                                참고로 숨김처리는 display: none; 이며,
+                                보여지는 처리는 display: inherit; 으로 코딩되었다.
+                            -->
+                            <div sp--view-device="pc">
+                                pc 에서만 보인다. ( 디바이스 크기 1025 ~  )
+                            </div>
+                            <div sp--view-device="tablet">
+                                tablet 에서만 보인다. ( 디바이스 크기 601 ~ 1024 )
+                            </div>
+                            <div sp--view-device="mobile">
+                                mobile 에서만 보인다. ( 디바이스 크기 1 ~ 600 )
+                            </div>
+
+                            <!--
+                                예외처리
+                                이정도 조건이면 거의 대부분의 대응을 예상한다.
+                            -->
+                            <div sp--view-device="pc, tablet">
+                                pc, tablet 에서만 보인다. ( 디바이스 크기 601 ~ )
+                            </div>
+                            <div sp--view-device="tablet, mobile">
+                                tablet, mobile 에서만 보인다. ( 디바이스 크기 ~ 1024 )
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Pc, Mobile, Tablet 에서의 수동적 대응</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                기본적으로 모든 라이브러리엔 light, gray, dark, primary 와 같은 컬러의 개념,<br />
+                                scale, theme, xs, md, lg, xl, 2xl, 3xl 와 같은 크기의 개념이 있다.<br />
+                                아래의 크기, 컬러, 투명도 등의 속성은 강제로 적용해야 할 때 사용된다.
+                            -->
+                            예를 들어
+                            <div [class="sp--title"] [theme="property"] [scale="property"]>
+                                타이틀 라이브러리
+                            </div>
+                            이런 형태이므로, 각각의 라이브러리를 복사해서 사용하는게 좋다.
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">H Scale</div>
+                        <textarea class="sp--document-preview">
+                            <[h1] class="sp--font" [theme="bold"]>H1 Heading text = 3xl</h1>
+                            <[h2] class="sp--font" [theme="bold"]>H2 Heading text = 2xl</h2>
+                            <[h3] class="sp--font" [theme="bold"]>H3 Heading text = xl</h3>
+                            <[h4] class="sp--font">H4 Heading text = lg</h4>
+                            <[h5] class="sp--font">H5 Heading text = md</h5>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Normal font scale</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                두번 강조하지만,
+                                폰트의 사이즈, 컬러는 반드시 해당 라이브러리를 먼저 봐야 한다.
+                                예를 들어 버튼의 경우엔 sp-btn 클래스 자체에 scale이 있다.
+                            -->
+                            <div class="sp--font" scale="[xs]">text xs</div>
+                            <div class="sp--font" scale="[sm]">text sm</div>
+                            <div class="sp--font" scale="[md]">text md</div>
+                            <div class="sp--font" scale="[lg]">text lg</div>
+                            <div class="sp--font" scale="[xl]">text xl</div>
+                            <div class="sp--font" scale="[2xl]">text 2xl</div>
+                            <div class="sp--font" scale="[3xl]">text 3xl</div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Color</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                세번 강조하지만,
+                                폰트의 사이즈, 컬러는 반드시 해당 라이브러리를 먼저 봐야 한다.
+                                예를 들어 버튼의 경우엔 sp-btn 클래스 자체에 scale이 있다.
+                            -->
+                            <h1 class="sp--font" theme="[light]">H1 Heading text - light</h1>
+                            <h1 class="sp--font" theme="[gray]">H1 Heading text - gray</h1>
+                            <h1 class="sp--font" theme="[dark]">H1 Heading text - dark</h1>
+                            <h1 class="sp--font" theme="[primary]">H1 Heading text - primary</h1>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Text with buttons (복합적인 구성이 가능하다.)</div>
+                        <textarea class="sp--document-preview">
+                            <h1 class="sp--font" theme="light-strike">Text strike</h1>
+                            <h1 class="sp--font" theme="light-struck">Text struck strike 한글도 가능</h1>
+                            <h1 class="sp--font" theme="gray-underline">H1 Heading text - gray</h1>
+                            <div class="sp--font" theme="gray-bottomline">
+                                gray underline
+                            </div>
+                            <div class="sp--font" scale="2xl" style="padding:30px;">
+                                <span class="sp--font" theme="bold-bottomline">Lorem Ipsum</span> is simply dummy 
+                                <span class="sp--font" theme="bold-underline">text</span> 
+                                of the printing and <span class="sp--font" theme="primary-bold-struck">typesetting industry.</span> 
+                                Lorem Ipsum has been the <span class="sp--font" theme="bold-strike">industry's standard</span> 
+                                dummy text ever since the 1500s,
+                                <a href="#!" class="sp--btn" theme="fill-light-left-round"><span>&nbsp;* text hover effect&nbsp;</span></a> 
+                                <a href="#!" class="sp--btn" theme="fill-primary-left-round" bg="light"><span>&nbsp;* text hover effect - with background&nbsp;</span></a> 
+                                <a href="#!" class="sp--btn" theme="fill-dark-left-round" bg="light"><span>&nbsp;* text hover effect - with background&nbsp;</span></a> 
+                                <a href="#!" class="sp--btn" theme="fill-primary-left-round" scale="nude"><span>&nbsp;* text hover effect&nbsp;</span></a> 
+                                <a href="#!" class="sp--btn" theme="under-dark" scale="xs">under-dark xs</a>
+                                <a href="#!" class="sp--btn" theme="box-light" scale="ss">한글 가장작은 버튼</a>
+                                text ever since the 1500s,
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - light</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" [theme="light"] space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - gray</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" [theme="gray"] space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dark</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" [theme="dark"[] space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dark fiqure</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dark" [figure="circle"] space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dark hexagon</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dark" [figure="hexagon"] space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dark band</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dark" [figure="band"] space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dark shape</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dark" [figure="shape"] space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - align ( left )</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dark" figure="shape-[left]" space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - align ( right )</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dark" figure="shape-[right]" space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dash ( with color )</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dash-xs-[light]" space="md" />
+                            <hr class="sp--hr" theme="dash-xs-[gray]" space="md" />
+                            <hr class="sp--hr" theme="dash-xs" space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dash sm</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dash-[sm]" space="xs" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dash md</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dash-[md]" space="xs" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dash lg</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dash-[lg]" space="xs" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dash xl (with bold)</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dash-xl" space="md" />
+                            <hr class="sp--hr" theme="dash-xl-[bold]" space="md" />
+                            <hr class="sp--hr" theme="dash-xl-[heavy]" space="md" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - dash xl (with top, bottom space)</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="dash-xl" space="[xs]" />
+                            <hr class="sp--hr" theme="dash-xl" space="[xm]" />
+                            <hr class="sp--hr" theme="dash-xl" space="[md]" />
+                            <hr class="sp--hr" theme="dash-xl" space="[lg]" />
+                            <hr class="sp--hr" theme="dash-xl" space="[xl]" />
+                            <hr class="sp--hr" theme="dash-xl" space="[2xl]" />
+                            <hr class="sp--hr" theme="dash-xl" space="[3xl]" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - tick (short)</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="[tick]-[short]" space="lg" />
+                            <hr class="sp--hr" theme="[tick]-[short]-center" space="lg" />
+                            <hr class="sp--hr" theme="[tick]-[short]-right" space="lg" />
+                            <hr class="sp--hr" theme="[tick]-[short]-[bold]-center" space="lg" />
+                            <hr class="sp--hr" theme="[tick]-[short]-[heavy]-[center]" space="lg" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - tick (medium)</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="tick-[medium]" space="lg" />
+                            <hr class="sp--hr" theme="tick-[medium]-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[medium]-right" space="lg" />
+                            <hr class="sp--hr" theme="tick-[medium]-bold-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[medium]-heavy-center" space="lg" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - tick (long)</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="tick-[long]" space="lg" />
+                            <hr class="sp--hr" theme="tick-[long]-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[long]-right" space="lg" />
+                            <hr class="sp--hr" theme="tick-[long]-bold-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[long]-heavy-center" space="lg" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - tick (diagonal)</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="tick-[diagonal]-short-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[diagonal]-medium-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[diagonal]-long-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[diagonal]-long-bold-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[diagonal]-long-heavy-center" space="lg" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - tick (diagonal - reverse)</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="tick-[diagonal]-reverse-short-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[diagonal]-reverse-medium-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[diagonal]-reverse-long-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[diagonal]-reverse-long-bold-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[diagonal]-reverse-long-heavy-center" space="lg" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">hr - tick (diagonal - reverse)</div>
+                        <textarea class="sp--document-preview">
+                            <hr class="sp--hr" theme="tick-[vertical]-reverse-short-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[vertical]-reverse-medium-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[vertical]-reverse-long-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[vertical]-reverse-long-bold-center" space="lg" />
+                            <hr class="sp--hr" theme="tick-[vertical]-reverse-long-heavy-center" space="lg" />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">자간</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--font" hspace="xs">SPACE BETWEEN</div>
+                            <div class="sp--font" hspace="sm">SPACE BETWEEN</div>
+                            <div class="sp--font" hspace="md">SPACE BETWEEN</div>
+                            <div class="sp--font" hspace="lg">SPACE BETWEEN</div>
+                            <div class="sp--font" hspace="xl">SPACE BETWEEN</div>
+                            <div class="sp--font" hspace="2xl">SPACE BETWEEN</div>
+                            <div class="sp--font" hspace="3xl">SPACE BETWEEN</div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Bedge - inside</div>
+                        <textarea class="sp--document-preview">
+                            
+                            <a href="#!" class="sp--btn" theme="box-dark-round" scale="md">
+                                버튼 top-in-left
+                                <span class="sp--bedge" position="top-in-left">
+                                    <span class="sp--btn" theme="box-primary-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                            <br /><br />
+                            <a href="#!" class="sp--btn" theme="box-dark-round" scale="md">
+                                버튼 top-in-center
+                                <span class="sp--bedge" position="top-in-center">
+                                    <span class="sp--btn" theme="box-primary-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                            <br /><br />
+                            <a href="#!" class="sp--btn" theme="box-dark-round" scale="md">
+                                버튼 top-in-right
+                                <span class="sp--bedge" position="top-in-right">
+                                    <span class="sp--btn" theme="box-primary-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                            <br /><br />
+                            <a href="#!" class="sp--btn" theme="box-dark-round" scale="md">
+                                버튼 bottom-in-left
+                                <span class="sp--bedge" position="bottom-in-left">
+                                    <span class="sp--btn" theme="box-primary-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                            <br /><br />
+                            <a href="#!" class="sp--btn" theme="box-dark-round" scale="md">
+                                버튼 bottom-in-center
+                                <span class="sp--bedge" position="bottom-in-center">
+                                    <span class="sp--btn" theme="box-primary-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                            <br /><br />
+                            <a href="#!" class="sp--btn" theme="box-dark-round" scale="md">
+                                버튼 bottom-in-right
+                                <span class="sp--bedge" position="bottom-in-right">
+                                    <span class="sp--btn" theme="box-primary-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Bedge - outside</div>
+                        <textarea class="sp--document-preview">
+                            
+                            <a href="#!" class="sp--btn" theme="box-light-round" scale="md">
+                                버튼 top-out-left
+                                <span class="sp--bedge" position="top-out-left">
+                                    <span class="sp--btn" theme="line-light-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                            <br /><br />
+                            <a href="#!" class="sp--btn" theme="box-gray-round" scale="md">
+                                버튼 top-out-center
+                                <span class="sp--bedge" position="top-out-center">
+                                    <span class="sp--btn" theme="line-gray-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                            <br /><br />
+                            <a href="#!" class="sp--btn" theme="box-dark-round" scale="md">
+                                버튼 top-out-right
+                                <span class="sp--bedge" position="top-out-right">
+                                    <span class="sp--btn" theme="line-dark-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                            <br /><br />
+                            <a href="#!" class="sp--btn" theme="box-primary-round" scale="md">
+                                버튼 bottom-out-left
+                                <span class="sp--bedge" position="bottom-out-left">
+                                    <span class="sp--btn" theme="line-primary-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                            <br /><br />
+                            <a href="#!" class="sp--btn" theme="box-gray-round" scale="md">
+                                버튼 bottom-out-center
+                                <span class="sp--bedge" position="bottom-out-center">
+                                    <span class="sp--btn" theme="line-gray-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                            <br /><br />
+                            <a href="#!" class="sp--btn" theme="box-dark-round" scale="md">
+                                버튼 bottom-out-right
+                                <span class="sp--bedge" position="bottom-out-right">
+                                    <span class="sp--btn" theme="line-dark-roundmax" scale="ss">3</span>
+                                </span>
+                            </a>
+
+                        </textarea>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

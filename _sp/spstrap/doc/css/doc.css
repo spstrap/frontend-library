@@ -1,0 +1,153 @@
+/*
+ * document css
+ */
+.sp--document {
+
+}
+
+/*
+ * 준비가 안된 모든 요소
+ */
+.sp--document-notready {
+    overflow: hidden;
+}
+.sp--document-notready.ready {
+    overflow: unset;
+}
+.sp--document-notready::before {
+    content: '';
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:#333 url(../../image/loader/grid.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    -webkit-transition: opacity 200ms ease-in,
+                        visibility 200ms ease-in;
+            transition: opacity 200ms ease-in,
+                        visibility 200ms ease-in;
+}
+.sp--document-notready.ready::before {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sp--document h2:not(.sp--font) {
+    font-size: var(--font-size-2xl);
+    font-weight: bold;
+    padding: 0 0 10px 0;
+}
+.sp--document-width {
+    max-width: var(--width);
+    margin: 0 auto;
+}
+.sp--document a.document {
+    color: var(--primary-up-color);
+    text-decoration: underline;
+}
+.sp--document aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--darkmax-color);
+}
+.sp--document aside .logo {
+    display: block;
+    padding: 0 0 10px 0;
+    color: var(--primary-color);
+    font-size: var(--font-size-2xl);
+}
+.sp--document aside .logo:hover {
+    color: var(--primary-up-color);
+}
+.sp--document aside .category {
+    padding: 10px 0 5px 0;
+    color: var(--primary-color);
+}
+.sp--document aside .menu {
+    display: block;
+    padding: 5px 10px;
+    color: var(--gray-color);
+    font-size: var(--font-size-lg);
+}
+.sp--document aside .menu:hover,
+.sp--document aside .menu.sp--currentlink-on {
+    color: var(--light-color);
+}
+.sp--document-aside--inner > ul {
+    padding: 30px;
+}
+.sp--document-aside--inner > ul > li {
+
+}
+.sp--document article {
+    margin-left: 250px;
+}
+.sp--document-contents {
+    padding: 40px 50px;
+}
+.sp--document footer {
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid var(--light-color);
+}
+.sp--document footer p {
+    padding: 0 0 5px 0;
+    font-size: var(--font-size-md);
+}
+.sp--document footer small {
+    display: block;
+    color: var(--gray-color);
+    font-size: var(--font-size-xs);
+}
+.sp--document pre {
+    padding-top: 10px;
+}
+.sp--document-box {
+    border: 1px solid var(--light-color);
+    border-radius: 5px;
+    padding: 30px;
+}
+.sp--document-box + .sp--document-box {
+    margin-top: 30px;
+}
+.sp--document-message {
+    margin: 10px 0;
+    padding: 20px 25px;
+    border-radius: 5px;
+    color: var(--base-color);
+    font-size: var(--font-size-lg);
+    border: 1px solid var(--primary-light-color);
+    background-color: var(--primary-bright-color);
+}
+.sp--document-subject {
+    font-weight: bold;
+    padding: 0 0 7px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid var(--light-color)
+}
+.sp--document-table {
+    width: 100%;
+}
+.sp--document-table > tr > td,
+.sp--document-table > thead > tr > td,
+.sp--document-table > tbody > tr > td,
+.sp--document-table > tfoot > tr > td {
+    padding: 12px 25px;
+    border: 1px solid var(--light-color);
+}
+.sp--document-table thead td {
+    background-color: var(--lightmax-color);
+}
+
+.sp--document-contents button:not([icon]):not(.swiper-pagination-bullet) {
+    padding: .5em 1em !important;
+    border: 1px solid #333 !important;
+}

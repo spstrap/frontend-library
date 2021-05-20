@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Ajax</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Preview : 클릭시 외부 컨텐츠를 삽입</div>
+                        <textarea class="sp--document-preview">
+                            <button class="sp--ajax-btn"
+                                data-url="../sample/image.html"
+                                data-target="#sp--ajax-target-1"
+                                data-effect="to_fadein"
+                            >이 버튼을 클릭하면 A 영역에 컨텐츠가 들어감.</button>
+                            <div id="sp--ajax-target-1" style="background:#eaeaea;padding:30px;">
+                                A 영역
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Preview : 화면이 로드되면 외부 컨텐츠를 삽입 (2초 뒤 단발성)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--ajax"
+                                data-url="../sample/text.html"
+                                data-delay="2000"
+                                data-effect="to_slidedown">
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Preview : 모달창과 ajax를 연결한 형태</div>
+                        <textarea class="sp--document-preview">
+                            <button class="sp--ajax-btn"
+                                data-url="../sample/modal.html"
+                                data-target="body"
+                                data-repeat="true"
+                                data-effect="to_fadein"
+                            >외부 모달창 불러오기</button>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Preview : 화면이 로드되면 외부 컨텐츠를 삽입하고 쿠키와 연결</div>
+                        <textarea class="sp--document-preview">
+                            <style>
+                                #sp--ajax-target-2.sp--cookie-on {
+                                    display: none;
+                                }
+                            </style>
+                            <!--
+                                현재 우측 상단에 보이는 슬라이더가 연결되어 있다.<br />
+                                쿠키 굽기를 누르면 쿠키 제거하기 버튼이 활성화 된다.
+                            -->
+                            <div class="sp--ajax"
+                                data-url="../sample/slider.html"
+                                data-target="#sp--ajax-target-2"
+                                data-delay="1000"
+                                data-effect="to_full_slidedown_slow"
+                                data-cookie="sp--ajax-cookie-1">
+                                <!-- 리로드 버튼 -->
+                                <a class="sp--ajax-btn" 
+                                    data-url="../sample/slider.html"
+                                    data-target="#sp--ajax-target-2"
+                                    data-effect="to_full_slidedown_slow"
+                                ></a>
+                            </div>
+                            <div id="sp--ajax-target-2" class="sp--cookie sp--dragable" data-cookie="sp--ajax-cookie-1" style="position:fixed;width:300px;top:20px;right:20px;z-index:999"></div>
+                            <button class="sp--cookie-btn" 
+                                data-cookie="sp--ajax-cookie-1" 
+                                data-scope="del"
+                                style="display:none;background-color:#eaeaea;padding:10px 20px;"
+                            >쿠키 제거하기 - 팝업창이 다시 로드된다.</button>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--ajax
+                                </td>
+                                <td>
+                                    ajax 컨테이터
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--ajax-btn
+                                </td>
+                                <td>
+                                    ajax 호출 버튼
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    data-url
+                                </td>
+                                <td>
+                                    호출될 파일 주소
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-target
+                                </td>
+                                <td>
+                                    컨텐츠를 밀어넣을 타켓.<br />
+                                    타켓이 존재하지 않는다면 버튼의 경우 body,<br />
+                                    load contents 타입의 경우 자신이 타겟이 된다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-type
+                                </td>
+                                <td>
+                                    ajax가 수행될때, 로드 타입을 결정한다.<br />
+                                    기본값은 빈값이며, 'cover' 의 경우 전체 화면에 로더를 추가한다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-method
+                                </td>
+                                <td>
+                                    메소드 지정, 기본값은 GET 이다. POST 를 지원한다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-scope
+                                </td>
+                                <td>
+                                    ajax가 데이터를 삽입한다면, 어떤 형태로 삽입할지 결정한다.<br />
+                                    기본값은 append 이며, 'replace', 'prepend' 를 지원한다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-cookie
+                                </td>
+                                <td>
+                                    해당 ajax 컨테이너가 연결될 쿠키를 지정한다.<br />
+                                    쿠키에 의해서 무언가를 결정해야 하는 경우 사용한다.<br />
+                                    예를 들어 팝업창이라던가, 이벤트성 메세지라던가 등등.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-delay
+                                </td>
+                                <td>
+                                    default : 0 ( 단위 ms )<br />
+                                    화면이 로드되고난 후 로드되는 컨텐츠라면,<br />
+                                    몇초후에 수행할지 결정한다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-effect
+                                </td>
+                                <td>
+                                    컨텐츠 노출 이펙트
+                                    <p class="sp--document-message">
+                                        애니메이션 코드와 연결해서 사용이 가능하다. <br />
+                                        <a href="/_sp/doc/demo/animation.html" class="document">css - animation document</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-repeat
+                                </td>
+                                <td>
+                                    defualt : null<br />
+                                    'true' 값을 주면 여러번 수행할 수 있다.<br />
+                                    모달창을 불러온다면, 닫고 다시 볼 수 있어야 하므로 이 기능이 필요하다.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            기본적으로 한개의 컨테이너 속에 여러 호출에 대한 개발은 고려되지 않음.<br />
+                            다만 반복적으로 수행할 수 있는 data-repeat 옵션으로 우회할 수 있다.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

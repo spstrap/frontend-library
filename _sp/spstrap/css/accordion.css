@@ -1,0 +1,44 @@
+/*
+** Accordion
+**/
+.sp--accordion {
+
+}
+.sp--accordion-contents {
+    display: none;
+}
+.sp--accordion-active .sp--accordion-contents {
+    display: block;
+}
+
+.sp--accordion-array [reaction] {
+    display: inline-block;
+    -webkit-transition: transform var(--animate-duration) var(--cubic-ease-in);
+            transition: transform var(--animate-duration) var(--cubic-ease-in);
+}
+.sp--accordion-array.sp--accordion-active [reaction] {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+}
+
+.sp--accordion[gap^="xs"] .sp--accordion-array + .sp--accordion-array {
+    margin-top: var(--padding-xs);
+}
+.sp--accordion[gap^="sm"] .sp--accordion-array + .sp--accordion-array {
+    margin-top: var(--padding-sm);
+}
+.sp--accordion[gap^="md"] .sp--accordion-array + .sp--accordion-array {
+    margin-top: var(--padding-md);
+}
+.sp--accordion[gap^="lg"] .sp--accordion-array + .sp--accordion-array {
+    margin-top: var(--padding-lg);
+}
+.sp--accordion[gap^="xl"] .sp--accordion-array + .sp--accordion-array {
+    margin-top: var(--padding-xl);
+}
+.sp--accordion[gap^="2xl"] .sp--accordion-array + .sp--accordion-array {
+    margin-top: var(--padding-2xl);
+}
+.sp--accordion[gap^="3xl"] .sp--accordion-array + .sp--accordion-array {
+    margin-top: var(--padding-3xl);
+}

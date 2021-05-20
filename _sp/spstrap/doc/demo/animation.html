@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Animation</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="js">
+                        <div class="sp--document-subject">Options</div>
+                        <textarea class="sp--document-preview">
+                           <!--//
+                           /*
+                            * animation class
+                            * 코드가 좌우로 나뉘어져 있는데, 좌측은 js에서 var 변수를 통해서 사용된다.
+                            * 우측의 코드는 css class에 넣어서 활용하면 된다.
+                           **/
+                           animation: {
+                               [to_fadein]: '[.sp--animate-to-fadein]',
+                               to_fadein_slow: '.sp--animate-to-fadein-slow',
+                               to_fadein_fast: '.sp--animate-to-fadein-fast',
+                               to_slideup: '.sp--animate-to-slideup',
+                               to_slideup_slow: '.sp--animate-to-slideup-slow',
+                               to_slideup_fast: '.sp--animate-to-slideup-fast',
+                               to_slidedown: '.sp--animate-to-slidedown',
+                               to_slidedown_slow: '.sp--animate-to-slidedown-slow',
+                               to_slidedown_fast: '.sp--animate-to-slidedown-fast',
+                               to_full_slideup: '.sp--animate-to-full-slideup',
+                               to_full_slideup_slow: '.sp--animate-to-full-slideup-slow',
+                               to_full_slideup_fast: '.sp--animate-to-full-slideup-fast',
+                               to_full_slidedown: '.sp--animate-to-full-slidedown',
+                               to_full_slidedown_slow: '.sp--animate-to-full-slidedown-slow',
+                               to_full_slidedown_fast: '.sp--animate-to-full-slidedown-fast',
+                           },
+                           //-->
+                        </textarea>
+                    </div>
+                    
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fadein on - load page</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                이 섹션은 마우스 이벤트로는 부적합하다.
+                                ajax로 화면에 불러올 때 사용하는것이 좋겠다.
+                                클래스 기본 골격은 위에 있는 옵션을 참조하자.
+                            -->
+                            <div class="sp--animate-to-[fadein]-[slow]">
+                                화면이 로드되고 난 후 천천히 나타남,
+                                혹은 display:none; 상태에서 나타날때도 적용됨.
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fadein slideup - load page</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--animate-to-full-[slideup]-slow">
+                                화면이 로드되고 난 후 천천히 위로 나타남,
+                                혹은 display:none; 상태에서 나타날때도 적용됨.
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fadein slidedown - load page</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--animate-to-full-[slidedown]-slow">
+                                화면이 로드되고 난 후 천천히 아래로 나타남,
+                                혹은 display:none; 상태에서 나타날때도 적용됨.
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fadein full slidedown - load page</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--animate-to-[full-slidedown]-slow">
+                                객체 크기만큼 위에서 떨어지는 효과
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fadein full slidedown - load page</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                화면 우측 하단에서 메신저처럼 올라오게 만들면 좋겠다.
+                                너무 큰 배너에는 사용하지 말자. fps 를 60으로 유지하자.
+                            -->
+                            <div class="sp--animate-to-[full-slideup]-slow">
+                                객체 크기만큼 위로 올라가는 효과
+                            </div>
+                        </textarea>
+                    </div>
+                    
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Bounce element</div>
+                        <textarea class="sp--document-preview">
+                            <button class="[sp--animate-to-bounce]">통통이</button>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Click to scale</div>
+                        <textarea class="sp--document-preview">
+                            <button class="[sp--animate-clicked]">클릭시 작아져요</button>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Zoom in & out</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                zoom - in
+                                자신의 크기를 스스로 변경하는 경우
+                            -->
+                            <img src="https://placeholder.pics/svg/300x300/f5f5f5/333333/1" class="[sp--animate-zoom]" scope="in" theme="sm-fast">
+                            <img src="https://placeholder.pics/svg/300x300/f5f5f5/333333/2" class="sp--animate-zoom" scope="[in]" theme="md">
+                            <img src="https://placeholder.pics/svg/300x300/f5f5f5/333333/3" class="sp--animate-zoom" scope="in" theme="[lg-slow]">
+
+                            <!--
+                                zoom - in
+                                부모에 마우스를 올렸을때 결정되는 경우
+                            -->
+                            <div style="padding:30px;background-color:#eaeaea;" class="[sp--animate]">
+                                <img src="https://placeholder.pics/svg/300x300/333333/ffffff/1" class="sp--animate-zoom" scope="in" theme="sm-fast">
+                                <img src="https://placeholder.pics/svg/300x300/333333/ffffff/2" class="sp--animate-zoom" scope="in" theme="md">
+                                <img src="https://placeholder.pics/svg/300x300/333333/ffffff/3" class="sp--animate-zoom" scope="in" theme="lg-slow">
+                            </div>
+
+                            <!--
+                                zoom - out
+                                자신의 크기를 스스로 변경하는 경우
+                            -->
+                            <img src="https://placeholder.pics/svg/300x300/f5f5f5/333333/1" class="[sp--animate-zoom]" scope="out" theme="sm-fast">
+                            <img src="https://placeholder.pics/svg/300x300/f5f5f5/333333/2" class="sp--animate-zoom" scope="[out]" theme="md">
+                            <img src="https://placeholder.pics/svg/300x300/f5f5f5/333333/3" class="sp--animate-zoom" scope="out" theme="[lg-slow]">
+
+                            <!--
+                                zoom - out
+                                부모에 마우스를 올렸을때 결정되는 경우
+                            -->
+                            <div style="padding:30px;background-color:#eaeaea;" class="[sp--animate]">
+                                <img src="https://placeholder.pics/svg/300x300/333333/ffffff/1" class="sp--animate-zoom" scope="out" theme="sm-fast">
+                                <img src="https://placeholder.pics/svg/300x300/333333/ffffff/2" class="sp--animate-zoom" scope="out" theme="md">
+                                <img src="https://placeholder.pics/svg/300x300/333333/ffffff/3" class="sp--animate-zoom" scope="out" theme="lg-slow">
+                            </div>
+                        </textarea>
+
+                        <br />
+                        <div class="sp--document-subject">Class & Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--animate-zoom
+                                </td>
+                                <td>
+                                    줌 이벤트의 영향을 받는 직접적인 클래스
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    scope ( attribute )
+                                </td>
+                                <td>
+                                    "in" or "out"
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    theme ( attribute )
+                                </td>
+                                <td>
+                                    ^sm, md, lg ( 크기를 결정하는 시작점 )<br />
+                                    -slow, -fast ( 속도를 조절하는 조합 명령어 )
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Flip Element</div>
+                        <textarea class="sp--document-preview">
+                            <div style="width:500px;">
+
+                                <!--
+                                    가로형 플립
+                                -->
+                                <div class="[sp--flip]">
+                                    <ul>
+                                        <li screen="[front]">
+                                            <img src="https://placeholder.pics/svg/500x300/333333/ffffff/front">
+                                        </li>
+                                        <li screen="[back]">
+                                            <img src="https://placeholder.pics/svg/500x300/ffffff/333333/back">
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--
+                                    세로형 플립
+                                -->
+                                <div class="sp--flip" direction="[vertical]">
+                                    <ul>
+                                        <li screen="front">
+                                            <img src="https://placeholder.pics/svg/500x300/333333/ffffff/front">
+                                        </li>
+                                        <li screen="back">
+                                            <img src="https://placeholder.pics/svg/500x300/ffffff/333333/back">
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Hamberger Bar - Scale</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                기본적으로 햄버거 버튼은 토글 모듈과 혼용해서 사용한다.
+                                토글의 클래스 제어가 햄버거메뉴에 사용되기 아주 좋기 때문.
+                            -->
+                            <div><!-- 토글에 영향을 받을 컨테이너 -->
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="sm">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" data-class=".sp--hamburger-on">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="lg">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Hamberger Bar - Inner Scale</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                기본적으로 햄버거 버튼은 토글 모듈과 혼용해서 사용한다.
+                                토글의 클래스 제어가 햄버거메뉴에 사용되기 아주 좋기 때문.
+                            -->
+                            <div><!-- 토글에 영향을 받을 컨테이너 -->
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="lg" line="thin">
+                                    <span class="sp--hamburger-box" scale="xs">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="lg">
+                                    <span class="sp--hamburger-box" scale="xs">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="xs">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="lg" line="thin">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="lg">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="lg" line="thin">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="lg">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Hamberger Bar - Arrow Left</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                기본적으로 햄버거 버튼은 토글 모듈과 혼용해서 사용한다.
+                                토글의 클래스 제어가 햄버거메뉴에 사용되기 아주 좋기 때문.
+                            -->
+                            <div><!-- 토글에 영향을 받을 컨테이너 -->
+                                <button class="sp--hamburger sp--hamburger--arrow sp--toggle-btn" scale="lg" line="thin">
+                                    <span class="sp--hamburger-box" scale="xs">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--arrow sp--toggle-btn" scale="lg">
+                                    <span class="sp--hamburger-box" scale="xs">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--arrow sp--toggle-btn" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="xs">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--arrow sp--toggle-btn" scale="lg" line="thin">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--arrow sp--toggle-btn" scale="lg">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--arrow sp--toggle-btn" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--arrow sp--toggle-btn" scale="lg" line="thin">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--arrow sp--toggle-btn" scale="lg">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--arrow sp--toggle-btn" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </textarea>
+                    </div>
+                    
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Hamberger Bar - Minus</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                기본적으로 햄버거 버튼은 토글 모듈과 혼용해서 사용한다.
+                                토글의 클래스 제어가 햄버거메뉴에 사용되기 아주 좋기 때문.
+                            -->
+                            <div><!-- 토글에 영향을 받을 컨테이너 -->
+                                <button class="sp--hamburger sp--hamburger--minus sp--toggle-btn" scale="lg" line="thin">
+                                    <span class="sp--hamburger-box" scale="xs">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--minus sp--toggle-btn" scale="lg">
+                                    <span class="sp--hamburger-box" scale="xs">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--minus sp--toggle-btn" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="xs">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--minus sp--toggle-btn" scale="lg" line="thin">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--minus sp--toggle-btn" scale="lg">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--minus sp--toggle-btn" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--minus sp--toggle-btn" scale="lg" line="thin">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--minus sp--toggle-btn" scale="lg">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--minus sp--toggle-btn" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Hamberger Bar - Color</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                기본적으로 햄버거 버튼은 토글 모듈과 혼용해서 사용한다.
+                                토글의 클래스 제어가 햄버거메뉴에 사용되기 아주 좋기 때문.
+                            -->
+                            <div><!-- 토글에 영향을 받을 컨테이너 -->
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" theme="light" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" theme="gray" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" theme="dark" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" theme="dark-reverse" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" theme="primary" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                                <button class="sp--hamburger sp--hamburger--spin sp--toggle-btn" theme="primary-reverse" scale="lg" line="bold">
+                                    <span class="sp--hamburger-box" scale="sm">
+                                        <span class="sp--hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </textarea>
+                    </div>
+                    
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            애니메이션 코드는 최초 수행, 혹은 숨김된 요소가 block 될 때 실행된다.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

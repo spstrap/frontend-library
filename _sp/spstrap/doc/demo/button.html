@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+    
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Buttons</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Base Button</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn">button</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Button scale</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" scale="md">md</a>
+                            <a href="#!" class="sp--btn" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Button Base color</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="light" scale="3xl">light color ( var silver )</a>
+                            <a href="#!" class="sp--btn" theme="gray" scale="3xl">gray color</a>
+                            <a href="#!" class="sp--btn" theme="dark" scale="3xl">dark color</a>
+                            <a href="#!" class="sp--btn" theme="primary" scale="3xl">primary color</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Theme white box</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="box-white" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="box-white" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="box-white" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="box-white" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="box-white" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="box-white" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="box-white" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="box-white" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Theme light box</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="box-light" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="box-light" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="box-light" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="box-light" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="box-light" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="box-light" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="box-light" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="box-light" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Theme gray box</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="box-gray" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="box-gray" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="box-gray" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="box-gray" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="box-gray" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="box-gray" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="box-gray" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="box-gray" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Theme dark box</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="box-dark" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="box-dark" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="box-dark" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="box-dark" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="box-dark" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="box-dark" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="box-dark" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Theme primary box</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                심볼 버튼의 색상은
+                                전역 컬러인 var(--primary-color) 에 대응한다.
+                            -->
+                            <a href="#!" class="sp--btn" theme="box-primary" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="box-primary" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="box-primary" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="box-primary" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="box-primary" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="box-primary" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="box-primary" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="box-primary" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Theme box - round</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                테마 영역에 -round 문자열로 라운드를 추가한다.
+                                라운드의 크기는 scale에 대응한다.
+                            -->
+                            <a href="#!" class="sp--btn" theme="[box-white]-[round]" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="box-light-round" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="box-gray-round" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="box-dark-round" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="box-primary-round" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="box-primary-round" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="box-primary-round" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="box-primary-round" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Theme box - round</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                테마 영역에 -roundmax 문자열로 라운드를 추가한다.
+                                라운드의 크기는 scale에 대응한다.
+                            -->
+                            <a href="#!" class="sp--btn" theme="[box-white]-[roundmax]" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="box-light-roundmax" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="box-gray-roundmax" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="box-dark-roundmax" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="box-primary-roundmax" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="box-primary-roundmax" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="box-primary-roundmax" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="box-primary-roundmax" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Line style - light</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="line-light" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="line-light" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="line-light" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="line-light" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="line-light" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="line-light" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="line-light" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="line-light" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Line style - gray</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="line-gray" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="line-gray" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="line-gray" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="line-gray" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="line-gray" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="line-gray" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="line-gray" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="line-gray" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Line style - dark</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="line-dark" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="line-dark" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="line-dark" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="line-dark" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="line-dark" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="line-dark" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="line-dark" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Line style - primary</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="line-primary" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="line-primary" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="line-primary" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="line-primary" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="line-primary" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="line-primary" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="line-primary" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="line-primary" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Border style - light</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="border-light" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="border-light" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="border-light" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="border-light" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="border-light" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="border-light" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="border-light" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="border-light" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Border style - gray</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="border-gray" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="border-gray" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="border-gray" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="border-gray" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="border-gray" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="border-gray" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="border-gray" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="border-gray" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Border style - dark</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="border-dark" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="border-dark" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="border-dark" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="border-dark" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="border-dark" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="border-dark" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="border-dark" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="border-dark" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Border style - primary</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="border-primary" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="border-primary" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="border-primary" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="border-primary" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="border-primary" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="border-primary" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="border-primary" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="border-primary" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Underline style - light</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="under-light" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="under-light" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="under-light" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="under-light" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="under-light" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="under-light" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="under-light" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="under-light" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Underline style - gray</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="under-gray" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="under-gray" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="under-gray" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="under-gray" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="under-gray" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="under-gray" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="under-gray" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="under-gray" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Underline style - dark</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="under-dark" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="under-dark" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="under-dark" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="under-dark" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="under-dark" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="under-dark" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="under-dark" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="under-dark" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Underline style - primary</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="under-primary" scale="ss">ss</a>
+                            <a href="#!" class="sp--btn" theme="under-primary" scale="xs">xs</a>
+                            <a href="#!" class="sp--btn" theme="under-primary" scale="sm">sm</a>
+                            <a href="#!" class="sp--btn" theme="under-primary" scale="md">md</a>
+                            <a href="#!" class="sp--btn" theme="under-primary" scale="lg">lg</a>
+                            <a href="#!" class="sp--btn" theme="under-primary" scale="xl">xl</a>
+                            <a href="#!" class="sp--btn" theme="under-primary" scale="2xl">2xl</a>
+                            <a href="#!" class="sp--btn" theme="under-primary" scale="3xl">3xl</a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fill Transition style - light</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                기본적으로 "fill-light-{[?]}" 값이 없는 경우는
+                                fill-light-{[vertical]} 과 같은 동작을 하게된다.
+                            -->
+                            <a href="#!" class="sp--btn" theme="fill-light" scale="ss"><span>ss</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-light" scale="xs"><span>xs</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-light-vertical" scale="sm"><span>sm</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-light-horizontal" scale="md"><span>md</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-light-top" scale="lg"><span>lg</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-light-right" scale="xl"><span>xl</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-light-bottom" scale="2xl"><span>2xl</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-light-left" scale="3xl"><span>3xl</span></a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fill Transition style - gray</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="fill-gray" scale="ss"><span>ss</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-gray" scale="xs"><span>xs</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-gray-vertical" scale="sm"><span>sm</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-gray-horizontal" scale="md"><span>md</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-gray-top" scale="lg"><span>lg</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-gray-right" scale="xl"><span>xl</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-gray-bottom" scale="2xl"><span>2xl</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-gray-left" scale="3xl"><span>3xl</span></a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fill Transition style - dark</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="fill-dark" scale="ss"><span>ss</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-dark" scale="xs"><span>xs</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-dark-vertical" scale="sm"><span>sm</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-dark-horizontal" scale="md"><span>md</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-dark-top" scale="lg"><span>lg</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-dark-right" scale="xl"><span>xl</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-dark-bottom" scale="2xl"><span>2xl</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-dark-left" scale="3xl"><span>3xl</span></a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fill Transition style - primary</div>
+                        <textarea class="sp--document-preview">
+                            <a href="#!" class="sp--btn" theme="fill-primary" scale="ss"><span>ss</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-primary" scale="xs"><span>xs</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-primary-vertical" scale="sm"><span>sm</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-primary-horizontal" scale="md"><span>md</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-primary-top" scale="lg"><span>lg</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-primary-right" scale="xl"><span>xl</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-primary-bottom" scale="2xl"><span>2xl</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-primary-left" scale="3xl"><span>3xl</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-primary-left-nude" scale="3xl"><span>3xl - nude</span></a>
+                            <a href="#!" class="sp--btn" theme="fill-primary-left-off" scale="3xl"><span>3xl - off</span></a>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group</div>
+                        <textarea class="sp--document-preview">
+                            <div [class="sp--btn-group"]>
+                                <a href="#!" class="sp--btn" theme="box-light" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-light" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group - fill (full - dynamic width)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" [fill="full"]>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-primary" scale="lg">buttonasd fasasd fasdf asdf asdf asdf asdf asdf asdf asdf asd fd fasd fasd fasd f</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group - fill (full - same width)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" [fill="fullsame"]>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-primary" scale="lg">busad fasdf asdf asdf asd fa fsd fasdf asdf asdf tton asdf asdf asdf asdf asd f</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group - fill (grid)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" [fill="grid"]>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-primary" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group - fill (justify)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" [fill="justify"]>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-primary" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group - direction (left)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" [direction="left"]>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-primary" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group - direction (center)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" [direction="center"]>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-primary" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group - direction (right)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" [direction="right"]>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-primary" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group - vertical align (top)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" direction="center" [vertical="top"] style="padding:30px;height:200px;background:#eaeaea;">
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-primary" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group - vertical align (middle)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" direction="center" [vertical="middle"] style="padding:30px;height:200px;background:#eaeaea;">
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-primary" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Group - vertical align (bottom)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" direction="center" [vertical="bottom"] style="padding:30px;height:200px;background:#eaeaea;">
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-primary" scale="lg">button</a>
+                                <a href="#!" class="sp--btn" theme="box-dark" scale="lg">button</a>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Gap (between space)</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                fill="{[?]}" 상태에 따라 버튼의 모습이 달라진다.
+                                사용하려는 장소에 어울리는 버튼을 넣자.
+                            -->
+                            <div class="sp--btn-group" [fill="fixed"] style="padding:30px;background:#eaeaea;">
+                                <div class="sp--btn-gap" gap="lg">
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button button button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button button button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button button button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button button button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button button button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button button button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button button button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button button button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button button button</a>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="sp--btn-group" style="padding:30px;background:#eaeaea;">
+                                <div class="sp--btn-gap" gap="lg">
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="sp--btn-group" [direction="center"] style="padding:30px;background:#eaeaea;">
+                                <div class="sp--btn-gap" gap="lg">
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="sp--btn-group" [direction="right"] style="padding:30px;background:#eaeaea;">
+                                <div class="sp--btn-gap" gap="lg">
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="sp--btn-group" [fill="full"] style="padding:30px;background:#eaeaea;">
+                                <div class="sp--btn-gap" gap="lg">
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">full option preview - other size</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="sp--btn-group" [fill="fullsame"] style="padding:30px;background:#eaeaea;">
+                                <div class="sp--btn-gap" gap="lg">
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">full same option preview</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="sp--btn-group" [fill="grid"] style="padding:30px;background:#eaeaea;">
+                                <div class="sp--btn-gap" gap="xl">
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="sp--btn-group" [fill="justify"] style="padding:30px;background:#eaeaea;">
+                                <div class="sp--btn-gap" gap="xl">
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                    <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Gap - Same width (with responsive)</div>
+                        <textarea class="sp--document-preview">
+                            <style>
+                                /*
+                                    반응형 코드를 위한 기본 크기 지정
+                                    이 크기는 gap 사이즈를 고려해야 한다.
+                                    이 예제는 컨테이너가 600px이고, gap이 10px 이므로
+                                    2개의 엘리먼트를 가지기 위해 295px을 min 사이즈로 설정한 예시이다.
+                                    화면의 크기를 줄여서 버튼들이 어떻게 반응하는지 살펴보자.
+                                */
+                                [.sample-conainer-col2] {
+                                    width: [600px];
+                                    margin: 0 auto;
+                                }
+                                .sample-conainer-col2 .sp--btn {
+                                    flex-basis: [290px];
+                                }
+                            </style>
+                            <div class="[sample-conainer-col2]">
+                                <div class="sp--btn-group" [fill="full"]  style="background:#eaeaea;">
+                                    <div class="sp--btn-gap" gap="xl">
+                                        <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                        <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                        <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                        <a href="#!" class="sp--btn" theme="box-dark" scale="3xl">button</a>
+                                        <a href="#!" class="sp--btn" theme="line-dark" scale="3xl">button</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Block type</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--btn-group" [fill="block"] vertical="bottom">
+                                <div class="sp--btn-gap" gap="md">
+                                    <a href="#!" class="sp--btn" theme="box-white" scale="ss">ss</a>
+                                    <a href="#!" class="sp--btn" theme="box-light" scale="xs">xs</a>
+                                    <a href="#!" class="sp--btn" theme="box-gray" scale="sm">sm</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark" scale="md">md</a>
+                                    <a href="#!" class="sp--btn" theme="box-primary" scale="lg">lg</a>
+                                    <a href="#!" class="sp--btn" theme="box-primary" scale="xl">xl</a>
+                                    <a href="#!" class="sp--btn" theme="box-primary" scale="2xl">2xl</a>
+                                    <a href="#!" class="sp--btn" theme="box-primary" scale="3xl">3xl</a>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Block align style</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                특이할건 없고 both의 경우만 보자.
+                                span의 마지막 자식 요소가 우측으로 정렬된다.
+                            -->
+                            <div class="sp--btn-group" [fill="block"] vertical="bottom">
+                                <div class="sp--btn-gap" gap="md">
+                                    <a href="#!" class="sp--btn" theme="box-light-[left]" scale="lg">left</a>
+                                    <a href="#!" class="sp--btn" theme="box-gray-center" scale="xl">center</a>
+                                    <a href="#!" class="sp--btn" theme="box-dark-right" scale="2xl">right</a>
+                                    <a href="#!" class="sp--btn" theme="box-primary-[both]" scale="3xl">
+                                        <span>😀 both</span>
+                                        <span>right description</span>
+                                    </a>
+                                    <a href="#!" class="sp--btn" theme="box-primary-[thumbnail]" scale="3xl">
+                                        <span>😀</span>
+                                        <span>right description</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Hover effect</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                이 기능은 매우 특별하다.
+                                단순히 이펙트가 들어간 것 같지만, 여러 장소에서 활용 가능성이 있다.
+                                예를 들어 드롭다운 메뉴에 혼합해서 사용이 가능하다.
+                            -->
+                            <div class="sp--btn" [effect="light"] style="padding:5px 7px;">
+                                호버 색상 이펙트 ( 라이트 )
+                            </div>
+                            <div class="sp--btn" effect="primary" style="padding:5px 7px;">
+                                호버 색상 이펙트 ( 메인색상 )
+                            </div>
+                            <div class="sp--btn" effect="dark" style="padding:5px 7px;">
+                                호버 색상 이펙트 ( 다크 )
+                            </div>
+                            <div class="sp--btn" effect="underline" style="padding:5px 7px;">
+                                언더라인 이펙트
+                            </div>
+                            <div class="sp--btn" effect="underline-ltr" style="padding:5px 7px;">
+                                언더라인 이펙트 ( left to right )
+                            </div>
+                            <div class="sp--btn" effect="underline-rtl" style="padding:5px 7px;">
+                                언더라인 이펙트 ( right to left )
+                            </div>
+                            <div class="sp--btn" effect="underline-tick" style="padding:5px 7px;">
+                                언더라인 이펙트 ( tick )
+                            </div>
+                            <div class="sp--btn" effect="underline-bold" style="padding:5px 7px;">
+                                언더라인 이펙트 ( bold )
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Hover effect (with dropdown)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="[sp--dropdown]" effect="slideup"><!-- 이 이펙트는 dropdown 이펙트다. 혼동하지 말자. -->
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="sp--btn" [effect="dark"] scale="lg">MENU 2</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!" class="sp--btn" [effect="underline-ltr"] scale="lg">MENU 2 - 1</a></li>
+                                                <li><a href="#!" class="sp--btn" [effect="underline-ltr"] scale="lg">MENU 2 - 2 CENTER DESC</a></li>
+                                                <li><a href="#!" class="sp--btn" [effect="underline-ltr"] scale="lg">MENU 2 - 3 LONG</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--btn-group
+                                </td>
+                                <td>
+                                    버튼 그룹박스
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--btn
+                                </td>
+                                <td>
+                                    버튼
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    scale
+                                </td>
+                                <td>
+                                    xs, sm, md, lg, xl, 2xl, 3xl<br />
+                                    버튼의 크기를 결정하는 attribute
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    theme
+                                </td>
+                                <td>
+                                    버튼의 디자인을 결정하는 테마 attribute
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    fill
+                                </td>
+                                <td>
+                                    full, grid, justify <br />
+                                    버튼 그룹에 지정해서 버튼이 그룹내에서 나열되는 모습을 지정
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    direction
+                                </td>
+                                <td>
+                                    left, center, right<br />
+                                    버튼의 가로 정렬 ( 좌, 중, 우)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    vertical
+                                </td>
+                                <td>
+                                    top, middle, bottom<br />
+                                    버튼의 세로 정렬 ( 상, 중, 하 )
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    gap
+                                </td>
+                                <td>
+                                    xs, sm, md, lg, xl, 2xl, 3xl<br />
+                                    버튼사이의 여백을 표현함. ( xs = 1px, 3xl = 30px )
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    float
+                                </td>
+                                <td>
+                                    right<br />
+                                    버튼 내부의 정렬 ( with span )
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    effect
+                                </td>
+                                <td>
+                                    버튼의 역할이 아닌 경우에도 함께 사용할 이펙트 영역<br />
+                                    스케일이나 테마 없이 class="sp--btn" effect="underline" 이런 형태로 사용한다.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            버튼과 박스의 컨테이너를 같이 가려 했으나,<br />
+                            경험상 박스 레이아웃은 변수가 많으므로, 별도로 구성하기로 결정
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

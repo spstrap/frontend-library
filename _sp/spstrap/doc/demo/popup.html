@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Popup</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Base Popup Button</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                클래스만 정의되면
+                                width : screen.width * .9
+                                height : screen.height * .8
+                                의 기본 크기를 가지게 된다.
+                                
+                                data-width="30%" - 단순 숫자로 입력 가능
+                                data-height="50%" - 단순 숫자로 입력 가능
+                            -->
+                            <button href="https://www.naver.com" [class="sp--popup-btn"]>클래스만 정의된 팝업창</button>
+                            <button href="https://www.google.com" class="sp--popup-btn" [data-width="30%"] [data-height="50%"]>크기가 정의된 팝업창</button> 
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="js">
+                        <div class="sp--document-subject">js popup</div>
+                        <textarea class="sp--document-preview">
+                            <!--//
+
+                                팝업창을 스크립트 상으로 띄우는 경우는
+                                아래와 같은 구조로 이용하면 된다.
+
+                                기본적으로 module에 있는 SP_EVENT 를 불러와야 한다.
+
+                            /*
+                             * import class
+                             */
+                            import { 
+                                SP_EVENT
+                            } from '..path/modules.js';
+                            
+                            /*
+                             * extends class
+                             */
+                            _.event = SP_EVENT;
+
+                            /*
+                             * init
+                             */
+                            _.event.openPopup( DomElement );
+                            
+                            or
+                            
+                            _.event.openPopup({
+                                href: 'URL', 
+                                width: '300px', 
+                                height: '300px', 
+                                target: 'name'
+                            });
+                            //-->
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--popup-btn
+                                </td>
+                                <td>
+                                    팝업창 클릭 이벤트 버튼
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    data-width
+                                </td>
+                                <td>
+                                    default : screen.width * .9<br />
+                                    px, % 문자열로 크기를 지정할 수 있다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-height
+                                </td>
+                                <td>
+                                    default : screen.height * .8<br />
+                                    px, % 문자열로 크기를 지정할 수 있다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-target
+                                </td>
+                                <td>
+                                    default : '' ( string )<br />
+                                    기본적으로 팝업창은 빈값이며, 중복해서 뜨게 된다.<br />
+                                    한개만 띄울 경우, 이 attribute에 이름을 전달하자.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

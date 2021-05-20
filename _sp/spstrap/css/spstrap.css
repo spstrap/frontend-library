@@ -1,0 +1,276 @@
+/*
+ * import css
+ */
+ @import "./reset.css";
+ @import "./fontface.css";
+ @import "./icons.css";
+ @import "./buttons.css";
+ @import "./animate.css";
+ @import "./box.css";
+ @import "./title.css";
+ @import "./decoration.css";
+ @import "./accordion.css";
+ @import "./table.css";
+ @import "./tab.css";
+ @import "./tooltip.css";
+ @import "./toggle.css";
+ @import "./form.css";
+ 
+/*
+ * library import css
+ */
+@import "./dropdown.css";
+@import "./modal.css";
+@import "./video.css";
+
+/*
+ * max index : 99999 : modal
+ */
+
+/*
+ * root property
+ */
+:root {
+
+    --width: 100%;                          /* 웹사이트 외부 사이즈 */
+    --width-box: 1382px;                      /* 웹사이트 내부 사이즈 */
+    --width-case: 900px;                     /* 센터 정렬의 화면 사이즈 ( 로그인 ) */
+    --width-card: 600px;                     /* 작은 박스 ( 무이자 할부 등 ) */
+    --width-cube: 400px;                     /* 아주 작은 박스 ( 로그인 좌우 등 ) */
+    --width-tablet: 1024px;
+    --width-mobile: 600px;
+
+    --black-color: #000;                    /* 베이스 */
+    --white-color: #fff;                    /* 화이트 베이스 */
+
+    --base-color: #555;                     /* 폰트컬러 */
+    --gray-color: #999;                     /* 옅은 폰트컬러 */
+    --active-color: #000;                   /* hover, active 폰트컬러 */
+    --danger-color: #bf2132;
+
+    --primary-color: #2559c9;               /* 메인컬러 */
+    --primary-up-color: #2c62d4;            /* 살짝 밝은 메인컬러 */
+    --primary-down-color: #1a4bb6;          /* 살짝 어두운 메인컬러 */
+    --primary-light-color: #dfe9ff;         /* 옅은 메인컬러 */
+    --primary-bright-color: #f4f7ff;        /* 아주 옅은 메인컬러 */
+
+    --light-color: #f0f0f0;                 /* 밝은컬러 */
+    --lightlow-color: #e2e2e2;              /* 밝은중 어두운 컬러 */
+    --lightmax-color: #f9f9f9;              /* 아주 밝은컬러 */
+    --silver-color: #cccccc;                 /* 실버컬러 */
+    --dark-color: #343a40;                  /* 어두운 컬러 */
+    --darklow-color: #212325;               /* 어두운 중간 컬러 */
+    --darkmax-color: #000000;               /* 아주 어두운 컬러 */
+
+    --opacity-white: rgba(255, 255, 255, 0.3);
+    --opacity-white-few: rgba(255, 255, 255, 0.05);
+    --opacity-white-light: rgba(255, 255, 255, 0.7);
+    --opacity-white-max: rgba(255, 255, 255, 0.97);
+    --opacity-black: rgba(0, 0, 0, 0.3);
+    --opacity-black-few: rgba(0, 0, 0, 0.05);
+    --opacity-black-light: rgba(0, 0, 0, 0.7);
+    --opacity-black-max: rgba(0, 0, 0, 0.97);
+
+    --shadow-dark: 0 0 3px 3px rgba(0, 0, 0, 0.02);
+    --shadow-light: 0 0 3px 3px rgba(255, 255, 255, 0.02);
+    --shadow-top-dark: 0 3px 3px 0 rgba(0, 0, 0, 0.02);
+    --shadow-top-light: 0 3px 3px 0 rgba(255, 255, 255, 0.02);
+    --textshadow-dark: 0 0 3px rgba(0, 0, 0, 0.2);
+    --textshadow-light: 0 0 3px rgba(255, 255, 255, 0.2);
+    --textshadow-glow: 0 0 10px rgba(255, 255, 255, 1);
+    --textshadow-top-dark: 0 3px 3px rgba(0, 0, 0, 0.2);
+    --textshadow-top-light: 0 3px 3px rgba(255, 255, 255, 0.2);
+
+    --letter-space: 0.03em;
+    --line-height: 1.4;                         /* base line height */
+    --font-size: 14px;                          /* base size */
+    --font-size-xs: 9px;
+    --font-size-sm: 11px;
+    --font-size-md: 12px;
+    --font-size-lg: 13px;
+    --font-size-xl: 14px;
+    --font-size-2xl: 16px;
+    --font-size-3xl: 22px;
+    --font-size-4xl: 25px;
+    --font-size-5xl: 36px;
+
+    --animate-duration: 300ms;
+    --animate-duration-slow: 600ms;
+    --animate-duration-fast: 150ms;
+    --animate-duration-veryfast: 30ms;
+    --animate-duration-bounce: 2000ms;
+    --animate-delay: 300ms;
+    --animate-repeat: 1;
+
+    /*
+    ** 그 외 갭의 적용
+    */
+    --padding-ss: 1px;
+    --padding-xs: 2px;
+    --padding-sm: 3px;
+    --padding-md: 4px;
+    --padding-lg: 5px;
+    --padding-xl: 10px;
+    --padding-2xl: 20px;
+    --padding-3xl: 30px;
+    --padding-4xl: 40px;
+    --padding-5xl: 50px;
+
+    --padding-text-ss: 2px;
+    --padding-text-xs: 3px;
+    --padding-text-sm: 4px;
+    --padding-text-md: 5px;
+    --padding-text-lg: 6px;
+    --padding-text-xl: 7px;
+    --padding-text-2xl: 8px;
+    --padding-text-3xl: 9px;
+
+    --padding-text-set-ss: calc(var(--padding-text-ss) * 1.15) calc(var(--padding-text-ss) * 3) calc(var(--padding-text-ss) * 1.25);
+    --padding-text-set-xs: calc(var(--padding-text-xs) * 1.15) calc(var(--padding-text-xs) * 2.5) calc(var(--padding-text-xs) * 1.25);
+    --padding-text-set-sm: calc(var(--padding-text-sm) * 1.25) calc(var(--padding-text-sm) * 2.5) calc(var(--padding-text-sm) * 1.20);
+    --padding-text-set-md: calc(var(--padding-text-md) * 1.25) calc(var(--padding-text-md) * 2.5) calc(var(--padding-text-md) * 1.20);
+    --padding-text-set-lg: calc(var(--padding-text-lg) * 1.275) calc(var(--padding-text-lg) * 2.5) calc(var(--padding-text-lg) * 1.20);
+    --padding-text-set-xl: calc(var(--padding-text-xl) * 1.275) calc(var(--padding-text-xl) * 2.5) calc(var(--padding-text-lg) * 1.20);
+    --padding-text-set-2xl: calc(var(--padding-text-2xl) * 1.275) calc(var(--padding-text-2xl) * 2.5) calc(var(--padding-text-2xl) * 1.20);
+    --padding-text-set-3xl: calc(var(--padding-text-3xl) * 1.275) calc(var(--padding-text-3xl) * 2.5) calc(var(--padding-text-3xl) * 1.20);
+
+    --cubic-ease-in: cubic-bezier(0.750, 0.000, 0.250, 1.000);
+    --cubic-ease-out: cubic-bezier(1.000, 0.250, 0.000, 0.750);
+
+}
+
+/*
+ * base setting
+ */
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+*,
+*:after,
+*:before {
+    -webkit-text-size-adjust: none;
+            text-size-adjust: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+div, img, p {
+    max-width: 100%;
+}
+a, a:visited {
+    color: var(--base-color);
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: var(--active-color);
+    text-decoration: none;
+}
+
+/*
+** 웹사이트 사이즈 설정
+*/
+.sp--width {
+    width: var(--width);
+    margin: 0 auto;
+}
+.sp--width[scope="box"] {
+    width: var(--width-box);
+}
+.sp--width[scope="case"] {
+    width: var(--width-case);
+}
+.sp--width[scope="card"] {
+    width: var(--width-card);
+}
+.sp--width[scope="cube"] {
+    width: var(--width-cube);
+}
+.sp--width[position="relative"] {
+    position: relative;
+}
+ 
+/*
+** 이 사이즈는 수동으로 지정해줘야 한다.
+** 힌트가 간단하므로, --width 사이즈를 참조하자.
+*/
+@media only screen and (min-width: 1px) and (max-width: 1442px) {
+    .sp--width[scope="box"] {
+        width: auto;
+        padding: 0 20px;
+    }
+}
+@media only screen and (min-width: 1px) and (max-width: 800px) {
+    .sp--width[scope="case"] {
+        width: auto;
+        padding: 0 20px;
+    }
+    .sp--width[scope="card"] {
+        width: calc(100vw - 60px);
+    }
+}
+
+/*
+** 디바이스별 보기
+*/
+[sp--view-device*="tablet"],
+[sp--view-device*="mobile"] {
+    display: none;
+}
+[sp--view-device*="pc"] {
+    display: inherit;
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    [sp--view-device*="pc"],
+    [sp--view-device*="mobile"] {
+        display: none !important;
+    }
+    [sp--view-device*="tablet"] {
+        display: inherit !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    [sp--view-device*="pc"],
+    [sp--view-device*="tablet"] {
+        display: none !important;
+    }
+    [sp--view-device*="mobile"] {
+        display: inherit !important;
+    }
+}
+
+/*
+ * 준비가 안된 모든 요소
+ */
+.sp--none {
+    display: none;
+}
+.sp--css-notready {
+    height: 0px;
+    margin: 0 auto;
+    overflow: hidden;
+    visibility: hidden;
+    /* 이 자체로 로딩바를 만들 수 있지 않을까 하는 생각 */
+}
+
+/*
+ * css 요소를 리셋
+ * 카페24는 listener와 class를 혼용하는 경우가 있다.
+ * 이 경우 스타일을 해치므로, 강제로 요소를 리셋하고
+ * 라이브러리의 스타일로 강제하기 위함이다.
+ */
+.sp--reset {
+    top: unset  !important;
+    right: unset  !important;
+    bottom: unset  !important;
+    left: unset  !important;
+    padding: unset !important;
+    margin: unset !important;
+    position: unset !important;
+    cursor: unset !important;
+    border: unset !important;
+    text-align: unset !important;
+    background: unset !important;
+}

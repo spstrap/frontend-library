@@ -1,0 +1,262 @@
+/*
+** Toggle
+**/
+.sp--toggle {
+    position: relative;
+}
+.sp--toggle.sp--toggle-on {
+
+}
+.sp--toggle-contents {
+    z-index: 3;
+    max-width: unset;
+    position: absolute;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+.sp--toggle.sp--toggle-on .sp--toggle-contents {
+    visibility: visible;
+}
+.sp--toggle[effect="fade"] .sp--toggle-contents {
+    opacity: 0;
+    transition: opacity var(--animate-duration-fast) var(--cubic-ease-in), 
+                visibility var(--animate-duration-fast) var(--cubic-ease-in);
+}
+.sp--toggle[effect="fade"].sp--toggle-on .sp--toggle-contents {
+    opacity: 1;
+}
+
+/* slide up */
+.sp--toggle[effect="slideup"] .sp--toggle-contents {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translate3D(0, 3px, 0);
+    transition: opacity var(--animate-duration-fast) var(--cubic-ease-out), 
+                visibility var(--animate-duration-fast) var(--cubic-ease-out), 
+                transform var(--animate-duration-fast) var(--cubic-ease-out);
+}
+.sp--toggle[effect="slideup"].sp--toggle-on .sp--toggle-contents {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: translate3D(0, 0, 0);
+}
+
+/* slide down */
+.sp--toggle[effect="slidedown"] .sp--toggle-contents {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translate3D(0, -3px, 0);
+    transition: opacity var(--animate-duration-fast) var(--cubic-ease-in), 
+                visibility var(--animate-duration-fast) var(--cubic-ease-in), 
+                transform var(--animate-duration-fast) var(--cubic-ease-in);
+}
+.sp--toggle[effect="slidedown"].sp--toggle-on .sp--toggle-contents {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: translate3D(0, 0, 0);
+}
+
+/*
+** 토글 레이어 컬러
+*/
+.sp--toggle[theme^="light"] .sp--toggle-contents {
+    border:1px solid var(--light-color);
+    background-color: var(--white-color);
+}
+.sp--toggle[theme^="gray"] .sp--toggle-contents {
+    border:1px solid var(--silver-color);
+    background-color: var(--white-color);
+}
+.sp--toggle[theme^="dark"] .sp--toggle-contents {
+    border:1px solid var(--dark-color);
+    background-color: var(--white-color);
+}
+.sp--toggle[theme^="primary"] .sp--toggle-contents {
+    border:1px solid var(--primary-color);
+    background-color: var(--white-color);
+}
+.sp--toggle[theme*="top-full"] .sp--toggle-contents {
+    left: 0;
+    right: 0;
+    bottom: 100%;
+}
+.sp--toggle[theme*="top-left"] .sp--toggle-contents {
+    left: 0;
+    bottom: 100%;
+}
+.sp--toggle[theme*="top-right"] .sp--toggle-contents {
+    right: 0;
+    bottom: 100%;
+}
+.sp--toggle[theme*="top-in-left"] .sp--toggle-contents {
+    top: 0;
+    left: 0;
+}
+.sp--toggle[theme*="top-in-right"] .sp--toggle-contents {
+    top: 0;
+    right: 0;
+}
+.sp--toggle[theme*="middle-left"] .sp--toggle-contents {
+    top: 0;
+    right: 100%;
+}
+.sp--toggle[theme*="middle-right"] .sp--toggle-contents {
+    top: 0;
+    left: 100%;
+}
+.sp--toggle[theme*="bottom-full"] .sp--toggle-contents {
+    left: 0;
+    right: 0;
+    top: 100%;
+}
+.sp--toggle[theme*="bottom-left"] .sp--toggle-contents {
+    top: 100%;
+    left: 0;
+}
+.sp--toggle[theme*="bottom-right"] .sp--toggle-contents {
+    top: 100%;
+    right: 0;
+}
+.sp--toggle[theme*="bottom-in-left"] .sp--toggle-contents {
+    left: 0;
+    bottom: 0;
+}
+.sp--toggle[theme*="bottom-in-right"] .sp--toggle-contents {
+    right: 0;
+    bottom: 0;
+}
+
+/*
+** 얼라인 예외처리
+** 현재 바텀으로만 존재한다.
+*/
+.sp--toggle[theme*="bottom-center"] {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sp--toggle[theme*="bottom-center"] .sp--toggle-contents {
+    top: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sp--toggle[theme*="bottom-center"] .sp--toggle-contents .sp--toggle-contents-inside {
+    left: auto;
+}
+
+.sp--toggle[theme*="top"][theme*="-1px"] .sp--toggle-contents {
+    bottom: calc(100% - 1px);
+}
+.sp--toggle[theme*="bottom"][theme*="-1px"] .sp--toggle-contents {
+    top: calc(100% - 1px);
+}
+.sp--toggle .sp--toggle-contents[fill="full"] {
+    min-width: 100%;
+}
+.sp--toggle .sp--toggle-contents[gap^="xs"] {
+    padding: var(--padding-text-set-xs);
+}
+.sp--toggle .sp--toggle-contents[gap^="sm"] {
+    padding: var(--padding-text-set-sm);
+}
+.sp--toggle .sp--toggle-contents[gap^="md"] {
+    padding: var(--padding-text-set-md);
+}
+.sp--toggle .sp--toggle-contents[gap^="lg"] {
+    padding: var(--padding-text-set-lg);
+}
+.sp--toggle .sp--toggle-contents[gap^="xl"] {
+    padding: var(--padding-text-set-xl);
+}
+.sp--toggle .sp--toggle-contents[gap^="2xl"] {
+    padding: var(--padding-text-set-2xl);
+}
+.sp--toggle .sp--toggle-contents[gap^="3xl"] {
+    padding: var(--padding-text-set-3xl);
+}
+.sp--toggle .sp--toggle-contents[gap^="xs-fix"] {
+    padding: var(--padding-xs);
+}
+.sp--toggle .sp--toggle-contents[gap^="sm-fix"] {
+    padding: var(--padding-sm);
+}
+.sp--toggle .sp--toggle-contents[gap^="md-fix"] {
+    padding: var(--padding-md);
+}
+.sp--toggle .sp--toggle-contents[gap^="lg-fix"] {
+    padding: var(--padding-lg);
+}
+.sp--toggle .sp--toggle-contents[gap^="xl-fix"] {
+    padding: var(--padding-xl);
+}
+.sp--toggle .sp--toggle-contents[gap^="2xl-fix"] {
+    padding: var(--padding-2xl);
+}
+.sp--toggle .sp--toggle-contents[gap^="3xl-fix"] {
+    padding: var(--padding-3xl);
+}
+.sp--toggle .sp--toggle-contents[gap*="-x"] {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.sp--toggle .sp--toggle-contents[gap*="-y"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+.sp--toggle [reaction] {
+    -webkit-transition: transform var(--animate-duration-fast) var(--cubic-ease-in);
+            transition: transform var(--animate-duration-fast) var(--cubic-ease-in);
+}
+.sp--toggle.sp--toggle-on [reaction] {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+}
+
+
+/*
+** 메뉴 호버 이펙트 모음
+**/
+.sp--toggle[active] {
+    -webkit-transition: color var(--animate-duration-fast) var(--cubic-ease-in),
+                        background-color var(--animate-duration-fast) var(--cubic-ease-in);
+            transition: color var(--animate-duration-fast) var(--cubic-ease-in),
+                        background-color var(--animate-duration-fast) var(--cubic-ease-in);
+}
+.sp--toggle.sp--toggle-on[active^="light"] {
+    background-color: var(--lightmax-color);
+}
+.sp--toggle.sp--toggle-on[active^="gray"] {
+    background-color: var(--gray-color);
+}
+.sp--toggle.sp--toggle-on[active^="dark"] {
+    background-color: var(--dark-color);
+}
+.sp--toggle.sp--toggle-on[active^="primary"] {
+    background-color: var(--primary-color);
+}
+.sp--toggle[active*="underline"] {
+    position: relative;
+}
+.sp--toggle[active*="underline"]::before {
+    content: '';
+    left: 0; 
+    right: 0;
+    bottom: -1px;
+    height: 1px;
+    z-index: 5;
+    position: absolute;
+    background-color: var(--dark-color);
+    opacity: 0;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: opacity var(--animate-duration) var(--cubic-ease-in),
+                        transform var(--animate-duration) var(--cubic-ease-in);
+    transition: opacity var(--animate-duration) var(--cubic-ease-in),
+                transform var(--animate-duration) var(--cubic-ease-in);
+}
+.sp--toggle.sp--toggle-on[active*="underline"]::before {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+}

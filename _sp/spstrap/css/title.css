@@ -1,0 +1,390 @@
+/*
+** 타이틀 디자인 영역
+**/
+.sp--title {
+    flex: 1;
+    display: flex;
+    position: relative;
+    align-items: stretch;
+}
+.sp--title .sp--title-right {
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.sp--title .sp--title-right > .sp--btn {
+    bottom: .7em;
+}
+.sp--title .sp--title-inner > * > i:not(.sp--icon) {
+    display: block;
+    color: var(--gray-color);
+    font-size: var(--font-size-md);
+    padding-top: var(--padding-xs);
+    font-weight: normal;
+}
+.sp--title[theme*="inline"] .sp--title-inner {
+    display: inline-flex;
+    align-items: center;
+}
+.sp--title[theme*="baseline"] .sp--title-inner {
+    align-items: baseline;
+}
+.sp--title[scale^="xs"] .sp--title-inner {
+    padding: var(--padding-text-set-xs);
+    font-size: var(--font-size-xs);
+}
+.sp--title[scale^="sm"] .sp--title-inner {
+    padding: var(--padding-text-set-sm);
+    font-size: var(--font-size-sm);
+}
+.sp--title[scale^="md"] .sp--title-inner {
+    padding: var(--padding-text-set-md);
+    font-size: var(--font-size-md);
+}
+.sp--title[scale^="lg"] .sp--title-inner {
+    padding: var(--padding-text-set-lg);
+    font-size: var(--font-size-lg);
+}
+.sp--title[scale^="xl"] .sp--title-inner {
+    padding: var(--padding-text-set-xl);
+    font-size: var(--font-size-xl);
+}
+.sp--title[scale^="2xl"] .sp--title-inner {
+    padding: var(--padding-text-set-2xl);
+    font-size: var(--font-size-2xl);
+}
+.sp--title[scale^="3xl"] .sp--title-inner {
+    padding: var(--padding-text-set-3xl);
+    font-size: var(--font-size-3xl);
+}
+
+/*
+** 박스형
+*/
+.sp--title[scale^="xs-box"] .sp--title-inner {
+    padding: var(--padding-xs);
+}
+.sp--title[scale^="sm-box"] .sp--title-inner {
+    padding: var(--padding-sm);
+}
+.sp--title[scale^="md-box"] .sp--title-inner {
+    padding: var(--padding-md);
+}
+.sp--title[scale^="lg-box"] .sp--title-inner {
+    padding: var(--padding-lg);
+}
+.sp--title[scale^="xl-box"] .sp--title-inner {
+    padding: var(--padding-xl);
+}
+.sp--title[scale^="2xl-box"] .sp--title-inner {
+    padding: var(--padding-2xl);
+}
+.sp--title[scale^="3xl-box"] .sp--title-inner {
+    padding: var(--padding-3xl);
+}
+
+.sp--title[scale*="-x"] .sp--title-inner {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.sp--title[scale*="-y"] .sp--title-inner {
+    padding-left: 0;
+    padding-right: 0;
+}
+.sp--title[scale*="nude"] .sp--title-inner {
+    padding: 0;
+    min-height: auto;
+}
+.sp--title[theme^="leftwall"] {
+    border-left: 5px solid var(--dark-color);
+    min-height: auto;
+}
+.sp--title[theme^="rightwall"] {
+    border-right: 5px solid var(--dark-color);
+    min-height: auto;
+}
+.sp--title[theme*="center"] {
+    text-align: center;
+    justify-content: center;
+}
+.sp--title[theme*="right"] {
+    text-align: right;
+    justify-content: flex-end;
+}
+
+/*
+ * 서브 텍스트의 정의
+**/
+.sp--title-subtext {
+    /*
+     * 기본적인 서브 텍스트
+    **/
+    font-size: .7em;
+    color: var(--gray-color);
+}
+.sp--title-subtext[theme^="xs"] {
+    font-size: var(--font-size-xs);
+}
+.sp--title-subtext[theme^="sm"] {
+    font-size: var(--font-size-sm);
+}
+.sp--title-subtext[theme^="md"] {
+    font-size: var(--font-size-md);
+}
+.sp--title-subtext[theme^="lg"] {
+    font-size: var(--font-size-lg);
+}
+.sp--title-subtext[theme^="xl"] {
+    font-size: var(--font-size-xl);
+}
+.sp--title-subtext[theme^="2xl"] {
+    font-size: var(--font-size-2xl);
+}
+.sp--title-subtext[theme^="3xl"] {
+    font-size: var(--font-size-3xl);
+}
+.sp--title-subtext[theme*="gray"] {
+    color: var(--gray-color);
+}
+.sp--title-subtext[theme*="dark"] {
+    color: var(--dark-color);
+}
+
+/*
+** underline title
+*/
+.sp--title[theme^="underline"] {
+
+}
+.sp--title[theme^="underline"] dt {
+    display: inline-flex;
+}
+.sp--title[theme^="underline"] dt > * {
+    display: flex;
+    flex: 1;
+    z-index: 1;
+    padding-bottom: 5px;
+    position: relative;
+}
+.sp--title[theme^="underline"] dt:before {
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    position: absolute;
+    background-color: var(--light-color);
+}
+.sp--title[theme^="underline"] dt > * {
+    border-bottom: 1px solid var(--dark-color);
+}
+.sp--title[theme^="underline"] dt:before {
+    height: 1px;
+}
+.sp--title[theme^="underline"][theme*="bold"] dt > * {
+    border-bottom: 2px solid var(--dark-color);
+}
+.sp--title[theme^="underline"][theme*="bold"] dt:before {
+    height: 2px;
+}
+.sp--title[theme^="underline"][theme*="heavy"] dt > * {
+    border-bottom: 3px solid var(--dark-color);
+}
+.sp--title[theme^="underline"][theme*="heavy"] dt:before {
+    height: 3px;
+}
+
+/*
+** left band title
+*/
+.sp--title[theme^="leftband"] {
+
+}
+.sp--title[theme^="leftband"] dt {
+    display: inline-flex;
+    padding-left: .75em;
+}
+.sp--title[theme^="leftband"] dt:before {
+    content: '';
+    top: 16%;
+    left: 0;
+    bottom: 24%;
+    z-index: -1;
+    position: absolute;
+    background-color: var(--dark-color);
+}
+.sp--title[theme^="leftband"] dt:before {
+    width: 1px;
+}
+.sp--title[theme^="leftband"][theme*="bold"] dt:before {
+    width: 3px;
+}
+.sp--title[theme^="leftband"][theme*="heavy"] dt:before {
+    width: 4px;
+}
+
+/*
+ * 코쿤 스타일
+**/
+.sp--title[theme^="cocoon"] {
+
+}
+.sp--title[theme^="cocoon"] .sp--title-inner {
+    z-index: 1;
+    position: relative;
+}
+.sp--title[theme^="cocoon"][theme*="round"] .sp--title-inner {
+    border-radius: 100rem;
+}
+.sp--title[theme^="cocoon"][theme*="light"] .sp--title-inner {
+    background-color: var(--white-color);
+    border: 1px solid var(--light-color);
+}
+.sp--title[theme^="cocoon"][theme*="gray"] .sp--title-inner {
+    background-color: var(--white-color);
+    border: 1px solid var(--gray-color);
+}
+.sp--title[theme^="cocoon"][theme*="dark"] .sp--title-inner {
+    background-color: var(--white-color);
+    border: 1px solid var(--dark-color);
+}
+.sp--title[theme^="cocoon"][theme*="primary"] .sp--title-inner {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--primary-color);
+}
+
+.sp--title[theme^="cocoon"][theme*="light"][theme*="reverse"] .sp--title-inner {
+    background-color: var(--light-color);
+}
+.sp--title[theme^="cocoon"][theme*="gray"][theme*="reverse"] .sp--title-inner {
+    color: var(--white-color);
+    background-color: var(--gray-color);
+}
+.sp--title[theme^="cocoon"][theme*="dark"][theme*="reverse"] .sp--title-inner {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+}
+.sp--title[theme^="cocoon"][theme*="primary"][theme*="reverse"] .sp--title-inner {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.sp--title[theme^="cocoon"][line]:before {
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+}
+.sp--title[theme^="cocoon"][line="light"]:before {
+    background-color: var(--light-color);
+}
+.sp--title[theme^="cocoon"][line="gray"]:before {
+    background-color: var(--gray-color);
+}
+.sp--title[theme^="cocoon"][line="dark"]:before {
+    background-color: var(--dark-color);
+}
+.sp--title[theme^="cocoon"][line="primary"]:before {
+    background-color: var(--primary-color);
+}
+
+/*
+ * 코쿤 밴드 스타일
+**/
+.sp--title[theme^="cocoon"][theme*="band"] .sp--title-inner {
+    box-shadow: var(--shadow-dark);
+}
+.sp--title[theme^="cocoon"][theme*="band"] .sp--title-inner span {
+    z-index: 3;
+    position: relative;
+}
+.sp--title[theme^="cocoon"][theme*="band"] .sp--title-inner:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: absolute;
+    background-color: inherit;
+}
+.sp--title[theme^="cocoon"][theme*="band"] .sp--title-inner:after {
+    content: '';
+    top: 5px;
+    right: -6px;
+    bottom: -6px;
+    left: 5px;
+    z-index: 1;
+    opacity: .7;
+    position: absolute;
+    border-right: 5px solid var(--lightlow-color);
+    border-bottom: 5px solid var(--lightlow-color);
+}
+
+.sp--title[theme^="cocoon"][line="light"]:before {
+    background-color: var(--light-color);
+}
+.sp--title[theme^="cocoon"][line="gray"]:before {
+    background-color: var(--gray-color);
+}
+.sp--title[theme^="cocoon"][line="dark"]:before {
+    background-color: var(--dark-color);
+}
+.sp--title[theme^="cocoon"][line="primary"]:before {
+    background-color: var(--primary-color);
+}
+
+/*
+ * 코쿤 대괄호 스타일
+**/
+.sp--title[theme^="cocoon"][theme*="brackets"] .sp--title-inner {
+    background: var(--white-color);
+}
+.sp--title[theme^="cocoon"][theme*="brackets"] .sp--title-inner span {
+    z-index: 3;
+    position: relative;
+}
+.sp--title[theme^="cocoon"][theme*="brackets"] .sp--title-inner:before {
+    content: '';
+    width: 12px;
+    top: 5%;
+    left: -3px;
+    bottom: 5%;
+    z-index: 1;
+    position: absolute;
+    border-top: 3px solid var(--dark-color);
+    border-left: 3px solid var(--dark-color);
+    border-bottom: 3px solid var(--dark-color);
+}
+.sp--title[theme^="cocoon"][theme*="brackets"] .sp--title-inner:after {
+    content: '';
+    width: 10px;
+    top: 5%;
+    right: -3px;
+    bottom: 5%;
+    z-index: 1;
+    position: absolute;
+    border-top: 3px solid var(--dark-color);
+    border-right: 3px solid var(--dark-color);
+    border-bottom: 3px solid var(--dark-color);
+}
+.sp--title[theme^="cocoon"][theme*="thin"] .sp--title-inner:before {
+    top: 5%;
+    left: -1px;
+    bottom: 5%;
+    border-top: 1px solid var(--dark-color);
+    border-left: 1px solid var(--dark-color);
+    border-bottom: 1px solid var(--dark-color);
+}
+.sp--title[theme^="cocoon"][theme*="thin"] .sp--title-inner:after {
+    top: 5%;
+    right: -1px;
+    bottom: 5%;
+    border-top: 1px solid var(--dark-color);
+    border-right: 1px solid var(--dark-color);
+    border-bottom: 1px solid var(--dark-color);
+}

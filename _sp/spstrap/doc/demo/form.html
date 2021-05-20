@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Form</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">인풋 사이즈</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--form"
+                                theme="xs"
+                            >
+                                <input type="text" value="xs" /><br />
+                                <trickarea>xs textarea</trickarea>
+                            </div>
+
+                            disabled, readonly
+                            <div class="sp--form"
+                                theme="sm"
+                            >
+                                <input type="text" value="sm" disabled /><br />
+                                <trickarea readonly>sm textarea</trickarea>
+                            </div>
+
+                            <div class="sp--form"
+                                theme="md"
+                            >
+                                <input type="text" value="md" /><br />
+                                <trickarea>md textarea</trickarea>
+                            </div>
+
+                            <div class="sp--form"
+                                theme="lg"
+                            >
+                                <input type="text" value="lg" /><br />
+                                <trickarea>lg textarea</trickarea>
+                            </div>
+
+                            <div class="sp--form"
+                                theme="xl"
+                            >
+                                <input type="text" value="xl" /><br />
+                                <trickarea>xl textarea</trickarea>
+                            </div>
+
+                            <div class="sp--form"
+                                theme="2xl"
+                            >
+                                <input type="text" value="2xl" /><br />
+                                <trickarea>2xl textarea</trickarea>
+                            </div>
+
+                            <div class="sp--form"
+                                theme="3xl"
+                            >
+                                <input type="text" value="3xl" /><br />
+                                <trickarea>3xl textarea</trickarea>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">input theme</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--form"
+                                theme="xs-light"
+                            >
+                                <input type="text" value="light" /><br />
+                                <trickarea>light theme</trickarea>
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="xs-gray"
+                            >
+                                <input type="text" value="gray" /><br />
+                                <trickarea>gray theme</trickarea>
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="xs-dark"
+                            >
+                                <input type="text" value="dark" /><br />
+                                <trickarea>dark theme</trickarea>
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="xs-primary"
+                            >
+                                <input type="text" value="primary" /><br />
+                                <trickarea>primary theme</trickarea>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">input theme</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--form"
+                                theme="xs-light-fill"
+                            >
+                                <input type="text" value="light fill" /><br />
+                                <trickarea>light fill theme</trickarea>
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="xs-gray-fill"
+                            >
+                                <input type="text" value="gray fill" /><br />
+                                <trickarea>gray fill theme</trickarea>
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="xs-dark-fill"
+                            >
+                                <input type="text" value="dark fill" /><br />
+                                <trickarea>dark fill theme</trickarea>
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="xs-primary-fill"
+                            >
+                                <input type="text" value="primary fill" /><br />
+                                <trickarea>primary fill theme</trickarea>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">input theme - nude & round</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--form"
+                                theme="xl-light-fill-round-nude"
+                            >
+                                <input type="text" value="light nude & round" /><br />
+                                <trickarea>light nude & round theme</trickarea>
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="xl-gray-fill-round-nude"
+                            >
+                                <input type="text" value="gray nude & round" /><br />
+                                <trickarea>gray nude & round theme</trickarea>
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="xl-dark-fill-round-nude"
+                            >
+                                <input type="text" value="dark nude & round" /><br />
+                                <trickarea>dark nude & round theme</trickarea>
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="xl-primary-fill-round-nude"
+                            >
+                                <input type="text" value="primary nude & round" /><br />
+                                <trickarea>primary nude & round theme</trickarea>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">input underline</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--form"
+                                theme="xl-dark"
+                            >
+                                <input type="text" value="light nude & round" theme="underline" /><br />
+                                <trickarea theme="underline">light nude & round theme</trickarea>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">input with icon</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--form"
+                                theme="xs-dark"
+                            >
+                                <input type="text" value="input with icon" theme="icon-right-underline" /><br />
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="sm-dark"
+                            >
+                                <input type="text" value="input with icon" theme="icon-right-underline" /><br />
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="md-dark"
+                            >
+                                <input type="text" value="input with icon" theme="icon-right-underline" /><br />
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="lg-dark"
+                            >
+                                <input type="text" value="input with icon" theme="icon-right-underline" /><br />
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="xl-dark"
+                            >
+                                <input type="text" value="input with icon - left" theme="icon-left-underline" /><br />
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="2xl-dark"
+                            >
+                                <input type="text" value="input with icon - left" theme="icon-left-underline" /><br />
+                            </div>
+
+                            <br />
+                            <div class="sp--form"
+                                theme="3xl-dark"
+                            >
+                                <input type="text" value="input with icon - left" theme="icon-left-underline" /><br />
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--goto-btn
+                                </td>
+                                <td>
+                                    goto 버튼
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    //
+                                </td>
+                                <td>
+                                    //
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            Etc description field
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Table style</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">light theme</div>
+                        <textarea class="sp--document-preview">
+                            <table [class="sp--table"] theme="lg-[light]-center-hover" gap="md" solid="light-even-nude">
+                                <colgroup>
+                                    <col style="width:70px" />
+                                    <col style="width:150px" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>MON</th>
+                                        <th>TUE</th>
+                                        <th>WED</th>
+                                        <th>THU</th>
+                                        <th>FRI</th>
+                                        <th>SAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Denver</td>
+                                        <td>Biscomb</td>
+                                        <td>2012</td>
+                                        <td>6094</td>
+                                        <td>3XL</td>
+                                        <td>8:06 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Tawnya</td>
+                                        <td>Leist</td>
+                                        <td>2004</td>
+                                        <td>21499</td>
+                                        <td>M</td>
+                                        <td>5:07 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Hugues</td>
+                                        <td>Hurdis</td>
+                                        <td>1995</td>
+                                        <td>5130</td>
+                                        <td>XL</td>
+                                        <td>7:53 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Anna</td>
+                                        <td>Jikylls</td>
+                                        <td>1994</td>
+                                        <td>21754</td>
+                                        <td>3XL</td>
+                                        <td>12:28 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Mata</td>
+                                        <td>Gribbin</td>
+                                        <td>2004</td>
+                                        <td>22518</td>
+                                        <td>XL</td>
+                                        <td>4:22 AM</td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">gray theme</div>
+                        <textarea class="sp--document-preview">
+                            <table class="sp--table" theme="lg-[gray]-center-hover" gap="md" solid="light-nude">
+                                <colgroup>
+                                    <col style="width:70px" />
+                                    <col style="width:150px" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>MON</th>
+                                        <th>TUE</th>
+                                        <th>WED</th>
+                                        <th>THU</th>
+                                        <th>FRI</th>
+                                        <th>SAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Denver</td>
+                                        <td>Biscomb</td>
+                                        <td>2012</td>
+                                        <td>6094</td>
+                                        <td>3XL</td>
+                                        <td>8:06 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Tawnya</td>
+                                        <td>Leist</td>
+                                        <td>2004</td>
+                                        <td>21499</td>
+                                        <td>M</td>
+                                        <td>5:07 AM</td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">dark theme</div>
+                        <textarea class="sp--document-preview">
+                            <table class="sp--table" theme="lg-[dark]-center-hover" gap="md" solid="light-nude">
+                                <colgroup>
+                                    <col style="width:70px" />
+                                    <col style="width:150px" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>MON</th>
+                                        <th>TUE</th>
+                                        <th>WED</th>
+                                        <th>THU</th>
+                                        <th>FRI</th>
+                                        <th>SAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Denver</td>
+                                        <td>Biscomb</td>
+                                        <td>2012</td>
+                                        <td>6094</td>
+                                        <td>3XL</td>
+                                        <td>8:06 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Tawnya</td>
+                                        <td>Leist</td>
+                                        <td>2004</td>
+                                        <td>21499</td>
+                                        <td>M</td>
+                                        <td>5:07 AM</td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">primary theme</div>
+                        <textarea class="sp--document-preview">
+                            <table class="sp--table" theme="lg-[primary]-center-hover" gap="md" solid="light-nude">
+                                <colgroup>
+                                    <col style="width:70px" />
+                                    <col style="width:150px" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>MON</th>
+                                        <th>TUE</th>
+                                        <th>WED</th>
+                                        <th>THU</th>
+                                        <th>FRI</th>
+                                        <th>SAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Denver</td>
+                                        <td>Biscomb</td>
+                                        <td>2012</td>
+                                        <td>6094</td>
+                                        <td>3XL</td>
+                                        <td>8:06 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Tawnya</td>
+                                        <td>Leist</td>
+                                        <td>2004</td>
+                                        <td>21499</td>
+                                        <td>M</td>
+                                        <td>5:07 AM</td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">font size</div>
+                        <textarea class="sp--document-preview">
+                            <table class="sp--table" theme="[xs]-primary-center-hover" gap="lg" solid="light-nude">
+                                <colgroup>
+                                    <col style="width:70px" />
+                                    <col style="width:150px" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>MON</th>
+                                        <th>TUE</th>
+                                        <th>WED</th>
+                                        <th>THU</th>
+                                        <th>FRI</th>
+                                        <th>SAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Denver</td>
+                                        <td>Biscomb</td>
+                                        <td>2012</td>
+                                        <td>6094</td>
+                                        <td>3XL</td>
+                                        <td>8:06 AM</td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">cell space</div>
+                        <textarea class="sp--document-preview">
+                            <table class="sp--table" theme="lg-primary-center-hover" [gap="xs"] solid="light-nude">
+                                <colgroup>
+                                    <col style="width:70px" />
+                                    <col style="width:150px" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>MON</th>
+                                        <th>TUE</th>
+                                        <th>WED</th>
+                                        <th>THU</th>
+                                        <th>FRI</th>
+                                        <th>SAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Denver</td>
+                                        <td>Biscomb</td>
+                                        <td>2012</td>
+                                        <td>6094</td>
+                                        <td>3XL</td>
+                                        <td>8:06 AM</td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">solid type</div>
+                        <textarea class="sp--document-preview">
+                            <table class="sp--table" theme="lg-primary-center-hover" gap="lg" [solid="light-bold-nude"]>
+                                <colgroup>
+                                    <col style="width:70px" />
+                                    <col style="width:150px" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>MON</th>
+                                        <th>TUE</th>
+                                        <th>WED</th>
+                                        <th>THU</th>
+                                        <th>FRI</th>
+                                        <th>SAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Denver</td>
+                                        <td>Biscomb</td>
+                                        <td>2012</td>
+                                        <td>6094</td>
+                                        <td>3XL</td>
+                                        <td>8:06 AM</td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">even, odd background</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                커스텀 테이블 타이틀
+                            -->
+                            <div class="sp--box" fill="justify" vertical="bottom">
+                                <ul>
+                                    <li>
+                                        <div class="sp--title" theme="leftwall" scale="2xl">
+                                            <div class="sp--title-inner">
+                                                TABLE DATA
+                                                <p class="sp--title-subtext">Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn" scale="lg-nude">더보기</a>
+                                    </li>
+                                </ul>
+                                <hr class="sp--hr" space="md" />
+                            </div>
+                            <!--
+                                테이블 디자인
+                            -->
+                            <table class="sp--table" theme="lg-dark-center" gap="md" solid="light-[even]-nude">
+                                <colgroup>
+                                    <col style="width:70px" />
+                                    <col style="width:150px" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>MON</th>
+                                        <th>TUE</th>
+                                        <th>WED</th>
+                                        <th>THU</th>
+                                        <th>FRI</th>
+                                        <th>SAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Denver</td>
+                                        <td>Biscomb</td>
+                                        <td>2012</td>
+                                        <td>6094</td>
+                                        <td>3XL</td>
+                                        <td>8:06 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Tawnya</td>
+                                        <td>Leist</td>
+                                        <td>2004</td>
+                                        <td>21499</td>
+                                        <td>M</td>
+                                        <td>5:07 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Hugues</td>
+                                        <td>Hurdis</td>
+                                        <td>1995</td>
+                                        <td>5130</td>
+                                        <td>XL</td>
+                                        <td>7:53 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Anna</td>
+                                        <td>Jikylls</td>
+                                        <td>1994</td>
+                                        <td>21754</td>
+                                        <td>3XL</td>
+                                        <td>12:28 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Mata</td>
+                                        <td>Gribbin</td>
+                                        <td>2004</td>
+                                        <td>22518</td>
+                                        <td>XL</td>
+                                        <td>4:22 AM</td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">responsive design *</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                [Responsive] table 은 [js]와 함께 사용된다.
+                                pure css 만으로는 불가능한 영역이 확인된다.*
+                                [responsive attribute]로 반응하며, 
+                                tablet, mobile 이라는 값을 단일, 혹은 중복으로 가진다. 
+                                ( 고의적으로 어렵게 작성했다. 이해한 사람만 사용 할 수 있는게 좋겠다. )
+                                *
+                                head 부분은 반응형 컨텐츠가 되었을때 좌측 제목부가 된다.
+                                flex display 로 구성되며, justify-contents:space-between;
+                                *
+                                만약 head가 존재하지 않는다면, 컨텐츠로만 구성되므로
+                                기본적으로 50%의 가로 사이즈를 가지게 된다. ( 모바일은 100% )
+                                *
+                                이 구성은 반드시
+                                [thead]
+                                    [tr]
+                                        [th]
+                                        ..
+                                [tbody]
+                                    [tr]
+                                        [td]
+                                        ..
+                                이 구조이어야만 된다.
+                            -->
+                            <table class="sp--table" theme="lg-dark-center" gap="md" solid="light" [responsive]="[tablet],[mobile]">
+                                <colgroup>
+                                    <col style="width:70px" />
+                                    <col style="width:150px" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                [<thead>]
+                                    <tr>
+                                        <th></th>           <!--// td의 Pseudo-Element가 될 text. //-->
+                                        <th>MON</th>
+                                        <th>TUE</th>
+                                        <th>WED</th>
+                                        <th>THU</th>
+                                        <th>FRI</th>
+                                        <th>SAT</th>
+                                    </tr>
+                                [</thead>]
+                                [<tbody>]
+                                    [<tr>]
+                                        [<td label="thead의 첫번째 속성">]1[</td>]                <!--// label 이라는 가장 엘리먼트(Pseudo-Element)가 js로 삽입된다. //-->
+                                        [<td>]Denver[</td>]           <!--// 때문에 innerHTML이 빈값이라면 '' 로 대체된다. //-->
+                                        [<td>]Biscomb[</td>]          <!--// 이 값들은 thead에 종속된다. //-->
+                                        [<td>]2012[</td>]
+                                        [<td>]6094[</td>]
+                                        [<td>]3XL[</td>]
+                                        [<td>]8:06 AM[</td>]
+                                    [</tr>]
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Tawnya</td>
+                                        <td>Leist</td>
+                                        <td>2004</td>
+                                        <td>21499</td>
+                                        <td>M</td>
+                                        <td>5:07 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Hugues</td>
+                                        <td>Hurdis</td>
+                                        <td>1995</td>
+                                        <td>5130</td>
+                                        <td>XL</td>
+                                        <td>7:53 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Anna</td>
+                                        <td>Jikylls</td>
+                                        <td>1994</td>
+                                        <td>21754</td>
+                                        <td>3XL</td>
+                                        <td>12:28 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Mata</td>
+                                        <td>Gribbin</td>
+                                        <td>2004</td>
+                                        <td>22518</td>
+                                        <td>XL</td>
+                                        <td>4:22 AM</td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--table
+                                </td>
+                                <td>
+                                    테이블 컨테이너
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    theme
+                                </td>
+                                <td>
+                                    lg-primary-center-hover<br />
+                                    크기 - 색상 - 정렬 - 호버스타일<br />
+                                    크기 : xs, sm, md, lg, xl<br />
+                                    색상 : light, gray, dark, primary<br />
+                                    정렬 : left, center, right<br />
+                                    호버 : boolean ( hover or '')
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    gap
+                                </td>
+                                <td>
+                                    셀 내부의 여백<br />
+                                    xs, sm, md, lg, xl
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    solid
+                                </td>
+                                <td>
+                                    light-bold-nude<br />
+                                    색상 - 두께 - 좌우 트임<br />
+                                    색상 : light, gray, dark, primary<br />
+                                    두께 : boolean ( gray or '' )<br />
+                                    트임 : boolean ( nude or '' )
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    responsive
+                                </td>
+                                <td>
+                                    tablet or mobile or tablet,mobile<br />
+                                    이 옵션은 반응형을 지원하겠다는 설정이다.<br />
+                                    js에 묶여있으므로, 웹사이트 내부에서만 사용하자.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

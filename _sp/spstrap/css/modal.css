@@ -1,0 +1,94 @@
+/*
+** 메세지 창
+*/
+.sp--message {
+	position: fixed;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999998;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+.sp--message-contents {
+	display: inline-flex;
+}
+
+/*
+ * 모달창
+ */
+.sp--modal {
+	z-index: 99999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	overflow-y: auto;
+	align-items: center;
+	justify-content: center;
+	background: var(--opacity-black);
+}
+.sp--modal-on {
+	display: flex;
+}
+.sp--modal-contents {
+	margin: auto;
+	position: relative;
+}
+
+.sp--modal[gap="xs"] .sp--modal-contents {
+    padding: var(--padding-xs);
+}
+.sp--modal[gap="sm"] .sp--modal-contents {
+    padding: var(--padding-sm);
+}
+.sp--modal[gap="md"] .sp--modal-contents {
+    padding: var(--padding-md);
+}
+.sp--modal[gap="lg"] .sp--modal-contents {
+    padding: var(--padding-lg);
+}
+.sp--modal[gap="xl"] .sp--modal-contents {
+    padding: var(--padding-xl);
+}
+.sp--modal[gap="2xl"] .sp--modal-contents {
+    padding: var(--padding-2xl);
+}
+.sp--modal[gap="3xl"] .sp--modal-contents {
+    padding: var(--padding-3xl);
+}
+
+.sp--modal-closebtn {
+	z-index: 3;
+	position: absolute;
+	background: none;
+}
+.sp--modal-closebtn[theme^="top-left"] {
+	bottom: 100%;
+	right: 0;
+}
+.sp--modal-closebtn[theme^="top-right"] {
+	bottom: 100%;
+	left: 100%;
+}
+.sp--modal-closebtn[theme^="left"] {
+	top: 0;
+	right: 0;
+}
+.sp--modal-closebtn[theme^="center"] {
+	left: 100%;
+	bottom: 100%;
+	-webkit-transform: translate3d(-50%, 50%, 0);
+			transform: translate3d(-50%, 50%, 0);
+}
+.sp--modal-closebtn[theme^="right"] {
+	top: 0;
+	left: 100%;
+}

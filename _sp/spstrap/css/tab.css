@@ -1,0 +1,307 @@
+/*
+** 탭 디자인
+**/
+.sp--tabs {
+    z-index: 2;
+    position: relative;
+}
+.sp--tabs .sp--tabs-contents > li {
+    display: none;
+}
+.sp--tabs .sp--tabs-contents > li.sp--tabs-active {
+    display: block;
+}
+.sp--tabs .sp--tabs-contents > li.sp--tabs-active:empty {
+    display: none;
+}
+.sp--tabs-controler {
+    z-index: 2;
+    display: flex;
+    position: relative;
+}
+.sp--tabs-controler li {
+    cursor: pointer;
+    align-items: center;
+    display: inline-flex; 
+    position: relative;
+}
+.sp--tabs-controler li:not(.sp--tabs-active):hover {
+    opacity: .93;
+}
+.sp--tabs-controler li + li {
+    margin-left: -1px;
+}
+.sp--tabs-controler li + li::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: -1px;
+    background: rgba(0, 0, 0, 0.1);
+}
+.sp--tabs-controler li.sp--tabs-active {
+    border-bottom: 1px solid transparent !important;
+}
+.sp--tabs-contents {
+    z-index: 1;
+    margin-top: -1px;
+    position: relative;
+}
+
+/*
+** 샘플 탭 디자인 코드
+**/
+.sp--tabs[theme*="full"] {
+    width: 100%;
+}
+.sp--tabs[theme*="full"] .sp--tabs-controler > li {
+    flex-grow: 1;
+}
+.sp--tabs[theme*="fullsame"] .sp--tabs-controler > li {
+    flex: 1 1 0;
+}
+.sp--tabs[theme*="center"] .sp--tabs-controler {
+    justify-content: center;
+}
+.sp--tabs[theme*="right"] .sp--tabs-controler {
+    justify-content: flex-end;
+}
+
+.sp--tabs[tabs^="xs"] .sp--tabs-controler > li {
+    font-size: var(--font-size-xs);
+    padding: var(--padding-text-set-xs)
+}
+.sp--tabs[tabs^="sm"] .sp--tabs-controler > li {
+    font-size: var(--font-size-sm);
+    padding: var(--padding-text-set-sm)
+}
+.sp--tabs[tabs^="md"] .sp--tabs-controler > li {
+    font-size: var(--font-size-md);
+    padding: var(--padding-text-set-md)
+}
+.sp--tabs[tabs^="lg"] .sp--tabs-controler > li {
+    font-size: var(--font-size-lg);
+    padding: var(--padding-text-set-lg)
+}
+.sp--tabs[tabs^="xl"] .sp--tabs-controler > li {
+    font-size: var(--font-size-xl);
+    padding: var(--padding-text-set-xl)
+}
+.sp--tabs[tabs^="2xl"] .sp--tabs-controler > li {
+    font-size: var(--font-size-2xl);
+    padding: var(--padding-text-set-2xl)
+}
+.sp--tabs[tabs^="3xl"] .sp--tabs-controler > li {
+    font-size: var(--font-size-3xl);
+    padding: var(--padding-text-set-3xl)
+}
+.sp--tabs[tabs*="left"] .sp--tabs-controler > li {
+    justify-content: flex-start;
+}
+.sp--tabs[tabs*="center"] .sp--tabs-controler > li {
+    justify-content: center;
+}
+.sp--tabs[tabs*="right"] .sp--tabs-controler > li {
+    justify-content: flex-end;
+}
+
+/*
+** 탭 영역
+**/
+.sp--tabs[tabs*="light"] .sp--tabs-controler li + li::before {
+    display: none;
+}
+.sp--tabs[tabs*="light"] .sp--tabs-controler > li {
+    color: var(--gray-color);
+    border: 1px solid var(--light-color);
+    background-color: var(--lightmax-color);
+}
+.sp--tabs[tabs*="light"] .sp--tabs-controler > li:hover,
+.sp--tabs[tabs*="light"] .sp--tabs-controler > li.sp--tabs-active {
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+.sp--tabs[tabs*="gray"] .sp--tabs-controler > li {
+    color: var(--light-color);
+    border: 1px solid var(--gray-color);
+    background-color: var(--gray-color);
+}
+.sp--tabs[tabs*="gray"] .sp--tabs-controler > li.sp--tabs-active {
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+.sp--tabs[tabs*="dark"] .sp--tabs-controler > li {
+    color: var(--gray-color);
+    border: 1px solid var(--dark-color);
+    background-color: var(--dark-color);
+}
+.sp--tabs[tabs*="dark"] .sp--tabs-controler > li.sp--tabs-active {
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+.sp--tabs[tabs*="primary"] .sp--tabs-controler > li {
+    color: var(--primary-light-color);
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+}
+.sp--tabs[tabs*="primary"] .sp--tabs-controler > li.sp--tabs-active {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+}
+.sp--tabs[tabs*="primary-bright"] .sp--tabs-controler > li {
+    color: var(--primary-up-color);
+    border: 1px solid var(--primary-light-color);
+    background-color: var(--primary-bright-color);
+}
+.sp--tabs[tabs*="primary-bright"] .sp--tabs-controler > li.sp--tabs-active {
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+.sp--tabs[tabs*="primary-bright"] .sp--tabs-controler > li::before {
+    display: none;
+}
+.sp--tabs[tabs*="under"] .sp--tabs-controler::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--light-color);
+    left: 0;
+    bottom: 0;
+}
+.sp--tabs[tabs*="under"] .sp--tabs-controler > li {
+    padding-left: 0;
+    padding-right: 0;
+    color: var(--gray-color);
+}
+.sp--tabs[tabs*="under"] .sp--tabs-controler li + li {
+    margin-left: 2em;
+}
+.sp--tabs[tabs*="under"] .sp--tabs-controler li + li::before {
+    display: none;
+}
+.sp--tabs[tabs*="under"] .sp--tabs-controler li.sp--tabs-active {
+    color: var(--dark-color);
+    border-bottom: 1px solid var(--dark-color) !important;
+}
+.sp--tabs[tabs*="under"][tabs*="bold"] .sp--tabs-controler li.sp--tabs-active {
+    border-bottom-width: 2px !important;
+}
+.sp--tabs[tabs*="under"][tabs*="heavy"] .sp--tabs-controler li.sp--tabs-active {
+    border-bottom-width: 3px !important;
+}
+
+.sp--tabs[tabs*="nude"] .sp--tabs-controler::before {
+    display: none;
+}
+.sp--tabs[tabs*="nude"] .sp--tabs-controler > li {
+    padding-left: 0;
+    padding-right: 0;
+    color: var(--gray-color);
+    border-bottom: 0 !important;
+}
+.sp--tabs[tabs*="nude"] .sp--tabs-controler li + li {
+    margin-left: 1em;
+}
+.sp--tabs[tabs*="nude"] .sp--tabs-controler li + li::before {
+    display: none;
+}
+.sp--tabs[tabs*="nude"] .sp--tabs-controler li.sp--tabs-active {
+    color: var(--dark-color);
+}
+.sp--tabs[hover="bold"] .sp--tabs-controler li.sp--tabs-active {
+    font-weight: bold;
+}
+
+/*
+** 컨텐츠 영역
+**/
+.sp--tabs[contents*="xs"] .sp--tabs-contents > li {
+    padding: var(--padding-xs);
+}
+.sp--tabs[contents*="sm"] .sp--tabs-contents > li {
+    padding: var(--padding-xs);
+}
+.sp--tabs[contents*="md"] .sp--tabs-contents > li {
+    padding: var(--padding-md);
+}
+.sp--tabs[contents*="lg"] .sp--tabs-contents > li {
+    padding: var(--padding-lg);
+}
+.sp--tabs[contents*="xl"] .sp--tabs-contents > li {
+    padding: var(--padding-xl);
+}
+.sp--tabs[contents*="2xl"] .sp--tabs-contents > li {
+    padding: var(--padding-2xl);
+}
+.sp--tabs[contents*="3xl"] .sp--tabs-contents > li {
+    padding: var(--padding-3xl);
+}
+.sp--tabs[contents*="light"] .sp--tabs-contents {
+    border: 1px solid var(--light-color);
+}
+.sp--tabs[contents*="gray"] .sp--tabs-contents {
+    border: 1px solid var(--gray-color);
+}
+.sp--tabs[contents*="dark"] .sp--tabs-contents {
+    border: 1px solid var(--dark-color);
+}
+.sp--tabs[contents*="primary"] .sp--tabs-contents {
+    border: 1px solid var(--primary-color);
+}
+.sp--tabs[contents*="empty"] .sp--tabs-contents,
+.sp--tabs[contents] .sp--tabs-contents:empty {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+.sp--tabs[contents*="-x"] .sp--tabs-contents > li {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.sp--tabs[contents*="-y"] .sp--tabs-contents > li {
+    padding-left: 0;
+    padding-right: 0;
+}
+.sp--tabs[contents*="nude"] .sp--tabs-contents > li {
+    padding: 0;
+}
+
+/*
+** 탭 설명형 우측 탭
+*/
+.sp--tabs .sp--tabs-controler p[scope="right"] {
+    margin-left: auto;
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+}
+
+/*
+** 탭 활성화 컨트롤
+*/
+.sp--tabs[active*="light"] .sp--tabs-controler > li.sp--tabs-active * {
+    color: var(--light-color) !important;
+}
+.sp--tabs[active*="gray"] .sp--tabs-controler > li.sp--tabs-active * {
+    color: var(--gray-color) !important;
+}
+.sp--tabs[active*="dark"] .sp--tabs-controler > li.sp--tabs-active * {
+    color: var(--dark-color) !important;
+}
+.sp--tabs[active*="primary"] .sp--tabs-controler > li.sp--tabs-active * {
+    color: var(--primary-color) !important;
+}
+.sp--tabs[active*="bold"] .sp--tabs-controler > li.sp--tabs-active * {
+    font-weight: bold !important;
+}
+.sp--tabs [sp--tabs-hide] {
+    display: none;
+}
+.sp--tabs .sp--tabs-active [sp--tabs-hide] {
+    display: block;
+}
+.sp--tabs .sp--tabs-active [sp--tabs-hide="inline"] {
+    display: inline-block;
+}

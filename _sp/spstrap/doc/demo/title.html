@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Title</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - NUDE</div>
+                        <textarea class="sp--document-preview">
+                            <div class="[sp--title]" scale="2xl[-nude]">
+                                <div class="sp--title-inner">
+                                    Basic title
+                                    <p class="sp--title-subtext">Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+                    
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - Basic</div>
+                        <textarea class="sp--document-preview">
+                            <div class="[sp--title]" scale="2xl">
+                                <div class="sp--title-inner">
+                                    Basic title
+                                    <p class="sp--title-subtext">Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - Basic - center</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" [theme="center"] scale="2xl">
+                                <div class="sp--title-inner">
+                                    Basic title
+                                    <p class="sp--title-subtext">Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+                    
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - Basic - right</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" [theme="right"] scale="2xl">
+                                <div class="sp--title-inner">
+                                    Basic title
+                                    <p class="sp--title-subtext">Lorem ipsum dolor sit amet</p>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Underline - subtext</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="underline" scale="2xl-nude">
+                                <div class="sp--title-inner">
+                                    <dt><strong>Basic title</strong></dt>
+                                    <span class="sp--title-subtext">Lorem ipsum dolor sit amet</span>
+                                    <p class="sp--title-right">
+                                        <a href="#!" class="sp--btn" scale="md-nude">더보기</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <br />
+                            <div class="sp--title" theme="underline-bold" scale="2xl-nude">
+                                <div class="sp--title-inner">
+                                    <dt><strong>Basic title</strong></dt>
+                                    <span class="sp--title-subtext">Lorem ipsum dolor sit amet</span>
+                                    <p class="sp--title-right">
+                                        <a href="#!" class="sp--btn" scale="md-nude">더보기</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="underline-heavy" scale="2xl-nude">
+                                <div class="sp--title-inner">
+                                    <dt><strong>Basic title</strong></dt>
+                                    <span class="sp--title-subtext">Lorem ipsum dolor sit amet</span>
+                                    <p class="sp--title-right">
+                                        <a href="#!" class="sp--btn" scale="md-nude">더보기</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Leftband - subtext</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="leftband" scale="2xl-nude">
+                                <div class="sp--title-inner">
+                                    <dt><strong>Left band</strong></dt>
+                                    <span class="sp--title-subtext">Lorem ipsum dolor sit amet</span>
+                                    <p class="sp--title-right">
+                                        <a href="#!" class="sp--btn" scale="md-nude">더보기</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="leftband-bold" scale="2xl-nude">
+                                <div class="sp--title-inner">
+                                    <dt><strong>Left band</strong></dt>
+                                    <span class="sp--title-subtext">Lorem ipsum dolor sit amet</span>
+                                    <p class="sp--title-right">
+                                        <a href="#!" class="sp--btn" scale="md-nude">더보기</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="leftband-heavy" scale="2xl-nude">
+                                <div class="sp--title-inner">
+                                    <dt><strong>Left band</strong></dt>
+                                    <span class="sp--title-subtext">Lorem ipsum dolor sit amet</span>
+                                    <p class="sp--title-right">
+                                        <a href="#!" class="sp--btn" scale="md-nude">더보기</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - leftwall</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--box" fill="justify" vertical="bottom">
+                                <ul>
+                                    <li>
+                                        <div class="sp--title" [theme="leftwall"] scale="2xl">
+                                            <div class="sp--title-inner">
+                                                THE FUTURE<br />
+                                                BELONGS TO<br />
+                                                THOSE
+                                                <hr class="sp--hr" space="xs" />
+                                                <p class="sp--title-subtext">Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn" scale="lg-nude">더보기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - rightwall</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--box" fill="justify" vertical="bottom">
+                                <ul>
+                                    <li flex="1">
+                                        <div class="sp--title" [theme="rightwall"] scale="2xl">
+                                            <div class="sp--title-inner">
+                                                THE FUTURE<br />
+                                                BELONGS TO<br />
+                                                THOSE
+                                                <hr class="sp--hr" space="xs" />
+                                                <p class="sp--title-subtext">Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - inline classic</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--box" vertical="bottom">
+                                <ul>
+                                    <li flex="1">
+                                        <div class="sp--title" [theme="inline-baseline"] scale="2xl-nude">
+                                            <div class="sp--title-inner">
+                                                Inline Classic   
+                                                <p class="sp--title-subtext" opacity="medium">Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn" scale="lg-nude">더보기</a>
+                                    </li>
+                                </ul>
+                                <hr class="sp--hr" theme="dash-md-light" space="md">
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - With Thumbnail</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--box" gap="true" vertical="middle">
+                                <ul>
+                                    [<li>]
+                                        [<img src="https://placeholder.pics/svg/50x50/eaeaea/fff">]
+                                    [</li>]
+                                    <li [flex="1"]>
+                                        <div class="sp--title" scale="2xl-nude">
+                                            <div class="sp--title-inner">
+                                                New Arrivals
+                                                <p class="sp--title-subtext" opacity="medium">Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <hr class="sp--hr" theme="dash-md-light" space="xs">
+                            </div>
+                        </textarea>
+                    </div>
+                    
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Customize - 1</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="center" scale="3xl">
+                                <div class="sp--title-inner">
+                                    [<hr class="sp--hr" theme="tick-medium-center-vertical" space="xs" />]
+                                    [<strong>Pants</strong>]
+                                    [<p class="sp--title-subtext">up to 70% sale</p>]
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Customize - 2</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" [theme="center"] scale="3xl">
+                                <div class="sp--title-inner">
+                                    단순한 텍스트[<br />]
+                                    [<strong>배열이라면 어때</strong>]
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Customize - 3</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="center" scale="3xl">
+                                <div class="sp--title-inner">
+                                    텍스트 사이
+                                    [<hr class="sp--hr" space="md" />]
+                                    <p class="sp--title-subtext" theme="md-gray">
+                                        공간이 필요하다면 이런식으로<br />
+                                        사이에 HR 태그를 이용해서 구성한다.<br />
+                                        자유롭게 구성이 가능하도록 마크업
+                                    </p>
+                                    [<hr class="sp--hr" theme="tick-medium-center-vertical" space="lg" />]
+                                    <p class="sp--title-subtext" theme="md-dark">
+                                        여러 문단으로도 구성이 가능<br />
+                                        단순하지만 활용도가 높다.
+                                    </p>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Customize - 4</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="center" scale="3xl">
+                                <div class="sp--title-inner">
+                                    <strong>Diagonal icon</strong>
+                                    <p class="sp--title-subtext">sub description</p>
+                                    [<hr class="sp--hr" theme="tick-medium-center-diagonal" space="lg" />]
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Customize - 5</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="center" scale="3xl">
+                                <div class="sp--title-inner">
+                                    <strong>Complex arrangement</strong>
+                                    [<hr class="sp--hr" theme="tick-long-heavy-center" space="md" />]
+                                    <p class="sp--title-subtext">remaining essentially</p>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - cocoon (light)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="[cocoon]-[light]-[round]-[center]-[inline]" line="light" scale="xl">
+                                <div class="sp--title-inner">Cocoon light</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-light-center-inline" line="light" scale="xl">
+                                <div class="sp--title-inner">Cocoon round light</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-light-reverse-center-inline" line="light" scale="xl">
+                                <div class="sp--title-inner">Cocoon light - reverse</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-light-reverse-round-center-inline" line="light" scale="xl">
+                                <div class="sp--title-inner">Cocoon light round - reverse</div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - cocoon (gray)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="cocoon-[gray]-round-center-inline" line="gray" scale="xl">
+                                <div class="sp--title-inner">Cocoon gray</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-gray-center-inline" line="gray" scale="xl">
+                                <div class="sp--title-inner">Cocoon round gray</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-gray-reverse-center-inline" line="gray" scale="xl">
+                                <div class="sp--title-inner">Cocoon gray - reverse</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-gray-reverse-round-center-inline" line="gray" scale="xl">
+                                <div class="sp--title-inner">Cocoon gray round - reverse</div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - cocoon (dark)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="cocoon-[dark]-round-center-inline" line="dark" scale="xl">
+                                <div class="sp--title-inner">Cocoon dark</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-dark-center-inline" line="dark" scale="xl">
+                                <div class="sp--title-inner">Cocoon round dark</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-dark-reverse-center-inline" line="dark" scale="xl">
+                                <div class="sp--title-inner">Cocoon dark - reverse</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-dark-reverse-round-center-inline" line="dark" scale="xl">
+                                <div class="sp--title-inner">Cocoon dark round - reverse</div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - cocoon (primary)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="cocoon-[primary]-round-center-inline" line="primary" scale="xl">
+                                <div class="sp--title-inner">Cocoon primary</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-primary-center-inline" line="primary" scale="xl">
+                                <div class="sp--title-inner">Cocoon round primary</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-primary-reverse-center-inline" line="primary" scale="xl">
+                                <div class="sp--title-inner">Cocoon primary - reverse</div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-primary-reverse-round-center-inline" line="primary" scale="xl">
+                                <div class="sp--title-inner">Cocoon primary round - reverse</div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - band</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="cocoon-[band]-[light]-center-inline" line="light" scale="2xl">
+                                <div class="sp--title-inner"><span>band light</span></div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-[band]-[gray]-center-inline" line="light" scale="2xl">
+                                <div class="sp--title-inner"><span>band gray</span></div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-[band]-[dark]-center-inline" line="light" scale="2xl">
+                                <div class="sp--title-inner"><span>band dark</span></div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-[band]-[dark-reverse]-center-inline" line="dark" scale="2xl">
+                                <div class="sp--title-inner"><span>band dark-reverse</span></div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-[band]-[primary]-center-inline" line="primary" scale="2xl">
+                                <div class="sp--title-inner"><span>band primary</span></div>
+                            </div>
+
+                            <br />
+                            <div class="sp--title" theme="cocoon-[band]-[primary-reverse]-center-inline" line="primary" scale="2xl">
+                                <div class="sp--title-inner"><span>band primary-reverse</span></div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Headline - brackets (light)</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--title" theme="cocoon-[brackets]-center-inline" line="dark" scale="2xl">
+                                <div class="sp--title-inner"><span>brackets</span></div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    sp--title
+                                </td>
+                                <td>
+                                    타이틀 컨테이너
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    sp--title-inner
+                                </td>
+                                <td>
+                                    타이틀 내부 텍스트 영역
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    sp--title-subtext
+                                </td>
+                                <td>
+                                    서브 텍스트 영역<br />
+                                    font-size: .6em;<br />
+                                    color: var(--gray-color);<br />
+                                    <br />
+                                    기본적으로 상속의 구조를 가지며,<br />
+                                    메인 폰트의 .6em 사이즈의 회색으로 작성된다.<br />
+                                    서브 텍스트의 사이즈 역시 지정할 수 있지만, 가급적 상속하자.
+                                    <br />
+                                    <div class="sp--document-box" data-hljs="css">
+                                        <div class="sp--document-subject">서브 텍스트의 attribute 정의</div>
+                                        <textarea class="sp--document-preview">
+                                            <!--//
+                                            /*
+                                             * 서브 텍스트의 정의
+                                            **/
+                                            .sp--title-subtext {
+                                                /*
+                                                    * 기본적인 서브 텍스트
+                                                **/
+                                                font-size: .6em;
+                                                color: var(--gray-color);
+                                            }
+                                            .sp--title-subtext[theme^="xs"] {
+                                                font-size: var(--font-size-xs);
+                                            }
+                                            .sp--title-subtext[theme^="sm"] {
+                                                font-size: var(--font-size-sm);
+                                            }
+                                            .sp--title-subtext[theme^="md"] {
+                                                font-size: var(--font-size-md);
+                                            }
+                                            .sp--title-subtext[theme^="lg"] {
+                                                font-size: var(--font-size-lg);
+                                            }
+                                            .sp--title-subtext[theme^="xl"] {
+                                                font-size: var(--font-size-xl);
+                                            }
+                                            .sp--title-subtext[theme^="2xl"] {
+                                                font-size: var(--font-size-2xl);
+                                            }
+                                            .sp--title-subtext[theme^="3xl"] {
+                                                font-size: var(--font-size-3xl);
+                                            }
+                                            .sp--title-subtext[theme*="gray"] {
+                                                color: var(--gray-color);
+                                            }
+                                            .sp--title-subtext[theme*="dark"] {
+                                                color: var(--dark-color);
+                                            }
+                                            //-->
+                                        </textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    theme
+                                </td>
+                                <td>
+                                    cocoon-band-brackets-primary-reverse-center-inline
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    scale
+                                </td>
+                                <td>
+                                    xs, sm, md, lg, xl, 2xl, 3xl
+                                    <p class="sp--document-message">
+                                        cocoon 스타일만 대응<br />
+                                        <a href="/_sp/doc/demo/animation.html" class="document">css - animation document</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    line
+                                </td>
+                                <td>
+                                    light, gray, dark, primary
+                                    <p class="sp--document-message">
+                                        cocoon 스타일만 대응<br />
+                                        <a href="/_sp/doc/demo/animation.html" class="document">css - animation document</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

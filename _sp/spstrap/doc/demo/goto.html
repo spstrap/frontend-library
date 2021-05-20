@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Go to</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Preview icon - xs</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                data-target="0"                 // 0 은 최 상단으로 간다.
+                                data-target="-1"                // -1 은 최 하단으로 간다.
+                                data-target="sample-nametag"    // 갈고리태그 <a name="#"></a>
+                                data-target="#sample-element"   // id
+                                data-target=".sample-class"     // class
+                            -->
+                            <a name="sample-nametag">갈고리 태그 위치</a>
+                            <div>
+                                <img src="https://placeholder.pics/svg/800x200">
+                            </div>
+                            <div id="sample-element">
+                                <img src="https://placeholder.pics/svg/800x201">
+                            </div>
+                            <div class="sample-class">
+                                <img src="https://placeholder.pics/svg/800x202">
+                            </div>
+                            <button class="sp--goto-btn" data-target="0">최 상단으로 이동</button>
+                            <button class="sp--goto-btn" data-target="-1">최 하단으로 이동</button>
+                            <button class="sp--goto-btn" data-target="sample-nametag" data-speed="300">갈고리 태그로 이동</button>
+                            <button class="sp--goto-btn" data-target="#sample-element" data-gap="-50">특정 id로 이동</button>
+                            <button class="sp--goto-btn" data-target=".sample-class" data-gap="50">특정 class로 이동</button>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--goto-btn
+                                </td>
+                                <td>
+                                    goto 버튼
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .data-target
+                                </td>
+                                <td>
+                                    4 type<br />
+                                    <!---->
+                                    <div class="sp--document-box" data-hljs="js">
+                                        <textarea class="sp--document-preview">
+                                            <!--//
+                                            data-target="[100]"     // 숫자로 입력하면 상단에서 숫자만큼 떨어진곳에 도착.
+                                            data-target="[0]"   // 0 = 최상단으로 이동
+                                            data-target="[-1]"  // -1 = 최하단으로 이동
+                                            data-target="[sample-nametag]"  // <a name="sample-nametag">갈고리 태그로 도착</a>
+                                            data-target="[#sample-element]"  // <a id="sample-element">id로 도착</a>
+                                            data-target="[.sample-class]"  // <a class="sample-class">class로 도착</a>
+                                            //-->
+                                        </textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .data-speed
+                                </td>
+                                <td>
+                                    default : css.duration ( var.js )<br />
+                                    두 타입만 존재한다.<br />
+                                    0 or 그 이상의 숫자. ( 0의 경우 딜레이 없이 바로 이동한다. )<br />
+                                    숫자가 아닌 모든 타입은 css.duration ( var.js ) 로 종속된다.
+                                    <!---->
+                                    <div class="sp--document-box" data-hljs="js">
+                                        <textarea class="sp--document-preview">
+                                            <!--//
+                                            data-speed="[0]"     // 딜레이 없이 이동
+                                            data-target="[ㅋㅋ]"   // css.duration
+                                            data-target="[3000]"  // 3초간 이동
+                                            //-->
+                                        </textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .data-gap
+                                </td>
+                                <td>
+                                    default : 0 ( int )<br />
+                                    대상 요소로 이동할 때 특정 값만큼 더 이동하거나, 덜 이동하게 한다.<br />
+                                    대부분 이런 경우는 마크업이 올바르지 않은 경우 트릭으로 이용하는 경우다.
+                                    <p class="sp--document-message">
+                                        숫자를 합산하므로, -30은 위로 30px만큼 더 올라가고,<br />
+                                        100은 아래로 100만큼 더 내려간다.
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            Etc description field
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Scroll Event</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Follow Fix</div>
+                        <textarea class="sp--document-preview">
+                            <style>
+                                .sp--sample-follow {
+                                    width: 200px;
+                                    top: 200px;
+                                    right: 20px;
+                                    padding: 30px;
+                                    z-index: 1;
+                                    position: absolute;
+                                    background :#f0cece;
+                                }
+                                .sp--sample-follow.sp--scroll-on {
+                                    position: fixed;
+                                    top: 20px;
+                                }
+                            </style>
+                            <div class="sp--scroll sp--sample-follow"
+                                data-fix="180"  // 컨텐츠 위치와 관계없이 상단에서 180px이 되면 작동한다.
+                            >
+                                <div class="sp--title" scale="2xl-nude">
+                                    <div class="sp--title-inner">
+                                        Follow Fix
+                                        <p class="sp--title-subtext">Lorem ipsum dolor sit amet</p>
+                                    </div>
+                                </div>
+                                <hr class="sp--hr" theme="dark" figure="band-left" space="md" />
+                                네번째 스크롤 ( 상단에서 100px 내려오면 무조건 실행한다. )
+                                홀더가 필요하지 않다.
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Scroll Element position fix</div>
+                        <textarea class="sp--document-preview">
+                            <style>
+                                .sp--sample-fixnav {
+                                    position: absolute;
+                                }
+                                .sp--sample-fixnav.sp--scroll-on {
+                                    position: fixed;
+                                }
+                            </style>
+                            <div class="sp--scroll sp--sample-fixnav" style="padding:30px;background:#eaeaea;"
+                                data-top="0"
+                                data-holder="true"
+                            >
+                                첫번째 스크롤
+                            </div>
+                            <p class="sp--scroll-holder"></p>                           // 스크롤 트릭 홀더 ( 부드러움을 위함 )
+                            <img src="https://placeholder.pics/svg/1400x400/aaaaaa/fff">
+                            
+                            <div class="sp--scroll sp--sample-fixnav" style="padding:30px;background:#7f67ac;"
+                                data-top="82"
+                                data-holder="true"
+                            >
+                                두번쨰 스크롤 ( top 74px )
+                            </div>
+                            // 폴더가 없어도 data-holder="true" 옵션으로 홀더를 넣어줄 수 있다.
+                            <img src="https://placeholder.pics/svg/1400x200/aaaaaa/fff">
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Scroll Vertical Navigation</div>
+                        <textarea class="sp--document-preview">
+                            <style>
+                                .sp--sample-navigation {
+                                    top: 50%;
+                                    right: 10px;
+                                    position: fixed;
+                                }
+                                .sp--sample-navigation a {
+                                    color: #333;
+                                    display: block;
+                                }
+                                .sp--sample-navigation a.sp--scroll-btn-on {
+                                    color: #ff3300;
+                                }
+                            </style>
+                            <!--
+                                네비게이션 메뉴는 컨텐츠의 높이에 반응한다.
+                                컨텐츠의 높이는 ready, load, resize 에서 재계산 되며,
+                                일반적은 스크롤 행위는 이 계산을 하지 않음을 이해하자.
+                            -->
+                            <div class="sp--document-box">
+                                <div class="sp--document-subject">Scroll Navigation</div>
+        
+                                <div class="sp--sample-navigation"></div>
+                                <div class="sp--scroll" 
+                                    data-navigation=".sp--sample-navigation"
+                                    data-navname="네비게이션 1"
+                                >
+                                    <div class="sp--title" theme="center" scale="2xl">
+                                        <div class="sp--title-inner">
+                                            <hr class="sp--hr" space="lg" />
+                                            <strong>Menu 1 Section</strong>
+                                            <p class="sp--title-subtext">sub description</p>
+                                            <hr class="sp--hr" theme="tick-medium-center-diagonal" space="lg" />
+                                        </div>
+                                    </div>
+                                    <img src="https://placeholder.pics/svg/1400x200/aaaaaa/fff">
+                                </div>
+                                <div class="sp--scroll" 
+                                    data-navigation=".sp--sample-navigation"
+                                    data-navname="네비게이션 2"
+                                >
+                                    <div class="sp--title" theme="center" scale="2xl">
+                                        <div class="sp--title-inner">
+                                            <hr class="sp--hr" space="lg" />
+                                            <strong>Menu 2 Section</strong>
+                                            <p class="sp--title-subtext">sub description</p>
+                                            <hr class="sp--hr" theme="tick-medium-center-diagonal" space="lg" />
+                                        </div>
+                                    </div>
+                                    <img src="https://placeholder.pics/svg/1400x200/aaaaaa/fff">
+                                </div>
+                                <div class="sp--scroll" 
+                                    data-navigation=".sp--sample-navigation"
+                                    data-navname="네비게이션 3"
+                                >
+                                    <div class="sp--title" theme="center" scale="2xl">
+                                        <div class="sp--title-inner">
+                                            <hr class="sp--hr" space="lg" />
+                                            <strong>Menu 3 Section</strong>
+                                            <p class="sp--title-subtext">sub description</p>
+                                            <hr class="sp--hr" theme="tick-medium-center-diagonal" space="lg" />
+                                        </div>
+                                    </div>
+                                    <img src="https://placeholder.pics/svg/1400x200/aaaaaa/fff">
+                                </div>
+        
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--scroll
+                                </td>
+                                <td>
+                                    스크롤 이벤트가 적용될 엘리먼트 지정
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    data-top
+                                </td>
+                                <td>
+                                    default : 0<br />
+                                    이 요소를 만나기 까지의 갭을 줄여준다.<br />
+                                    만약 상단에 이 요소보다 먼저 보여야 할 부분이 있다면 사용하자.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="js">
+                        <div class="sp--document-subject">Setting</div>
+                        <textarea class="sp--document-preview">
+                            <!--//
+                            /*
+                             * variable ( var.js )
+                             */
+                            scroll: {
+                                works: false,
+                                resize: false,
+                                height: 0,
+                                sec: 30,        // 스크롤 딜레이
+                                                // 인터발 수치 : 숫자가 클수록 느리고 가볍다
+                                                //              숫자가 작을수록 빠르고 무겁다 ( 최소 30 )
+                                secs: 1000      // 전체 높이 체크 딜레이
+                            },
+                            //-->
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            data-top 에 값을 줄 경우, 위쪽 엘리먼트의 높이를 정확하게 지정해주자.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+/*
+ * Dropdown
+ */
+.sp--dropdown {
+    position: relative;
+}
+.sp--dropdown > ul {
+    font-size: 0;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.sp--dropdown > ul > li {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size);
+}
+.sp--dropdown > ul > li:hover {
+    z-index: 3;
+}
+.sp--dropdown > ul > li > a {
+    z-index: 2;
+}
+.sp--dropdown .sp--dropdown-layer ul {
+    z-index: 1;
+    min-width: 100%;
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+}
+.sp--dropdown li {
+    position: relative;
+}
+.sp--dropdown li li {
+    display: block;
+}
+.sp--dropdown li:hover > div > ul {
+    visibility: visible;
+    pointer-events: all;
+}
+.sp--dropdown .sp--dropdown-layer a {
+    white-space: nowrap;
+}
+
+.sp--dropdown a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    /*justify-content: flex-start;*/
+    -webkit-transition: color var(--animate-duration) ease,
+                        background-color var(--animate-duration) ease;
+            transition: color var(--animate-duration) ease,
+                        background-color var(--animate-duration) ease;
+}
+.sp--dropdown[scope*="left"] a,
+.sp--dropdown[scope*="left"] > ul,
+.sp--dropdown[scope] [direction="ltr"] a {
+    justify-content: flex-start;
+}
+.sp--dropdown[scope*="center"] a,
+.sp--dropdown[scope*="center"] > ul {
+    justify-content: center;
+}
+.sp--dropdown[scope*="right"] a,
+.sp--dropdown[scope*="right"] > ul,
+.sp--dropdown[scope] [direction="rtl"] a {
+    justify-content: flex-end;
+}
+.sp--dropdown[scope*="full"] > ul > li {
+    flex-grow: 1;
+}
+.sp--dropdown[scope*="grid"] > ul {
+    justify-content: space-around;
+}
+.sp--dropdown[scope*="justify"] > ul {
+    justify-content: space-between;
+}
+
+/*
+** 레이어 외곽선
+*/
+.sp--dropdown[layer*="outline"] ul ul {
+    border: 1px solid var(--light-color);
+}
+
+/*
+ * Customize
+ */
+/* default */
+.sp--dropdown > ul > li > div > ul {
+    top: 100%;
+    left: 0;
+}
+.sp--dropdown ul ul {
+    top: 0;
+    left: 100%;
+}
+.sp--dropdown[layer*="outline"] ul ul ul {
+    top: -1px;
+}
+.sp--dropdown > ul > li[direction="rtl"] > div > ul {
+	left: auto;
+	right: 0;
+}
+.sp--dropdown li[direction="rtl"] ul ul {
+	left: auto;
+    right: 100%;
+}
+
+/* horizontal + centered */
+.sp--dropdown[scope*="center"] > ul > li:not([direction]) > .sp--dropdown-layer {
+    display: flex;
+    justify-content: center;
+}
+.sp--dropdown[scope*="center"] > ul > li:not([direction]) > .sp--dropdown-layer > ul {
+    top: 100%;
+    left: auto;
+}
+.sp--dropdown[scope*="center"] > ul > li:not([direction]) .sp--dropdown-layer > ul > li > a {
+    justify-content: center;
+}
+.sp--dropdown[scope*="center"] > ul > li:not([direction]) ul ul {
+    left: 100%;
+}
+
+/* horizontal + right */
+.sp--dropdown[scope*="right"] > ul > li:not([direction]) > .sp--dropdown-layer > ul {
+	left: auto;
+    right: 0;
+}
+.sp--dropdown[scope*="right"] > ul > li:not([direction]) > .sp--dropdown-layer > ul ul {
+	left: auto;
+    right: 100%;
+}
+
+/* vertical */
+.sp--dropdown[scope*="vertical"] > ul {
+    flex-direction: column;
+}
+.sp--dropdown[scope*="vertical"] .sp--dropdown-layer > ul {
+    top: -1px;
+    left: 100%;
+}
+
+/*
+** 레이어 스타일 컨트롤
+** 소분류 부터는 버튼에 귀속되지 않도록 했다. ( 코드가 너무 길어진다. )
+*/
+.sp--dropdown[layer^="xs"] ul ul {
+    padding-top: var(--padding-text-xs);
+    padding-bottom: var(--padding-text-xs);
+}
+.sp--dropdown[layer^="xs"] ul ul ul {
+    margin-top: calc(var(--padding-text-xs) * -1);
+}
+.sp--dropdown[layer^="xs"] ul ul > li > a {
+    font-size: var(--font-size-xs);
+    padding: var(--padding-text-set-xs);
+}
+.sp--dropdown[layer^="sm"] ul ul {
+    padding-top: var(--padding-text-sm);
+    padding-bottom: var(--padding-text-sm);
+}
+.sp--dropdown[layer^="sm"] ul ul ul {
+    margin-top: calc(var(--padding-text-sm) * -1);
+}
+.sp--dropdown[layer^="sm"] ul ul > li > a {
+    font-size: var(--font-size-sm);
+    padding: var(--padding-text-set-sm);
+}
+.sp--dropdown[layer^="md"] ul ul {
+    padding-top: var(--padding-text-md);
+    padding-bottom: var(--padding-text-md);
+}
+.sp--dropdown[layer^="md"] ul ul ul {
+    margin-top: calc(var(--padding-text-md) * -1);
+}
+.sp--dropdown[layer^="md"] ul ul > li > a {
+    font-size: var(--font-size-md);
+    padding: var(--padding-text-set-md);
+}
+.sp--dropdown[layer^="lg"] ul ul {
+    padding-top: var(--padding-text-lg);
+    padding-bottom: var(--padding-text-lg);
+}
+.sp--dropdown[layer^="lg"] ul ul ul {
+    margin-top: calc(var(--padding-text-lg) * -1);
+}
+.sp--dropdown[layer^="lg"] ul ul > li > a {
+    font-size: var(--font-size-lg);
+    padding: var(--padding-text-set-lg);
+}
+.sp--dropdown[layer^="xl"] ul ul {
+    padding-top: var(--padding-text-xl);
+    padding-bottom: var(--padding-text-xl);
+}
+.sp--dropdown[layer^="xl"] ul ul ul {
+    margin-top: calc(var(--padding-text-xl) * -1);
+}
+.sp--dropdown[layer^="xl"] ul ul > li > a {
+    font-size: var(--font-size-xl);
+    padding: var(--padding-text-set-xl);
+}
+.sp--dropdown[layer^="2xl"] ul ul {
+    padding-top: var(--padding-text-2xl);
+    padding-bottom: var(--padding-text-2xl);
+}
+.sp--dropdown[layer^="2xl"] ul ul ul {
+    margin-top: calc(var(--padding-text-2xl) * -1);
+}
+.sp--dropdown[layer^="2xl"] ul ul > li > a {
+    font-size: var(--font-size-2xl);
+    padding: var(--padding-text-set-2xl);
+}
+.sp--dropdown[layer^="3xl"] ul ul {
+    padding-top: var(--padding-text-3xl);
+    padding-bottom: var(--padding-text-3xl);
+}
+.sp--dropdown[layer^="3xl"] ul ul ul {
+    margin-top: calc(var(--padding-text-3xl) * -1);
+}
+.sp--dropdown[layer^="3xl"] ul ul > li > a {
+    font-size: var(--font-size-3xl);
+    padding: var(--padding-text-set-3xl);
+}
+
+/*
+** 레이어 컬러패턴
+*/
+.sp--dropdown[layer*="light"] ul ul {
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-top-dark);
+}
+.sp--dropdown[layer*="light"] ul ul > li:hover > a {
+    background-color: var(--lightmax-color);
+}
+.sp--dropdown[layer*="light-reverse"] ul ul {
+    background-color: var(--light-color);
+    box-shadow: var(--shadow-top-dark);
+}
+.sp--dropdown[layer*="light-reverse"] ul ul > li:hover > a {
+    background-color: var(--white-color);
+}
+.sp--dropdown[layer*="gray"] ul ul {
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-top-dark);
+}
+.sp--dropdown[layer*="gray"] ul ul > li:hover > a {
+    color: var(--white-color);
+    background-color: var(--gray-color);
+}
+.sp--dropdown[layer*="gray-reverse"] ul ul {
+    background-color: var(--gray-color);
+    box-shadow: var(--shadow-top-dark);
+}
+.sp--dropdown[layer*="gray-reverse"] ul ul > li > a {
+    color: var(--white-color);
+}
+.sp--dropdown[layer*="gray-reverse"] ul ul > li:hover > a {
+    color: var(--gray-color);
+    background-color: var(--white-color);
+}
+.sp--dropdown[layer*="dark"] ul ul {
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-top-dark);
+}
+.sp--dropdown[layer*="dark"] ul ul > li:hover > a {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+}
+.sp--dropdown[layer*="dark-reverse"] ul ul {
+    background-color: var(--dark-color);
+    box-shadow: var(--shadow-top-dark);
+}
+.sp--dropdown[layer*="dark-reverse"] ul ul > li > a {
+    color: var(--white-color);
+}
+.sp--dropdown[layer*="dark-reverse"] ul ul > li:hover > a {
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+.sp--dropdown[layer*="primary"] ul ul {
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-top-dark);
+}
+.sp--dropdown[layer*="primary"] ul ul > li:hover > a {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.sp--dropdown[layer*="primary-reverse"] ul ul {
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow-top-dark);
+}
+.sp--dropdown[layer*="primary-reverse"] ul ul > li > a {
+    color: var(--white-color);
+}
+.sp--dropdown[layer*="primary-reverse"] ul ul > li:hover > a {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+}
+
+/*
+** sub="true"
+** 서브 메뉴를 가지고 있다는 의미
+*/
+
+/*
+ * dropdown effect
+ */
+.sp--dropdown ul {
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+/* fade */
+.sp--dropdown[effect="fade"] ul ul {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: opacity var(--animate-duration-fast) var(--cubic-ease-in), 
+                visibility var(--animate-duration-fast) var(--cubic-ease-in);
+}
+.sp--dropdown[effect="fade"] ul li:hover > div > ul {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+/* slide up */
+.sp--dropdown[effect="slideup"] ul ul {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translate3D(0, 3px, 0);
+    transition: opacity var(--animate-duration-fast) var(--cubic-ease-out), 
+                visibility var(--animate-duration-fast) var(--cubic-ease-out), 
+                transform var(--animate-duration-fast) var(--cubic-ease-out);
+}
+.sp--dropdown[effect="slideup"] ul li:hover > div > ul {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: translate3D(0, 0, 0);
+}
+
+/* slide down */
+.sp--dropdown[effect="slidedown"] ul ul {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translate3D(0, -3px, 0);
+    transition: opacity var(--animate-duration-fast) var(--cubic-ease-in), 
+                visibility var(--animate-duration-fast) var(--cubic-ease-in), 
+                transform var(--animate-duration-fast) var(--cubic-ease-in);
+}
+.sp--dropdown[effect="slidedown"] ul li:hover > div > ul {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: translate3D(0, 0, 0);
+}
+
+/*
+** 서브메뉴 화살표
+*/
+.sp--dropdown .sp--dropdown-layer li[sub="true"] > .sp--dropdown-layer > ul > li:first-child::before {
+    content: '';
+    top: 50%;
+    right: 100%;
+    margin-top: -3px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-right: 4px solid var(--dark-color);
+}
+.sp--dropdown[scope="right"] li[sub="true"] > .sp--dropdown-layer > ul > li:first-child::before,
+.sp--dropdown [direction="rtl"] li[sub="true"] > .sp--dropdown-layer > ul > li:first-child::before {
+    right: auto;
+    left: 100%;
+    border-width: 0;
+    border-bottom-width: 4px;
+    border-top-width: 4px;
+    border-left: 4px solid var(--dark-color);
+}
+.sp--dropdown[layer*="gray"] li[sub="true"] > .sp--dropdown-layer > ul > li:first-child::before {
+    border-left-color: var(--light-color);
+    border-right-color: var(--light-color);
+}
+.sp--dropdown[layer*="gray"][layer*="reverse"] li[sub="true"] > .sp--dropdown-layer > ul > li:first-child::before {
+    border-left-color: var(--gray-color);
+    border-right-color: var(--gray-color);
+}
+.sp--dropdown[layer*="dark"] li[sub="true"] > .sp--dropdown-layer > ul > li:first-child::before {
+    border-left-color: var(--light-color);
+    border-right-color: var(--light-color);
+}
+.sp--dropdown[layer*="dark"][layer*="reverse"] li[sub="true"] > .sp--dropdown-layer > ul > li:first-child::before {
+    border-left-color: var(--dark-color);
+    border-right-color: var(--dark-color);
+}
+.sp--dropdown[layer*="primary"] li[sub="true"] > .sp--dropdown-layer > ul > li:first-child::before {
+    border-left-color: var(--light-color);
+    border-right-color: var(--light-color);
+}
+.sp--dropdown[layer*="primary"][layer*="reverse"] li[sub="true"] > .sp--dropdown-layer > ul > li:first-child::before {
+    border-left-color: var(--primary-color);
+    border-right-color: var(--primary-color);
+}

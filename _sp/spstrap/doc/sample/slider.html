@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="padding:30px;">
+
+    <div id="sp--ajax-result"
+        data-callback="slider, cookie"
+    >
+        <div>
+            <h2>AJAX로 로드된 슬라이더</h2>
+            <button class="sp--dragable-handler">손잡이</button>
+            <button class="sp--cookie-btn" data-cookie="sp--ajax-cookie-1" data-cookiescope="set">쿠기 굽기</button>
+            <hr />
+            <div class="swiper-container sp--css-notready"
+                data-type="default"
+                data-swiper="
+                    slidesPerView = 1
+                    loopedSlides = 1
+                    autoplay-delay = 1000
+            ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/600x600/f5f5f5/333&text=1"></div>
+                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/600x600/f5f5f5/333&text=2"></div>
+                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/600x600/f5f5f5/333&text=3"></div>
+                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/600x600/f5f5f5/333&text=4"></div>
+                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/600x600/f5f5f5/333&text=5"></div>
+                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/600x600/f5f5f5/333&text=6"></div>
+                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/600x600/f5f5f5/333&text=7"></div>
+                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/600x600/f5f5f5/333&text=8"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

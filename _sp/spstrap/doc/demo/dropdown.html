@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Dropdown</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Float Left</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                대메뉴는 sp--btn의 라이브러리를 사용한다.
+                                ex : <a href="#!" class="[sp--btn] [sp--currentlink]" scale="[lg]" effect="[gray]">BEST</a>
+                                중분류 부터는 자체적인 디자인을 사용한다.
+                            -->
+                            <div class="[sp--dropdown]" 
+                                effect="slideup"
+                                layer="lg-light-outline"
+                            >
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="gray">BEST</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!">MENU 2 - 1</a></li>
+                                                <li>
+                                                    <a href="#!">MENU 2 - 2</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 3 - 1</a></li>
+                                                            <li><a href="#!">MENU 3 - 2</a></li>
+                                                            <li><a href="#!">MENU 3 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#!">MENU 2 - 3</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 3 - 1</a></li>
+                                                            <li><a href="#!">MENU 3 - 2</a></li>
+                                                            <li><a href="#!">MENU 3 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="gray">NEW 5%</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="gray">MENS</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="gray">WOMENS</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="gray">FIERCE</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="gray">FIERCE</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="gray">FIERCE</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="gray">FIERCE</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="gray">FIERCE</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!">MENU 2 - 1</a></li>
+                                                <li>
+                                                    <a href="#!">MENU 2 - 2</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 3 - 1</a></li>
+                                                            <li><a href="#!">MENU 3 - 2</a></li>
+                                                            <li><a href="#!">MENU 3 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#!">MENU 2 - 3</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 3 - 1</a></li>
+                                                            <li><a href="#!">MENU 3 - 2</a></li>
+                                                            <li><a href="#!">MENU 3 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <br /><br /><br />
+                            <br /><br /><br />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Float Center</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--dropdown" 
+                                effect="slideup"
+                                scope="[center]"
+                                layer="lg-light-outline"
+                            >
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="dark">BEST</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!">MENU 2 - 1</a></li>
+                                                <li>
+                                                    <a href="#!">MENU 2 - 2</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 3 - 1</a></li>
+                                                            <li><a href="#!">MENU 3 - 2</a></li>
+                                                            <li><a href="#!">MENU 3 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#!">MENU 2 - 3</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 3 - 1</a></li>
+                                                            <li><a href="#!">MENU 3 - 2</a></li>
+                                                            <li><a href="#!">MENU 3 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="dark">NEW 5%</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="dark">MENS</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="dark">WOMENS</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <br /><br /><br />
+                            <br /><br /><br />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Float Right</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--dropdown" 
+                                effect="slideup"
+                                scope="[right]"
+                                layer="lg-light-outline"
+                            >
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="primary">BEST</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!">MENU 2 - 1</a></li>
+                                                <li>
+                                                    <a href="#!">MENU 2 - 2</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 3 - 1</a></li>
+                                                            <li><a href="#!">MENU 3 - 2</a></li>
+                                                            <li><a href="#!">MENU 3 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#!">MENU 2 - 3</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 3 - 1</a></li>
+                                                            <li><a href="#!">MENU 3 - 2</a></li>
+                                                            <li><a href="#!">MENU 3 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="primary">NEW 5%</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="primary">MENS</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="primary">WOMENS</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <br /><br /><br />
+                            <br /><br /><br />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Main Menu Theme</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--dropdown" 
+                                scope="center"
+                                layer="lg-light-outline"
+                            >
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="light">light</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!">MENU 2 - 1</a></li>
+                                                <li><a href="#!">MENU 2 - 2</a></li>
+                                                <li><a href="#!">MENU 2 - 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="gray">gray</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="dark">dark</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="primary">primary</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="underline">underline</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="underline-tick">underline-tick</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="sp--btn sp--currentlink" scale="lg" effect="underline-bold">underline-bold</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <br /><br /><br />
+                            <br /><br /><br />
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Main Layer Theme</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                테마는 중복으로 사용이 불가능하다.
+                                아래 예시는 슬라이더 자체가 여러개인 경우다.
+                            -->
+                            <div class="sp--box" vertical="middle">
+                                <ul>
+                                    <li>
+                                        <!--
+                                            xl-light-outline
+                                        -->
+                                        <div class="sp--dropdown" 
+                                            scope="center"
+                                            layer="xl-light-outline"
+                                        >
+                                            <ul>
+                                                <li>
+                                                    <a href="#!" class="sp--btn sp--currentlink" scale="xl" bg="light">xl-light-outline</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 2 - 1</a></li>
+                                                            <li><a href="#!">MENU 2 - 2</a></li>
+                                                            <li><a href="#!">MENU 2 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!--
+                                            xl-gray<
+                                        -->
+                                        <div class="sp--dropdown" 
+                                            scope="center"
+                                            layer="xl-gray"
+                                        >
+                                            <ul>
+                                                <li>
+                                                    <a href="#!" class="sp--btn sp--currentlink" scale="xl" bg="gray">xl-gray</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 2 - 1</a></li>
+                                                            <li><a href="#!">MENU 2 - 2</a></li>
+                                                            <li><a href="#!">MENU 2 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!--
+                                            xl-gray-reverse
+                                        -->
+                                        <div class="sp--dropdown" 
+                                            scope="center"
+                                            layer="xl-gray-reverse"
+                                        >
+                                            <ul>
+                                                <li>
+                                                    <a href="#!" class="sp--btn sp--currentlink" scale="xl" bg="gray">xl-gray-reverse</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 2 - 1</a></li>
+                                                            <li><a href="#!">MENU 2 - 2</a></li>
+                                                            <li><a href="#!">MENU 2 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!--
+                                            xl-dark
+                                        -->
+                                        <div class="sp--dropdown" 
+                                            scope="center"
+                                            layer="xl-dark"
+                                        >
+                                            <ul>
+                                                <li>
+                                                    <a href="#!" class="sp--btn sp--currentlink" scale="xl" bg="dark">xl-dark</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 2 - 1</a></li>
+                                                            <li><a href="#!">MENU 2 - 2</a></li>
+                                                            <li><a href="#!">MENU 2 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!--
+                                            xl-dark-reverse
+                                        -->
+                                        <div class="sp--dropdown" 
+                                            scope="center"
+                                            layer="xl-dark-reverse"
+                                        >
+                                            <ul>
+                                                <li>
+                                                    <a href="#!" class="sp--btn sp--currentlink" scale="xl" bg="dark">xl-dark-reverse</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 2 - 1</a></li>
+                                                            <li><a href="#!">MENU 2 - 2</a></li>
+                                                            <li><a href="#!">MENU 2 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!--
+                                            xl-primary
+                                        -->
+                                        <div class="sp--dropdown" 
+                                            scope="center"
+                                            layer="xl-primary"
+                                        >
+                                            <ul>
+                                                <li>
+                                                    <a href="#!" class="sp--btn sp--currentlink" scale="xl" bg="primary">xl-primary</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 2 - 1</a></li>
+                                                            <li><a href="#!">MENU 2 - 2</a></li>
+                                                            <li><a href="#!">MENU 2 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!--
+                                            xl-primary-reverse
+                                        -->
+                                        <div class="sp--dropdown" 
+                                            scope="center"
+                                            layer="xl-primary-reverse"
+                                        >
+                                            <ul>
+                                                <li>
+                                                    <a href="#!" class="sp--btn sp--currentlink" scale="xl" bg="primary">xl-primary-reverse</a>
+                                                    <div class="sp--dropdown-layer">
+                                                        <ul>
+                                                            <li><a href="#!">MENU 2 - 1</a></li>
+                                                            <li><a href="#!">MENU 2 - 2</a></li>
+                                                            <li><a href="#!">MENU 2 - 3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Dropdown Vertical</div>
+                        <textarea class="sp--document-preview">
+                            <div style="width:200px;">
+                                <div class="sp--dropdown" 
+                                    scope="vertical-left" 
+                                    layer="lg-light-outline"
+                                    effect="slideup"
+                                >
+                                    <ul>
+                                        <li>
+                                            <a href="#!" class="sp--btn" effect="primary" theme="left-block" scale="lg">MENU 1</a>
+                                            <div class="sp--dropdown-layer">
+                                                <ul>
+                                                    <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 1</a></li>
+                                                    <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 2</a></li>
+                                                    <li>
+                                                        <a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 3</a>
+                                                        <div class="sp--dropdown-layer">
+                                                            <ul>
+                                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 1</a></li>
+                                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 2</a></li>
+                                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 3</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#!" class="sp--btn" effect="primary" theme="left-block" scale="lg">MENU 2</a></li>
+                                        <li><a href="#!" class="sp--btn" effect="primary" theme="left-block" scale="lg">MENU 3</a></li>
+                                        <li><a href="#!" class="sp--btn" effect="primary" theme="left-block" scale="lg">MENU 4</a></li>
+                                        <li><a href="#!" class="sp--btn" effect="primary" theme="left-block" scale="lg">MENU 5</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Dropdown full - left</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--dropdown" scope="full-left" effect="slideup">
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 1</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 1</a></li>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 2</a></li>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 2</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 3</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 4</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 5</a></li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Dropdown full - center</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--dropdown" scope="full-center" effect="slideup">
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 1</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 1</a></li>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 2</a></li>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 2</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 3</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 4</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 5</a></li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Dropdown full - right</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--dropdown" scope="full-right" effect="slideup">
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 1</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 1</a></li>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 2</a></li>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 2</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 3</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 4</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 5</a></li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Dropdown grid - center</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--dropdown" scope="grid-center" effect="slideup">
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 1</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 1</a></li>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 2</a></li>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 2</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 3</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 4</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 5</a></li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Dropdown justify - center</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--dropdown" scope="justify-center" effect="slideup">
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 1</a>
+                                        <div class="sp--dropdown-layer">
+                                            <ul>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 1</a></li>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 2</a></li>
+                                                <li><a href="#!" class="sp--btn" effect="light" scale="lg">MENU 2 - 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 2</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 3</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 4</a></li>
+                                    <li><a href="#!" class="sp--btn" effect="primary" scale="lg">MENU 5</a></li>
+                                </ul>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--dropdown
+                                </td>
+                                <td>
+                                    드롭다운 컨테이너
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--dropdown-layer
+                                </td>
+                                <td>
+                                    드롭다운의 첫번째 자식 컨테이너.<br />
+                                    첫번째 중분류만 컨테이너에 클래스를 준다.<br />
+                                    왼쪽, 중간, 우측으로 자유롭게 보여주기 위함이다.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    effect
+                                </td>
+                                <td>
+                                    default : '' ( string)<br />
+                                    '' or fade or slideup or slidedown
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

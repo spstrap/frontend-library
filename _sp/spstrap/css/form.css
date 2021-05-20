@@ -1,0 +1,681 @@
+/*
+** 폼
+**/
+.sp--form {
+
+}
+.sp--form select,
+.sp--form textarea,
+.sp--form input[type="text"],
+.sp--form input[type="number"],
+.sp--form input[type="password"] {
+    opacity: .85;
+    border-width: 1px;
+    border: 1px solid var(--lightlow-color);
+}
+.sp--form select:focus,
+.sp--form textarea:focus,
+.sp--form input[type="text"]:focus,
+.sp--form input[type="number"]:focus,
+.sp--form input[type="password"]:focus,
+.sp--form select:hover,
+.sp--form textarea:hover,
+.sp--form input[type="text"]:hover,
+.sp--form input[type="number"]:hover,
+.sp--form input[type="password"]:hover {
+    opacity: 1;
+}
+
+/*
+** remove arrow
+**/
+.sp--form select::-ms-expand {
+    display: none;
+}
+.sp--form select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../image/form/select-arrow.svg);
+    background-position-x: right;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+.sp--form select:focus {
+    background-image: url(../image/form/select-arrow-reverse.svg);
+}
+.sp--form[theme*="gray"] select,
+.sp--form[theme*="dark"] select,
+.sp--form[theme*="primary"]:not([theme*="bright"]) select {
+    background-image: url(../image/form/select-arrow-white.svg);
+}
+.sp--form[theme*="gray"] select:focus,
+.sp--form[theme*="dark"] select:focus,
+.sp--form[theme*="primary"]:not([theme*="bright"]) select:focus {
+    background-image: url(../image/form/select-arrow-reverse-white.svg);
+}
+
+/*
+** focus
+**/
+.sp--form select:focus,
+.sp--form textarea:focus,
+.sp--form input[type="text"]:focus,
+.sp--form input[type="number"]:focus,
+.sp--form input[type="password"]:focus{
+    outline: none;
+}
+
+/*
+** disabled
+**/
+.sp--form select[disabled],
+.sp--form textarea[disabled],
+.sp--form input[type="text"][disabled],
+.sp--form input[type="number"][disabled],
+.sp--form input[type="password"][disabled] {
+    cursor: no-drop;
+    color: var(--gray-color);
+    background-color: var(--light-color);
+}
+.sp--form select[readonly],
+.sp--form textarea[readonly],
+.sp--form input[type="text"][readonly],
+.sp--form input[type="number"][readonly],
+.sp--form input[type="password"][readonly] {
+    /* readonly */
+    cursor: default;
+}
+.sp--form [readonly="insert"],
+.sp--form [disabled="insert"] {
+    cursor: pointer !important;
+}
+
+/*
+** input size
+**/
+.sp--form[theme^="xs"] select,
+.sp--form[theme^="xs"] input[type="text"],
+.sp--form[theme^="xs"] input[type="number"],
+.sp--form[theme^="xs"] input[type="password"] {
+    height: 22px;
+    font-size: var(--font-size-xs);
+    padding: 0 var(--font-size-xs);
+    background-size: 22px;
+}
+.sp--form[theme^="sm"] select,
+.sp--form[theme^="sm"] input[type="text"],
+.sp--form[theme^="sm"] input[type="number"],
+.sp--form[theme^="sm"] input[type="password"] {
+    height: 25px;
+    font-size: var(--font-size-sm);
+    padding: 0 var(--font-size-sm);
+    background-size: 25px;
+}
+.sp--form[theme^="md"] select,
+.sp--form[theme^="md"] input[type="text"],
+.sp--form[theme^="md"] input[type="number"],
+.sp--form[theme^="md"] input[type="password"] {
+    height: 30.25px;
+    font-size: var(--font-size-md);
+    padding: 0 var(--font-size-md);
+    background-size: 30.25px;
+}
+.sp--form[theme^="lg"] select,
+.sp--form[theme^="lg"] input[type="text"],
+.sp--form[theme^="lg"] input[type="number"],
+.sp--form[theme^="lg"] input[type="password"] {
+    height: 34.83px;
+    font-size: var(--font-size-lg);
+    padding: 0 var(--font-size-lg);
+    background-size: 34.83px;
+}
+.sp--form[theme^="xl"] select,
+.sp--form[theme^="xl"] input[type="text"],
+.sp--form[theme^="xl"] input[type="number"],
+.sp--form[theme^="xl"] input[type="password"] {
+    height: 37.11px;
+    font-size: var(--font-size-lg);
+    padding: 0 var(--font-size-xl);
+    background-size: 37.11px;
+}
+.sp--form[theme^="2xl"] select,
+.sp--form[theme^="2xl"] input[type="text"],
+.sp--form[theme^="2xl"] input[type="number"],
+.sp--form[theme^="2xl"] input[type="password"] {
+    height: 44.78px;
+    font-size: var(--font-size-lg);
+    padding: 0 var(--font-size-2xl);
+    background-size: 44.78px;
+}
+.sp--form[theme^="3xl"] select,
+.sp--form[theme^="3xl"] input[type="text"],
+.sp--form[theme^="3xl"] input[type="number"],
+.sp--form[theme^="3xl"] input[type="password"] {
+    height: 53.27px;
+    font-size: var(--font-size-lg);
+    padding: 0 var(--font-size-3xl);
+    background-size: 53.27px;
+}
+
+/*
+** selectbox
+**/
+.sp--form[theme^="xs"] select {
+    padding-right: calc(var(--font-size-xs) * 2.5);
+}
+.sp--form[theme^="sm"] select {
+    padding-right: calc(var(--font-size-sm) * 2.5);
+}
+.sp--form[theme^="md"] select {
+    padding-right: calc(var(--font-size-md) * 2.5);
+}
+.sp--form[theme^="lg"] select {
+    padding-right: calc(var(--font-size-lg) * 2.5);
+}
+.sp--form[theme^="xl"] select {
+    padding-right: calc(var(--font-size-xl) * 2.5);
+}
+.sp--form[theme^="2xl"] select {
+    padding-right: calc(var(--font-size-2xl) * 2.5);
+}
+.sp--form[theme^="3xl"] select {
+    padding-right: calc(var(--font-size-3xl) * 2.5);
+}
+
+/*
+** input direction
+**/
+.sp--form[theme*="center"] select,
+.sp--form[theme*="center"] textarea,
+.sp--form[theme*="center"] input[type="text"],
+.sp--form[theme*="center"] input[type="number"],
+.sp--form[theme*="center"] input[type="password"],
+.sp--form [form-theme*="center"] select,
+.sp--form [form-theme*="center"] textarea,
+.sp--form [form-theme*="center"] input[type="text"],
+.sp--form [form-theme*="center"] input[type="number"],
+.sp--form [form-theme*="center"] input[type="password"] {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*
+** input radius
+**/
+.sp--form[theme*="round"] select,
+.sp--form[theme*="round"] textarea,
+.sp--form[theme*="round"] input[type="text"],
+.sp--form[theme*="round"] input[type="number"],
+.sp--form[theme*="round"] input[type="password"],
+.sp--form [form-theme*="round"] select,
+.sp--form [form-theme*="round"] textarea,
+.sp--form [form-theme*="round"] input[type="text"],
+.sp--form [form-theme*="round"] input[type="number"],
+.sp--form [form-theme*="round"] input[type="password"] {
+    border-radius: .2em;
+}
+
+/*
+** textarea size
+**/
+.sp--form[theme^="xs"] textarea {
+    font-size: var(--font-size-xs);
+    padding: var(--font-size-xs);
+    min-height: 48px;
+}
+.sp--form[theme^="sm"] textarea {
+    font-size: var(--font-size-sm);
+    padding: var(--font-size-sm);
+    min-height: 54px;
+}
+.sp--form[theme^="md"] textarea {
+    font-size: var(--font-size-md);
+    padding: var(--font-size-md);
+    min-height: 58px;
+}
+.sp--form[theme^="lg"] textarea {
+    font-size: var(--font-size-lg);
+    padding: var(--font-size-lg);
+    min-height: 63px;
+}
+.sp--form[theme^="xl"] textarea {
+    font-size: var(--font-size-lg);
+    padding: var(--font-size-xl);
+    min-height: 68px;
+}
+.sp--form[theme^="2xl"] textarea {
+    font-size: var(--font-size-lg);
+    padding: var(--font-size-2xl);
+    min-height: 75px;
+}
+.sp--form[theme^="3xl"] textarea {
+    font-size: var(--font-size-lg);
+    padding: var(--font-size-3xl);
+    min-height: 100px;
+}
+
+/*
+** theme
+**/
+.sp--form[theme*="light"] select,
+.sp--form[theme*="light"] textarea,
+.sp--form[theme*="light"] input[type="text"],
+.sp--form[theme*="light"] input[type="number"],
+.sp--form[theme*="light"] input[type="password"],
+.sp--form [form-theme*="light"] select,
+.sp--form [form-theme*="light"] textarea,
+.sp--form [form-theme*="light"] input[type="text"],
+.sp--form [form-theme*="light"] input[type="number"],
+.sp--form [form-theme*="light"] input[type="password"] {
+    border: 1px solid var(--lightlow-color);
+}
+.sp--form[theme*="gray"] select,
+.sp--form[theme*="gray"] textarea,
+.sp--form[theme*="gray"] input[type="text"],
+.sp--form[theme*="gray"] input[type="number"],
+.sp--form[theme*="gray"] input[type="password"],
+.sp--form [form-theme*="gray"] select,
+.sp--form [form-theme*="gray"] textarea,
+.sp--form [form-theme*="gray"] input[type="text"],
+.sp--form [form-theme*="gray"] input[type="number"],
+.sp--form [form-theme*="gray"] input[type="password"] {
+    border: 1px solid var(--gray-color);
+}
+.sp--form[theme*="dark"] select,
+.sp--form[theme*="dark"] textarea,
+.sp--form[theme*="dark"] input[type="text"],
+.sp--form[theme*="dark"] input[type="number"],
+.sp--form[theme*="dark"] input[type="password"],
+.sp--form [form-theme*="dark"] select,
+.sp--form [form-theme*="dark"] textarea,
+.sp--form [form-theme*="dark"] input[type="text"],
+.sp--form [form-theme*="dark"] input[type="number"],
+.sp--form [form-theme*="dark"] input[type="password"] {
+    border: 1px solid var(--dark-color);
+}
+.sp--form[theme*="primary"] select,
+.sp--form[theme*="primary"] textarea,
+.sp--form[theme*="primary"] input[type="text"],
+.sp--form[theme*="primary"] input[type="number"],
+.sp--form[theme*="primary"] input[type="password"],
+.sp--form [form-theme*="primary"] select,
+.sp--form [form-theme*="primary"] textarea,
+.sp--form [form-theme*="primary"] input[type="text"],
+.sp--form [form-theme*="primary"] input[type="number"],
+.sp--form [form-theme*="primary"] input[type="password"] {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+/*
+** theme fill
+**/
+.sp--form[theme*="light"][theme*="fill"] select,
+.sp--form[theme*="light"][theme*="fill"] textarea,
+.sp--form[theme*="light"][theme*="fill"] input[type="text"],
+.sp--form[theme*="light"][theme*="fill"] input[type="number"],
+.sp--form[theme*="light"][theme*="fill"] input[type="password"],
+.sp--form [form-theme*="light"][form-theme*="fill"] select,
+.sp--form [form-theme*="light"][form-theme*="fill"] textarea,
+.sp--form [form-theme*="light"][form-theme*="fill"] input[type="text"],
+.sp--form [form-theme*="light"][form-theme*="fill"] input[type="number"],
+.sp--form [form-theme*="light"][form-theme*="fill"] input[type="password"] {
+    box-shadow: inset 0 0 1em rgba(0, 0, 0, .015);
+    background-color: var(--lightmax-color);
+    border: 1px solid var(--light-color);
+}
+.sp--form[theme*="gray"][theme*="fill"] select,
+.sp--form[theme*="gray"][theme*="fill"] textarea,
+.sp--form[theme*="gray"][theme*="fill"] input[type="text"],
+.sp--form[theme*="gray"][theme*="fill"] input[type="number"],
+.sp--form[theme*="gray"][theme*="fill"] input[type="password"],
+.sp--form [form-theme*="gray"][form-theme*="fill"] select,
+.sp--form [form-theme*="gray"][form-theme*="fill"] textarea,
+.sp--form [form-theme*="gray"][form-theme*="fill"] input[type="text"],
+.sp--form [form-theme*="gray"][form-theme*="fill"] input[type="number"],
+.sp--form [form-theme*="gray"][form-theme*="fill"] input[type="password"] {
+    color: var(--white-color);
+    background-color: var(--gray-color);
+    border: 1px solid var(--gray-color);
+}
+.sp--form[theme*="dark"][theme*="fill"] select,
+.sp--form[theme*="dark"][theme*="fill"] textarea,
+.sp--form[theme*="dark"][theme*="fill"] input[type="text"],
+.sp--form[theme*="dark"][theme*="fill"] input[type="number"],
+.sp--form[theme*="dark"][theme*="fill"] input[type="password"],
+.sp--form [form-theme*="dark"][form-theme*="fill"] select,
+.sp--form [form-theme*="dark"][form-theme*="fill"] textarea,
+.sp--form [form-theme*="dark"][form-theme*="fill"] input[type="text"],
+.sp--form [form-theme*="dark"][form-theme*="fill"] input[type="number"],
+.sp--form [form-theme*="dark"][form-theme*="fill"] input[type="password"] {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+}
+.sp--form[theme*="primary"][theme*="fill"] select,
+.sp--form[theme*="primary"][theme*="fill"] textarea,
+.sp--form[theme*="primary"][theme*="fill"] input[type="text"],
+.sp--form[theme*="primary"][theme*="fill"] input[type="number"],
+.sp--form[theme*="primary"][theme*="fill"] input[type="password"],
+.sp--form [form-theme*="primary"][form-theme*="fill"] select,
+.sp--form [form-theme*="primary"][form-theme*="fill"] textarea,
+.sp--form [form-theme*="primary"][form-theme*="fill"] input[type="text"],
+.sp--form [form-theme*="primary"][form-theme*="fill"] input[type="number"],
+.sp--form [form-theme*="primary"][form-theme*="fill"] input[type="password"] {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.sp--form[theme*="primary-bright"][theme*="fill"] select,
+.sp--form[theme*="primary-bright"][theme*="fill"] textarea,
+.sp--form[theme*="primary-bright"][theme*="fill"] input[type="text"],
+.sp--form[theme*="primary-bright"][theme*="fill"] input[type="number"],
+.sp--form[theme*="primary-bright"][theme*="fill"] input[type="password"],
+.sp--form [form-theme*="primary-bright"][form-theme*="fill"] select,
+.sp--form [form-theme*="primary-bright"][form-theme*="fill"] textarea,
+.sp--form [form-theme*="primary-bright"][form-theme*="fill"] input[type="text"],
+.sp--form [form-theme*="primary-bright"][form-theme*="fill"] input[type="number"],
+.sp--form [form-theme*="primary-bright"][form-theme*="fill"] input[type="password"] {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-light-color);
+    background-color: var(--primary-bright-color);
+}
+
+/*
+** otherside
+**/
+.sp--form[theme*="nude"] textarea,
+.sp--form[theme*="nude"] input[type="text"],
+.sp--form[theme*="nude"] input[type="number"],
+.sp--form[theme*="nude"] input[type="password"],
+.sp--form [form-theme*="nude"] textarea,
+.sp--form [form-theme*="nude"] input[type="text"],
+.sp--form [form-theme*="nude"] input[type="number"],
+.sp--form [form-theme*="nude"] input[type="password"] {
+    border: 0 !important;
+}
+
+/*
+** underline with input
+**/
+.sp--form[theme*="underline"] textarea,
+.sp--form[theme*="underline"] input[type="text"],
+.sp--form[theme*="underline"] input[type="number"],
+.sp--form[theme*="underline"] input[type="password"],
+.sp--form [theme*="underline"] {
+    border-top: 1px solid transparent !important;
+    border-right: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+}
+
+/*
+** underline with input
+**/
+.sp--form [theme*="icon-left"] {
+    padding-left: 3.5em !important;
+}
+.sp--form [theme*="icon-right"] {
+    padding-right: 3.5em !important;
+}
+
+/*
+** grid
+**/
+.sp--form[grid="1"] select,
+.sp--form[grid="1"] textarea,
+.sp--form[grid="1"] input[type="text"],
+.sp--form[grid="1"] input[type="number"],
+.sp--form[grid="1"] input[type="password"],
+.sp--form [form-grid="1"] label,
+.sp--form [form-grid="1"] select,
+.sp--form [form-grid="1"] textarea,
+.sp--form [form-grid="1"] input[type="text"],
+.sp--form [form-grid="1"] input[type="number"],
+.sp--form [form-grid="1"] input[type="password"] {
+    width: 100%;
+}
+.sp--form[grid="2"] select,
+.sp--form[grid="2"] textarea,
+.sp--form[grid="2"] input[type="text"],
+.sp--form[grid="2"] input[type="number"],
+.sp--form[grid="2"] input[type="password"],
+.sp--form [form-grid="2"] select,
+.sp--form [form-grid="2"] textarea,
+.sp--form [form-grid="2"] input[type="text"],
+.sp--form [form-grid="2"] input[type="number"],
+.sp--form [form-grid="2"] input[type="password"] {
+    width: 50%;
+    display: inline-flex;
+}
+.sp--form[grid="3"] select,
+.sp--form[grid="3"] textarea,
+.sp--form[grid="3"] input[type="text"],
+.sp--form[grid="3"] input[type="number"],
+.sp--form[grid="3"] input[type="password"],
+.sp--form [form-grid="3"] select,
+.sp--form [form-grid="3"] textarea,
+.sp--form [form-grid="3"] input[type="text"],
+.sp--form [form-grid="3"] input[type="number"],
+.sp--form [form-grid="3"] input[type="password"] {
+    width: 33.333%;
+    display: inline-flex;
+}
+.sp--form[grid="4"] select,
+.sp--form[grid="4"] textarea,
+.sp--form[grid="4"] input[type="text"],
+.sp--form[grid="4"] input[type="number"],
+.sp--form[grid="4"] input[type="password"],
+.sp--form [form-grid="4"] select,
+.sp--form [form-grid="4"] textarea,
+.sp--form [form-grid="4"] input[type="text"],
+.sp--form [form-grid="4"] input[type="number"],
+.sp--form [form-grid="4"] input[type="password"] {
+    width: 25%;
+    display: inline-flex;
+}
+.sp--form[grid="5"] select,
+.sp--form[grid="5"] textarea,
+.sp--form[grid="5"] input[type="text"],
+.sp--form[grid="5"] input[type="number"],
+.sp--form[grid="5"] input[type="password"],
+.sp--form [form-grid="5"] select,
+.sp--form [form-grid="5"] textarea,
+.sp--form [form-grid="5"] input[type="text"],
+.sp--form [form-grid="5"] input[type="number"],
+.sp--form [form-grid="5"] input[type="password"] {
+    width: 20%;
+    display: inline-flex;
+}
+
+/*
+** gap
+**/
+.sp--form[gap="xs"] select,
+.sp--form[gap="xs"] textarea,
+.sp--form[gap="xs"] input[type="text"],
+.sp--form[gap="xs"] input[type="number"],
+.sp--form[gap="xs"] input[type="password"],
+.sp--form [form-gap="xs"] label,
+.sp--form [form-gap="xs"] select,
+.sp--form [form-gap="xs"] textarea,
+.sp--form [form-gap="xs"] input[type="text"],
+.sp--form [form-gap="xs"] input[type="number"],
+.sp--form [form-gap="xs"] input[type="password"] {
+    margin-right: var(--padding-xs);
+    margin-bottom: var(--padding-xs);
+}
+.sp--form[gap="sm"] select,
+.sp--form[gap="sm"] textarea,
+.sp--form[gap="sm"] input[type="text"],
+.sp--form[gap="sm"] input[type="number"],
+.sp--form[gap="sm"] input[type="password"],
+.sp--form [form-gap="sm"] label,
+.sp--form [form-gap="sm"] select,
+.sp--form [form-gap="sm"] textarea,
+.sp--form [form-gap="sm"] input[type="text"],
+.sp--form [form-gap="sm"] input[type="number"],
+.sp--form [form-gap="sm"] input[type="password"] {
+    margin-right: var(--padding-sm);
+    margin-bottom: var(--padding-sm);
+}
+.sp--form[gap="md"] select,
+.sp--form[gap="md"] textarea,
+.sp--form[gap="md"] input[type="text"],
+.sp--form[gap="md"] input[type="number"],
+.sp--form[gap="md"] input[type="password"],
+.sp--form [form-gap="md"] label,
+.sp--form [form-gap="md"] select,
+.sp--form [form-gap="md"] textarea,
+.sp--form [form-gap="md"] input[type="text"],
+.sp--form [form-gap="md"] input[type="number"],
+.sp--form [form-gap="md"] input[type="password"] {
+    margin-right: var(--padding-md);
+    margin-bottom: var(--padding-md);
+}
+.sp--form[gap="lg"] select,
+.sp--form[gap="lg"] textarea,
+.sp--form[gap="lg"] input[type="text"],
+.sp--form[gap="lg"] input[type="number"],
+.sp--form[gap="lg"] input[type="password"],
+.sp--form [form-gap="lg"] label,
+.sp--form [form-gap="lg"] select,
+.sp--form [form-gap="lg"] textarea,
+.sp--form [form-gap="lg"] input[type="text"],
+.sp--form [form-gap="lg"] input[type="number"],
+.sp--form [form-gap="lg"] input[type="password"] {
+    margin-right: var(--padding-lg);
+    margin-bottom: var(--padding-lg);
+}
+.sp--form[gap="xl"] select,
+.sp--form[gap="xl"] textarea,
+.sp--form[gap="xl"] input[type="text"],
+.sp--form[gap="xl"] input[type="number"],
+.sp--form[gap="xl"] input[type="password"],
+.sp--form [form-gap="xl"] label,
+.sp--form [form-gap="xl"] select,
+.sp--form [form-gap="xl"] textarea,
+.sp--form [form-gap="xl"] input[type="text"],
+.sp--form [form-gap="xl"] input[type="number"],
+.sp--form [form-gap="xl"] input[type="password"] {
+    margin-right: var(--padding-xl);
+    margin-bottom: var(--padding-xl);
+}
+.sp--form[gap="2xl"] select,
+.sp--form[gap="2xl"] textarea,
+.sp--form[gap="2xl"] input[type="text"],
+.sp--form[gap="2xl"] input[type="number"],
+.sp--form[gap="2xl"] input[type="password"],
+.sp--form [form-gap="2xl"] label,
+.sp--form [form-gap="2xl"] select,
+.sp--form [form-gap="2xl"] textarea,
+.sp--form [form-gap="2xl"] input[type="text"],
+.sp--form [form-gap="2xl"] input[type="number"],
+.sp--form [form-gap="2xl"] input[type="password"] {
+    margin-right: var(--padding-2xl);
+    margin-bottom: var(--padding-2xl);
+}
+.sp--form[gap="3xl"] select,
+.sp--form[gap="3xl"] textarea,
+.sp--form[gap="3xl"] input[type="text"],
+.sp--form[gap="3xl"] input[type="number"],
+.sp--form[gap="3xl"] input[type="password"],
+.sp--form [form-gap="3xl"] label,
+.sp--form [form-gap="3xl"] select,
+.sp--form [form-gap="3xl"] textarea,
+.sp--form [form-gap="3xl"] input[type="text"],
+.sp--form [form-gap="3xl"] input[type="number"],
+.sp--form [form-gap="3xl"] input[type="password"] {
+    margin-right: var(--padding-3xl);
+    margin-bottom: var(--padding-3xl);
+}
+
+/*
+** 라디오, 체크박스
+*/
+input[type="radio"] {
+    display: inline-flex;
+    width: var(--font-size-xl);
+    height: var(--font-size-xl);
+    font-size: var(--font-size-xl);
+    color: var(--silver-color);
+    margin: -.2em .25em 0 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+}
+input[type="radio"]::before {
+    font-family: 'spstrap-icon-font' !important;
+    content: "\e91c";
+}
+input[type="radio"]:checked::before {
+    content: "\e91b";
+    color: var(--primary-color);
+}
+
+input[type="checkbox"] {
+    display: inline-flex;
+    width: var(--font-size-xl);
+    height: var(--font-size-xl);
+    font-size: var(--font-size-xl);
+    margin: -.175em .25em 0 0;
+    color: var(--silver-color);
+    -webkit-appearance: none;
+       -moz-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+}
+input[type="checkbox"]::before {
+    font-family: 'spstrap-icon-font' !important;
+    content: "\e93d";
+}
+input[type="checkbox"]:checked::before {
+    content: "\e954";
+    color: var(--primary-color);
+}
+
+
+/*
+** Place Holder
+*/
+input::placeholder, 
+textarea::placeholder,
+input::-webkit-input-placeholder, 
+textarea::-webkit-input-placeholder { 
+    opacity: 0.5;
+    font-size: .9em;
+    font-style: italic;
+    color: var(--color-dark);
+}
+.sp--form[theme*="gray"] input::placeholder, 
+.sp--form[theme*="gray"] textarea::placeholder,
+.sp--form[theme*="gray"] input::-webkit-input-placeholder, 
+.sp--form[theme*="gray"] textarea::-webkit-input-placeholder,
+.sp--form[theme*="dark"] input::placeholder, 
+.sp--form[theme*="dark"] textarea::placeholder,
+.sp--form[theme*="dark"] input::-webkit-input-placeholder, 
+.sp--form[theme*="dark"] textarea::-webkit-input-placeholder,
+.sp--form[theme*="primary"]:not([theme*="-bright"]) input::placeholder, 
+.sp--form[theme*="primary"]:not([theme*="-bright"]) textarea::placeholder,
+.sp--form[theme*="primary"]:not([theme*="-bright"]) input::-webkit-input-placeholder, 
+.sp--form[theme*="primary"]:not([theme*="-bright"]) textarea::-webkit-input-placeholder { 
+    color: #fff;
+}
+
+/*
+** 쿠키 기본요소
+**/
+.sp--cookie.sp--cookie-on {
+    display:none;
+}
+button.sp--cookie-btn {
+    background: none;
+}
+
+/*
+** 드래그 엘리먼트
+*/
+.sp--dragable-handler {
+    cursor: move;
+}

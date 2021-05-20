@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Cookies</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">markup</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                쿠키 컨테이너
+                            -->
+                            <div class="sp--cookie"                     // 쿠키 컨테이너
+                                data-cookie="sample-1"                  // 컨테이너가 가지는 쿠키명
+                                style="padding:30px;background:#f0f0f0;"
+                            >
+                                쿠키 컨텐츠                              // 실제 쿠키속 컨텐츠
+                                <!--
+                                    굽기 버튼
+                                -->
+                                <button class="sp--cookie-btn"          // 쿠키 버튼 리스너
+                                    data-cookie="sample-1"              // 영향을 줄 쿠키명
+                                    data-scope="set"                    // 버튼 역할 ( set = "굽기" )
+                                    data-value="val"                    // 쿠키의 값이 필요할 경우 지정 ( 웬만하면 쓸 일 없다 )
+                                    data-date="3"                       // 쿠키 유효기간 ( 3 = 3일 )
+                                    style="display:none;"               // 초기상태 숨겨두기 ( 쿠키가 비었다면 이 부분이 삭제된다. ) 
+                                >쿠기 굽기</button>
+                            </div>
+                            <!--
+                                제거하기 버튼
+                            -->
+                            <button class="sp--cookie-btn"      // 쿠키 버튼 리스너
+                                data-cookie="sample-1"          // 영향을 줄 쿠키명
+                                data-scope="del"                // 버튼 역할 ( del = "제거" )
+                                style="[display:none;]"         // 초기상태 숨겨두기 ( 쿠키가 구워져있다면 이 부분이 삭제된다. )
+                            >쿠기 제거하기</button>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">base cookie</div>
+                        <textarea class="sp--document-preview">
+                            <!-- 쿠키 클래스 -->
+                            <style>
+                                .sp--cookie.sp--cookie-on { display:none; }
+                            </style>
+                            <div [class="sp--cookie"] data-cookie="[test]" style="padding:30px;background:#f0f0f0;">
+                                쿠키 컨텐츠<br />
+                                <button class="[sp--cookie-btn]" data-cookie="test" [data-scope="set"] data-value="val" data-date="3" style="[display:none;]">쿠기 굽기</button>
+                            </div>
+                            <button class="[sp--cookie-btn]" data-cookie="test" [data-scope="del"] style="[display:none;]">쿠기 제거하기</button>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--cookie
+                                </td>
+                                <td>
+                                    쿠키의 영향을 받는 컨테이너
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--cookie-btn
+                                </td>
+                                <td>
+                                    쿠키의 영향을 주는 버튼
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--cookie-on
+                                </td>
+                                <td>
+                                    쿠키에 값이 지정되면, .sp--cookie 컨테이너에 추가되는 클래스
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    data-cookie
+                                </td>
+                                <td>
+                                    <!---->
+                                    <div class="sp--document-box" data-hljs="html">
+                                        <div class="sp--document-subject">쿠키가 가지는 unique name</div>
+                                        <textarea class="sp--document-preview">
+                                            <div class="sp--cookie" [data-cookie="index-popup-cookie-1"]>
+                                                <!--
+                                                    ...
+                                                -->
+                                            </div>
+                                        </textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-scope="set"
+                                </td>
+                                <td>
+                                    쿠키를 굽거나 삭제한다. 버튼 속성에서 사용.<br />
+                                    data-cookie와 반드시 함께 사용해야 한다.
+                                    <!---->
+                                    <div class="sp--document-box" data-hljs="html">
+                                        <div class="sp--document-subject">set or del</div>
+                                        <textarea class="sp--document-preview">
+                                            <div class="sp--cookie" data-cookie="index-popup-cookie-1">
+                                                ...
+                                                <button class="sp--cookie-btn" 
+                                                    data-cookie="index-popup-cookie-1" 
+                                                    [data-scope="set"] 
+                                                    style="display:none;">쿠기 굽기</button>
+                                            </div>
+                                            <button class="sp--cookie-btn" 
+                                                    data-cookie="index-popup-cookie-1" 
+                                                    [data-scope="del"] 
+                                                    style="display:none;">제거하기 굽기</button>
+                                        </textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-date
+                                </td>
+                                <td>
+                                    default : 1 = 하루,<br />
+                                    쿠키의 수명을 지정한다.<br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-value
+                                </td>
+                                <td>
+                                    default : true<br />
+                                    특별하게 쿠키의 값이 필요한 경우만 사용한다.<br />
+                                    기본적으로 boolean 형태로 체크하므로 중요하진 않다.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            .sp--cookie 클래스는 .sp--ajax 클래스와 체인 형태로 연결되어 있습니다.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

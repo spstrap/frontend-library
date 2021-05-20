@@ -1,0 +1,260 @@
+/* -------------------------------------------------------------------
+  Microtip
+
+  Modern, lightweight css-only tooltips
+  Just 1kb minified and gzipped
+
+  @author Ghosh
+  @package Microtip
+  https://microtip.now.sh/
+
+----------------------------------------------------------------------
+  1. Base Styles
+  2. Direction Modifiers
+  3. Position Modifiers
+--------------------------------------------------------------------*/
+
+/* ------------------------------------------------
+  [1] Base Styles
+-------------------------------------------------*/
+
+[tooltip-label] {
+    position: relative;
+}
+  
+/* ------------------------------------------------
+  [1-1] tooltip color
+-------------------------------------------------*/
+
+[tooltip-label]::before {
+    color: var(--dark-color);
+}
+  
+[tooltip-label]::after {
+    background-color: var(--dark-color);
+}
+
+[tooltip-label]::before,
+[tooltip-label]::after {
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--microtip-transition-duration, .18s) var(--microtip-transition-easing, ease-in-out) var(--microtip-transition-delay, 0s);
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 10;
+    transform-origin: top;
+}
+  
+[tooltip-label]::before {
+    content: '\e919';
+    font-family: 'spstrap-icon-font' !important;
+    font-size: 16px;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+}
+  
+[tooltip-label]::after {
+    border-radius: 4px;
+    color: var(--white-color);
+    content: attr(tooltip-label);
+    font-size: var(--microtip-font-size, 11px);
+    font-weight: var(--microtip-font-weight, normal);
+    text-transform: var(--microtip-text-transform, none);
+    padding: .5em 1em .6em 1em;
+    height: 16px;
+    line-height: 18px;
+    white-space: nowrap;
+    box-sizing: content-box;
+}
+.sp--toggle-on > [tooltip-scope="close"]::after {
+    content: '\e91f';
+    font-family: 'spstrap-icon-font' !important;
+}
+  
+[tooltip-label]:hover::before,
+[tooltip-label]:hover::after,
+[tooltip-label]:focus::before,
+[tooltip-label]:focus::after {
+    opacity: 1;
+    pointer-events: auto;
+}
+  
+/* ------------------------------------------------
+[2] Position Modifiers
+-------------------------------------------------*/
+  
+[tooltip-label][tooltip-position|="top"]::before {
+    transform: translate3d(-50%, 3px, 0) rotate(90deg);
+    bottom: 100%;
+    left: 50%;
+}
+
+[tooltip-label][tooltip-position|="top"]::after {
+    margin-bottom: 11px;
+    transform: translate3d(-50%, 3px, 0);
+    bottom: 100%;
+    left: 50%;
+}
+  
+[tooltip-label][tooltip-position|="top"]:hover::before {
+    transform: translate3d(-50%, 0, 0) rotate(90deg);
+}
+  
+[tooltip-label][tooltip-position="top"]:hover::after {
+    transform: translate3d(-50%, 0, 0);
+}
+  
+/* ------------------------------------------------
+    [2.1] Top Left
+-------------------------------------------------*/
+[tooltip-label][tooltip-position="top-left"]::after {
+    transform: translate3d(calc(-100% + 16px), 3px, 0);
+    bottom: 100%;
+}
+  
+[tooltip-label][tooltip-position="top-left"]:hover::after {
+    transform: translate3d(calc(-100% + 16px), 0, 0);
+}
+  
+  
+/* ------------------------------------------------
+    [2.2] Top Right
+-------------------------------------------------*/
+[tooltip-label][tooltip-position="top-right"]::after {
+    transform: translate3d(calc(0% + -16px), 3px, 0);
+    bottom: 100%;
+}
+  
+[tooltip-label][tooltip-position="top-right"]:hover::after {
+    transform: translate3d(calc(0% + -16px), 0, 0);
+}
+  
+  
+/* ------------------------------------------------
+    [2.3] Bottom
+-------------------------------------------------*/
+[tooltip-label][tooltip-position|="bottom"]::before {
+    transform: translate3d(-50%, -3px, 0) rotate(270deg);
+    top: 100%;
+    left: 50%;
+}
+  
+[tooltip-label][tooltip-position|="bottom"]::after {
+    margin-top: 11px;
+    transform: translate3d(-50%, -3px, 0);
+    top: 100%;
+    left: 50%;
+}
+  
+[tooltip-label][tooltip-position|="bottom"]:hover::before {
+    transform: translate3d(-50%, 0, 0) rotate(270deg);
+}
+  
+[tooltip-label][tooltip-position="bottom"]:hover::after {
+    transform: translate3d(-50%, 0, 0);
+}
+  
+  
+/* ------------------------------------------------
+    [2.4] Bottom Left
+-------------------------------------------------*/
+[tooltip-label][tooltip-position="bottom-left"]::after {
+    transform: translate3d(calc(-100% + 16px), -3px, 0);
+    top: 100%;
+}
+  
+[tooltip-label][tooltip-position="bottom-left"]:hover::after {
+    transform: translate3d(calc(-100% + 16px), 0, 0);
+}
+  
+  
+/* ------------------------------------------------
+    [2.5] Bottom Right
+-------------------------------------------------*/
+[tooltip-label][tooltip-position="bottom-right"]::after {
+    transform: translate3d(calc(0% + -16px), -3px, 0);
+    top: 100%;
+}
+  
+[tooltip-label][tooltip-position="bottom-right"]:hover::after {
+    transform: translate3d(calc(0% + -16px), 0, 0);
+}
+  
+  
+/* ------------------------------------------------
+    [2.6] Left
+-------------------------------------------------*/
+[tooltip-label][tooltip-position^="left"]::before,
+[tooltip-label][tooltip-position^="left"]::after {
+    bottom: auto;
+    left: auto;
+    right: 100%;
+    top: 50%;
+    transform: translate3d(3px, -50%, 0);
+}
+  
+[tooltip-label][tooltip-position^="left"]::after {
+    margin-right: 11px;
+}
+  
+[tooltip-label][tooltip-position^="left"]:hover::before,
+[tooltip-label][tooltip-position^="left"]:hover::after {
+    transform: translate3d(0, -50%, 0);
+}
+
+[tooltip-label][tooltip-position^="left"][tooltip-position$="more"]::before,
+[tooltip-label][tooltip-position^="left"][tooltip-position$="more"]::after {
+    transform: translate3d(-7px, -50%, 0);
+}
+[tooltip-label][tooltip-position^="left"][tooltip-position$="more"]:hover::before,
+[tooltip-label][tooltip-position^="left"][tooltip-position$="more"]:hover::after {
+    transform: translate3d(-10px, -50%, 0);
+}
+  
+  
+/* ------------------------------------------------
+    [2.7] Right
+-------------------------------------------------*/
+[tooltip-label][tooltip-position^="right"]::before,
+[tooltip-label][tooltip-position^="right"]::after {
+    bottom: auto;
+    left: 100%;
+    top: 50%;
+}
+[tooltip-label][tooltip-position^="right"]::before {
+    transform: translate3d(-3px, -50%, 0) rotate(180deg);
+}
+[tooltip-label][tooltip-position^="right"]::after {
+    transform: translate3d(-3px, -50%, 0);
+    margin-left: 11px;
+}
+
+[tooltip-label][tooltip-position^="right"]:hover::after {
+    transform: translate3d(0, -50%, 0);
+}
+
+[tooltip-label][tooltip-position^="right"]:hover::before {
+    transform: translate3d(0, -50%, 0) rotate(180deg);
+}
+
+[tooltip-label][tooltip-position^="right"][tooltip-position$="more"]::before {
+    transform: translate3d(7px, -50%, 0) rotate(180deg);
+}
+[tooltip-label][tooltip-position^="right"][tooltip-position$="more"]::after {
+    transform: translate3d(7px, -50%, 0);
+}
+[tooltip-label][tooltip-position^="right"][tooltip-position$="more"]:hover::before {
+    transform: translate3d(10px, -50%, 0) rotate(180deg);
+}
+[tooltip-label][tooltip-position^="right"][tooltip-position$="more"]:hover::after {
+    transform: translate3d(10px, -50%, 0);
+}

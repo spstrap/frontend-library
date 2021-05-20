@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Slider</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="js">
+                        <div class="sp--document-subject">Slider Type</div>
+                        <textarea class="sp--document-preview">
+                            <!--//
+                            data-type="default"
+                            data-type="scrollbar"
+                            data-type="navigation"
+                            data-type="pagination"
+                            data-type="pagination-dynamic-bullets"
+                            data-type="progress-pagination"
+                            data-type="fraction-pagination"
+                            data-type="custom-pagination"
+                            data-type="vertical-slider"
+                            data-type="multiple-slides-per-view"
+                            data-type="centered-slides"
+                            data-type="centered-slides-auto-slides-per-view"
+                            data-type="multi-row-slides-layout"
+                            data-type="loop-mode-with-multiple-slides-per-group"
+                            data-type="3d-cube-effect"
+                            data-type="3d-coverflow-effect"
+                            data-type="mousewheel-control"
+                            data-type="lazy-loading-images"
+                            //-->
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Default</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                page="xs"
+                                data-type="default"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fade</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="fade"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 3000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Scrollbar</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="scrollbar"
+                                data-swiper="
+                                    loopedSlides = 5
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Navigation</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="navigation"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Pagination-dynamic-bullets</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="pagination-dynamic-bullets"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Progress-pagination</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="progress-pagination"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/4"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/5"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Fraction-pagination</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="fraction-pagination"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Custom-pagination</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                [custom="xs-dark"]
+                                data-type="custom-pagination"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                커스텀 페이지는 아래의 마크업 구조를 가진다.
+                                두개의 클래스만 관리하면 된다.
+                                .swiper-pagination-bullet-customize // 커스텀 버튼
+                                .swiper-pagination-bullet-active // 커스텀 액티브 버튼
+
+                                * custum="" 부분을 삭제하고, 개인적인 코드를 삽입해서 디자인을 보완할 수 있다.
+                            -->
+                            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                                <span class="swiper-pagination-bullet swiper-pagination-bullet-customize" tabindex="0">1</span>
+                                <span class="swiper-pagination-bullet [swiper-pagination-bullet-customize swiper-pagination-bullet-active]" tabindex="0">2</span>
+                                <span class="swiper-pagination-bullet swiper-pagination-bullet-customize" tabindex="0">3</span>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Vertical-slider</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                // vertical slider는 반드시 높이가 지정되어야 한다.
+                                // 구조적으로 풀 방법을 아직 찾지 못했다.
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                scope="fixheight"
+                                data-type="vertical-slider"
+                                data-swiper="
+                                    loop = true
+                                    autoheight = true
+                                    autoplay-delay = 3000
+                                " style="height:300px;">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Vertical-slider - rows</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                scope="fixheight"
+                                data-type="vertical-slider"
+                                data-swiper="
+                                    loop = true
+                                    autoheight = true
+                                    autoplay-delay = 3000
+                                    slidesPerView = 2
+                                " style="height:300px;">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Multiple-slides-per-view</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="multiple-slides-per-view"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 2
+                                    spaceBetween = 30
+                                    autoplay-delay = 3000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/700x300/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/700x300/f5f5f5/333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/700x300/f5f5f5/333&text=3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Centered-slides</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="centered-slides"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 2
+                                    spaceBetween = 30
+                                    centeredSlides = true
+                                    autoplay-delay = 3000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/f5f5f5/333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/f5f5f5/333&text=3"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/f5f5f5/333&text=4"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Centered-slides-auto-slides-per-view</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="centered-slides-auto-slides-per-view"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = auto
+                                    centeredSlides = true
+                                    spaceBetween = 30
+                                    autoplay-delay = 3000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/300x300/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/f5f5f5/333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/700x300/f5f5f5/333&text=3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Multi-row-slides-layout</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                slidesPerView = 3
+                                slidesPerColumn = 2
+                                slidesPerGroup = 3  // 그룹수를 지정한다면 perView와 같으면 된다. 없어도 무관하다.
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                data-type="multi-row-slides-layout"
+                                data-swiper="
+                                    slidesPerView = 3
+                                    slidesPerColumn = 2
+                                    slidesPerGroup = 3
+                                    spaceBetween = 50
+                                    watchOverflow = true
+                                    autoplay-delay = 1000000
+                                "
+                            >
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="https://placeholder.pics/svg/500x300/1">
+                                            <p>
+                                                gkgkgkgk<br />
+                                                하하하하하<br />
+                                                5,000원
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/f5f5f5/333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/f5f5f5/333&text=3"></div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="https://placeholder.pics/svg/500x300/f5f5f5/333&text=4">
+                                            <p>
+                                                gkgkgkgk<br />
+                                                하하하하하<br />
+                                                5,000원
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/f5f5f5/333&text=5"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/f5f5f5/333&text=6"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/f5f5f5/333&text=7"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/f5f5f5/333&text=8"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/f5f5f5/333&text=9"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/10"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/11"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/12"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Loop-mode-with-multiple-slides-per-group</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="loop-mode-with-multiple-slides-per-group"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 3
+                                    spaceBetween = 30
+                                    slidesPerGroup = 3
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x500/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x500/f5f5f5/333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x500/f5f5f5/333&text=3"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x500/f5f5f5/333&text=4"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x500/f5f5f5/333&text=5"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x500/f5f5f5/333&text=6"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">3d-cube-effect</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="3d-cube-effect"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/f5f5f5/333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/f5f5f5/333&text=3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">3d-coverflow-effect</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="3d-coverflow-effect"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Mousewheel-control</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                scope="fixheight"
+                                data-type="mousewheel-control"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                            " style="height:450px;">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/f5f5f5/333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/f5f5f5/333&text=3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Lazy-loading-images</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                data-type="lazy-loading-images"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 3000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img data-src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1" class="swiper-lazy">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img data-src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1" class="swiper-lazy">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img data-src="https://placeholder.pics/svg/2000x400/f5f5f5/333333/1" class="swiper-lazy">
+                                        <div class="swiper-lazy-preloader"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Chain slider</div>
+                        <textarea class="sp--document-preview">
+                            <!-- Slider main container -->
+                            <div class="swiper-container sp--css-notready"
+                                data-type="default"
+                                data-chain="index"
+                                data-swiper="
+                                    loop = true
+                                    loopedSlides = 5
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x400/1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x400/f5f5f5/333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x400/f5f5f5/333&text=3"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x400/f5f5f5/333&text=4"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x400/f5f5f5/333&text=5"></div>
+                                </div>
+                            </div>
+                            <!-- Slider chain container -->
+                            <!--
+                                * 두번째로 나오는 슬라이더는 체인에 연결된 unique name을 찾는다.
+                                * 만약 있다면, 해당 슬라이더와 연결한다.
+                                * 즉 후자가 컨트롤러가 된다는 느낌으로 제작하자.
+                                * 물론 반대도 가능하지만, 굳이?
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                data-type="multiple-slides-per-view"
+                                data-chain="index"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 5
+                                    loopedSlides = 5
+                                    slideToClickedSlide = true
+                                    centeredSlides = true
+                                    pagination = delete
+                                    navigation = delete
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/333333/ffffff&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/333333/ffffff&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/333333/ffffff&text=3"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/333333/ffffff&text=4"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/500x300/333333/ffffff&text=5"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Slider Hover Controler</div>
+                        <textarea class="sp--document-preview">
+                            <div class="swiper-container sp--css-notready"
+                                page="hover"
+                                arrow="hover"
+                                data-type="default"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 50000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/eaeaea/333333&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/eaeaea/333333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/eaeaea/333333&text=3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Slider Arrow Theme</div>
+                        <textarea class="sp--document-preview">
+
+                            <!--
+                                hover, theme
+                                md-primary-hover-inside
+                                크기-색상테마-호버이펙트-내부 형태로 수정된다.
+                                크기는 반드시 시작점이어야 한다. ( ^ )
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [arrow="md-primary-hover-inside"]
+                                data-type="default"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 50000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                inside
+                                웹사이트 내부 크기에 종속된다.
+                                풀화면에서는 의미가 없으며, 내부 크기보다
+                                브라우저가 더 클때만 원하는 화면을 볼 수 있다.
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                arrow="xl-black-[inside]"
+                                data-type="default"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 50000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/eaeaea/333333&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/eaeaea/333333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/eaeaea/333333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                outside
+                                data-type="fade" 일때만 지원한다.
+                                가급적 사용하지 말자. 하지만 사용은 가능하다.
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                arrow="xl-primary-[outside]"
+                                data-type="fade"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 50000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/eaeaea/333333&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/eaeaea/333333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x500/eaeaea/333333&text=3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Slider Pager Theme</div>
+                        <textarea class="sp--document-preview">
+
+                            <!--
+                                hover, theme
+                                md-primary-hover-outside
+                                크기-색상테마-호버이펙트-외부 형태로 수정된다.
+                                크기는 반드시 시작점이어야 한다. ( ^ )
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [page="xs-primary-hover"]
+                                data-type="default"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 50000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                hover, theme
+                                md-primary-hover-outside
+                                크기-색상테마-호버이펙트-외부 형태로 수정된다.
+                                크기는 반드시 시작점이어야 한다. ( ^ )
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [page="xs-primary-outside"]
+                                data-type="default"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 50000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                wide
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                page="md-dark-[wide]-outside"
+                                data-type="default"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 50000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Slider Fraction Theme</div>
+                        <textarea class="sp--document-preview">
+
+                            <!--
+                                hover, theme
+                                md-primary
+                                크기-색상테마-호버이펙트-외부 형태로 수정된다.
+                                크기는 반드시 시작점이어야 한다. ( ^ )
+                                *
+                                hover, outside 이펙트는 page에 종속된다. ( 서로 같은 성질 )
+                                fraction 옵션은 테마만 정의한다.
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [page="outside"]
+                                [fraction="md-gray"]
+                                data-type="fraction-pagination"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 50000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                theme
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [fraction="md-primary"]
+                                data-type="fraction-pagination"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 50000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                hover
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [page="hover"]
+                                fraction="md-dark"
+                                data-type="fraction-pagination"
+                                data-swiper="
+                                    loop = true
+                                    slidesPerView = 1
+                                    loopedSlides = 5
+                                    autoplay-delay = 50000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/1400x300/f0f0f0/333333&text=3"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Slider Custom Buttons</div>
+                        <textarea class="sp--document-preview">
+
+                            <!--
+                                custom button
+                                data-page="버튼" 속성을 이용해서 버튼을 정의할 수 있다.
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [custom="md-gray"]
+                                data-type="custom-pagination"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                                ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" data-page="버튼 1"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=1"></div>
+                                    <div class="swiper-slide" data-page="버튼 2"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=2"></div>
+                                    <div class="swiper-slide" data-page="버튼 3"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                color
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [custom="md-primary"]
+                                data-type="custom-pagination"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                                ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" data-page="버튼 1"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=1"></div>
+                                    <div class="swiper-slide" data-page="버튼 2"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=2"></div>
+                                    <div class="swiper-slide" data-page="버튼 3"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                outside
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [page="outside"]
+                                custom="md-dark"
+                                data-type="custom-pagination"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                                ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" data-page="버튼 1"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=1"></div>
+                                    <div class="swiper-slide" data-page="버튼 2"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=2"></div>
+                                    <div class="swiper-slide" data-page="버튼 3"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                square mode
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [custom="md-dark-square"]
+                                data-type="custom-pagination"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                                ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" data-page="버튼 1"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=1"></div>
+                                    <div class="swiper-slide" data-page="버튼 2"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=2"></div>
+                                    <div class="swiper-slide" data-page="버튼 3"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                justify mode
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [custom="lg-dark-justify"]
+                                data-type="custom-pagination"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                                ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" data-page="버튼 1"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=1"></div>
+                                    <div class="swiper-slide" data-page="버튼 2"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=2"></div>
+                                    <div class="swiper-slide" data-page="버튼 3"><img src="https://placeholder.pics/svg/1400x300/dadada/333&text=3"></div>
+                                </div>
+                            </div>
+
+                            <!--
+                                justify grid ( 1 ~ 10 )
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [custom="md-primary-grid-3"]
+                                data-type="custom-pagination"
+                                data-swiper="
+                                    loop = true
+                                    autoplay-delay = 5000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" data-page="김치를 먹어요<br />맛있게~"><img src="https://placeholder.pics/svg/1400x300/dddddd/ffffff&text=1"></div>
+                                    <div class="swiper-slide" data-page="김치를 먹어요<br />맛있게~"><img src="https://placeholder.pics/svg/1400x300/dddddd/ffffff&text=2"></div>
+                                    <div class="swiper-slide" data-page="김치를 먹어요<br />맛있게~"><img src="https://placeholder.pics/svg/1400x300/dddddd/ffffff&text=3"></div>
+                                    <div class="swiper-slide" data-page="김치를 먹어요<br />맛있게~"><img src="https://placeholder.pics/svg/1400x300/dddddd/ffffff&text=4"></div>
+                                    <div class="swiper-slide" data-page="김치를 먹어요<br />맛있게~"><img src="https://placeholder.pics/svg/1400x300/dddddd/ffffff&text=5"></div>
+                                    <div class="swiper-slide" data-page="김치를 먹어요<br />맛있게~"><img src="https://placeholder.pics/svg/1400x300/dddddd/ffffff&text=6"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+                    
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Slider Active Opacity, Scale</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                현재 슬라이드만 opacity 를 1로 지정한다.
+                                loop = true 옵션을 사용 할 경우 끝 부분에서 약간의 버그가 있다.
+                                알려진 버그 같은데, 다음 버전을 기대해보는게 좋겠다.
+                                그 전까진 가급적 loop 모드에선 사용하지 말자.
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [scope="active-opacity"]
+                                data-type="centered-slides"
+                                data-swiper="
+                                    slidesPerView = 3
+                                    spaceBetween = 30
+                                    centeredSlides = true
+                                    autoplay-delay = 500000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=3"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=4"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=5"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=6"></div>
+                                </div>
+                            </div>
+
+                            <br /><br />
+
+                            <!--
+                                scale mode
+                            -->
+                            <div class="swiper-container sp--css-notready"
+                                [scope="active-scale"]
+                                data-type="centered-slides"
+                                data-swiper="
+                                    slidesPerView = 3
+                                    spaceBetween = 5
+                                    centeredSlides = true
+                                    autoplay-delay = 500000
+                            ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=1"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=2"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=3"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=4"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=5"></div>
+                                    <div class="swiper-slide"><img src="https://placeholder.pics/svg/800x400/333333/ffffff&text=6"></div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .swiper-container
+                                </td>
+                                <td>
+                                    스와이퍼 컨테이너
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .swiper-wrapper
+                                </td>
+                                <td>
+                                    스와이퍼 내부 커버
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .swiper-slide
+                                </td>
+                                <td>
+                                    스와이퍼 요소
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    data-type
+                                </td>
+                                <td>
+                                    슬라이더 타입을 결정
+                                    <p class="sp--document-message">
+                                        <a href="#data-type" class="document">type document</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-swiper *
+                                </td>
+                                <td>
+                                    슬라이더 내부 명령어 입력 가능<br />
+                                    코드는 엔터로 구분되며, = 기준으로 split 된다.<br />
+                                    entity-sub = value 형태이며, sub 은 디렉토리에 해당한다.
+                                    <p class="sp--document-message">
+                                        매우 까다로우니, 가급적 기본 소스를 사용하자.
+                                    </p>
+                                    <pre><code class="js"><textarea>
+// 옵션이 매우 많으므로, 중요한 항목만 열거한다.
+
+data-swiper="
+    loop = true                     // 무한반복
+    slidesPerView = 1               // 한 화면에 보여줄 개수
+    loopedSlides = 5                // 클론을 할 개수. 걍 slidesPerView 이거랑 같은 숫자 적어주자.
+    spaceBetween = 30               // 슬라이더 사이의 간격
+    centeredSlides = true           // 슬라이더를 가운데로 정렬
+    autoplay-delay = 5000           // 다음 슬라이더로 가는 시간
+    [pagination = delete             // 속성 자체를 삭제할 수 있다.]
+    [navigation = delete             // 속성 자체를 삭제할 수 있다.]
+    observer = true                 // 슬라이더를 주시한다.
+    observeParents = true           // 숨김 상태일때 사용하는게 좋다.
+"
+                                    </textarea></code></pre>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            * display none 상태에서 보여줄 시 loop 는 false 이어야 한다.<br />
+                            * 예를 들어 팝업창으로 슬라이더가 나오는 경우 loop는 false로 하자.<br />
+                            슬라이더는 화면에 속해있을때만 작동한다.<br />
+                            동영상이나, 프로그래스바는 크게 의미가 없는 듯 하다.
+                        </p>
+                    </div>
+
+                </div>
+                
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

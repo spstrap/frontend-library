@@ -1,0 +1,168 @@
+/*
+ * 동영상 컨테이너
+ */
+.sp--video {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.sp--video[layout="cover"] {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sp--video[layout="cover"] .sp--video-iframe {
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.sp--video .sp--video-iframe:not(.sp--css-notready) {
+    padding-bottom: 56.25%;
+}
+.sp--video[ratio="4:3"] .sp--video-iframe:not(.sp--css-notready) {
+    padding-bottom: 75%;
+}
+.sp--video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.sp--video-progress {
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    height: 2px;
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    -webkit-transition : transform var(--animate-duration-fast) var(--cubic-ease-in);
+            transition : transform var(--animate-duration-fast) var(--cubic-ease-in);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+            transform: translate3d(0, 0, 0) scale(1, 1);
+    -webkit-transform-origin: center bottom;
+        -ms-transform-origin: center bottom;
+            transform-origin: center bottom;
+}
+.sp--video:hover .sp--video-progress,
+.swiper-container:hover .sp--video-progress {
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 3);
+            transform: translate3d(0, 0, 0) scale(1, 3);
+}
+.sp--video-progress-current {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    position: absolute;
+    background-color: var(--primary-color);
+    -webkit-transition : width var(--animate-duration-fast) ease;
+            transition : width var(--animate-duration-fast) ease;
+}
+.sp--video-progress-loaded {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .66);
+}
+.sp--video-progress-total {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .33);
+}
+.sp--video-controller {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+/*
+ * 동영상 리모컨 영역
+ */
+ .sp--video-remote {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0;
+    -ms-filter: alpha(opacity=0);
+        filter: alpha(opacity=0);
+    -webkit-transition : transform var(--animate-duration) var(--cubic-ease-in),
+                         visibility var(--animate-duration) var(--cubic-ease-in),
+                         transform var(--animate-duration) var(--cubic-ease-in);
+            transition : opacity var(--animate-duration) var(--cubic-ease-in), 
+                         visibility var(--animate-duration) var(--cubic-ease-in),
+                         transform var(--animate-duration) var(--cubic-ease-in);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+.sp--video:hover .sp--video-remote,
+.sp--video[play="2"] .sp--video-remote {
+    opacity: 1;
+    -ms-filter: alpha(opacity=100);
+        filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+/*
+ * 동영상 버튼 영역
+ */
+.sp--video-remote .sp--video-btn {
+    border: 0;
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    font-size: 0;
+    background-size: cover;
+    background-color: transparent;
+}
+.sp--video-remote .sp--video-btn[icon="play"] {
+    margin-top: 37px;
+    background-image: url(../image/video/play.svg);
+}
+.sp--video-remote .sp--video-btn[icon="pause"] {
+    display: none;
+    margin-top: 37px;
+    background-image: url(../image/video/pause.svg);
+}
+.sp--video-remote .sp--video-btn[icon="mute"] {
+    width: 19px;
+    height: 19px;
+    background-image: url(../image/video/mute.svg);
+}
+.sp--video-remote .sp--video-btn[icon="unmute"] {
+    width: 19px;
+    height: 19px;
+    display: none;
+    background-image: url(../image/video/unmute.svg);
+}
+.sp--video[play="1"] .sp--video-btn[icon="play"] {
+    display: none;
+}
+.sp--video[play="1"] .sp--video-btn[icon="pause"] {
+    display: inline-block;
+}
+.sp--video[mute="true"] .sp--video-btn[icon="mute"] {
+    display: none;
+}
+.sp--video[mute="true"] .sp--video-btn[icon="unmute"] {
+    display: inline-block;
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, initial-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>SPSTRAP Document API</title>
+
+    <!-- document api library -->
+    <script defer type="module" src="../module/doc.js"></script>
+    <link rel="stylesheet" href="../css/doc.css">
+
+</head>
+<body class="sp--document-notready">
+
+    <!-- container -->
+    <div class="sp--document">
+
+        <!-- include : aside -->
+        <aside class="sp--document-aside sp--scrollbar" data-class="os-theme-light" w3-include-html="../include/aside.html"></aside>
+
+        <!-- article -->
+        <article>
+            <div class="sp--document-width">
+
+                <!-- include : header -->
+                <header w3-include-html="../include/header.html"></header>
+
+                <!-- contents -->
+                <div class="sp--document-contents">
+
+                    <div class="sp--title" theme="cocoon-brackets-line-inline" line="dark" scale="2xl">
+                        <div class="sp--title-inner"><strong class="sp--font" hspace="lg">Toggle</strong></div>
+                    </div>
+                    <hr class="sp--hr" space="xl" />
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Toggle Animation</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                -1px 옵션을 넣으면 100%에서 1px을 차감한다.
+                            -->
+                            <div class="sp--toggle" 
+                                theme="light-bottom-left[-1px]"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-gray-both" scale="xl">
+                                    <span>No Effect</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--toggle" 
+                                effect="[fade]"
+                                theme="light-bottom-left"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-gray-both" scale="xl">
+                                    <span>Fade Effect</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--toggle" 
+                                effect="[slideup]"
+                                theme="light-bottom-left"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-gray-both" scale="xl">
+                                    <span>SlideUp Effect</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--toggle" 
+                                effect="[slidedown]"
+                                theme="light-bottom-left"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-gray-both" scale="xl">
+                                    <span>SlideDown Effect</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Toggle Color</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--toggle" 
+                                theme="light-bottom-left"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-gray-both" scale="xl">
+                                    <span>sp--btn 클래스와 조합한 형태</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    [<div class="sp--btn-group" fill="block">]
+                                        [<div class="sp--btn-gap" gap="overlap">]
+                                            [<a href="#!" class="sp--btn" theme="line-light-left-nowrap" scale="xl">]서브메뉴 1[</a>]
+                                            [<a href="#!" class="sp--btn" theme="line-light-left-nowrap" scale="xl">]서브메뉴 2[</a>]
+                                            [<a href="#!" class="sp--btn" theme="line-light-left-nowrap" scale="xl">]서브메뉴 3[</a>]
+                                        [</div>]
+                                    [</div>]
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--toggle" 
+                                theme="[light]-bottom-left"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-light-both" scale="xl">
+                                    <span>light</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--toggle" 
+                                theme="[gray]-bottom-left"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-gray-both" scale="xl">
+                                    <span>gray</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--toggle" 
+                                theme="[dark]-bottom-left"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-dark-both" scale="xl">
+                                    <span>dark</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--toggle" 
+                                theme="[primary]-bottom-left"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-primary-both" scale="xl">
+                                    <span>primary</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Toggle Direction</div>
+                        <textarea class="sp--document-preview">
+                            <div class="sp--toggle" 
+                                theme="dark-[top-left]"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-dark-both" scale="xl">
+                                    <span>top Left</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--toggle" 
+                                theme="dark-[top-right]"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-dark-both" scale="xl">
+                                    <span>top right</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="sp--toggle" 
+                                theme="dark-[middle-left]"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-dark-both" scale="xl">
+                                    <span>middle left</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <br />
+                            <div class="sp--toggle" 
+                                theme="dark-[middle-right]"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-dark-both" scale="xl">
+                                    <span>middle right</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <br />
+                            <div class="sp--toggle" 
+                                theme="dark-[bottom-left]"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-dark-both" scale="xl">
+                                    <span>bottom left</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <br />
+                            <div class="sp--toggle" 
+                                theme="dark-[bottom-right]"
+                            >
+                                <a href="#!" class="sp--btn sp--toggle-btn" theme="line-dark-both" scale="xl">
+                                    <span>bottom right</span>
+                                    <span reaction><i class="sp--icon" ico="bracket" rotate="90"></i></span>
+                                </a>
+                                <div class="sp--toggle-contents">
+                                    <div style="padding:20px 30px;">
+                                        샘플 컨텐츠
+                                    </div>
+                                </div>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Toggle Chain Class</div>
+                        <textarea class="sp--document-preview">
+                            <!-- 
+                                토글 클래스 체인
+                                체인은 동일 선상 ( siblings ) 요소들의 토글을
+                                동시에 적용해서 꺼주는 역할을 한다.
+                                특이하게 이 기능은 버튼에 연결되어 있다.
+                            -->
+                            <style>
+                                .sp--toggle-sample {
+                                    border:1px solid #333;padding:30px;
+                                }
+                                .sp--toggle-sample.sp--toggle-on {
+                                    border:5px dashed #333;
+                                }
+                            </style>
+                            <div class="sp--toggle sp--toggle-sample">
+                                <button class="sp--toggle-btn" data-target="div" [data-scope="chain"]>토글 클래스 - 체인</button>
+                            </div>
+                            <div class="sp--toggle sp--toggle-sample">
+                                <button class="sp--toggle-btn" data-target="div" [data-scope="chain"]>토글 클래스 - 체인</button>
+                            </div>
+                            <div class="sp--toggle sp--toggle-sample">
+                                <button class="sp--toggle-btn" data-target="div" [data-scope="chain"]>토글 클래스 - 체인</button>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Toggle Chain Class</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                토글 클래스 멀티플
+                                멀티플은 토글의 영향을 현재 요소의 
+                                부모( closest ) 혹은 자식들만 영향을 받는다.
+                            -->
+                            <style>
+                                .sp--toggle-sample {
+                                    border:1px solid #333;padding:30px;
+                                }
+                                .sp--toggle-sample.sp--toggle-on {
+                                    border:5px dashed #333;
+                                }
+                            </style>
+                            <div class="sp--toggle sp--toggle-sample">
+                                <button class="sp--toggle-btn" data-target="div">토글 클래스 - 멀티</button>
+                            </div>
+                            <div class="sp--toggle sp--toggle-sample">
+                                <button class="sp--toggle-btn" data-target="div">토글 클래스 - 멀티</button>
+                            </div>
+                            <div class="sp--toggle sp--toggle-sample">
+                                <button class="sp--toggle-btn" data-target="div">토글 클래스 - 멀티</button>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Toggle Self</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                토글 클래스 셀프
+                                버튼에 아무런 속성이 없는 경우다.
+                            -->
+                            <style>
+                                .sp--toggle-sample {
+                                    border:1px solid #333;padding:30px;
+                                }
+                                .sp--toggle-sample.sp--toggle-on {
+                                    border:5px dashed #333;
+                                }
+                            </style>
+                            <button class="sp--toggle sp--toggle-sample [sp--toggle-btn]">
+                                스스로를 토글하는 방식
+                            </button>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Toggle Hover event</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                토글 클래스 호버 스타일
+                            -->
+                            <style>
+                                .sp--toggle-sample {
+                                    border:1px solid #333;padding:30px;
+                                }
+                                .sp--toggle-sample.sp--toggle-on {
+                                    border:5px dashed #333;
+                                }
+                            </style>
+                            <div class="sp--toggle sp--toggle-sample sp--toggle-btn" [data-event="hover"]>
+                                마우스 hover 이벤트로 스스로를 토글한다.
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Toggle Some Class</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                토글을 다른 클래스로 적용하는 방법이다.
+                                esc key 혹은 body click listener 를 무시하려면 사용하자.
+                                모든 토글은 esc 키나 body 클릭시 죽는데 클래스를 예외처리 하면 살릴 수 있다.
+                                예를 들어 팝업을 살려냈는데, esc를 눌렀을때 죽으면 난감하기 때문.
+                            -->
+                            <style>
+                                .sp--toggle-sample {
+                                    border:1px solid #333;padding:30px;
+                                }
+                                .sp--toggle-sample.sp--other-class {
+                                    border:5px dashed #ff3300;
+                                }
+                            </style>
+                            <div class="sp--toggle sp--toggle-sample">
+                                <button class="sp--toggle-btn" [data-class=".sp--other-class"]>토글을 다른 클래스로 지정</button>
+                            </div>
+                        </textarea>
+                    </div>
+
+                    <!---->
+                    <div class="sp--document-box" data-hljs="html">
+                        <div class="sp--document-subject">Toggle Closeall btn</div>
+                        <textarea class="sp--document-preview">
+                            <!--
+                                <button class="sp--toggle-btn" data-class=".sp--other-class">
+                                     클래스가 지정된 토글
+                                </button>
+                                이런 형태로 클래스가 지정된건 닫지 않는다.
+                            -->
+                            <button class="sp--toggle-btn" data-scope="closeall">
+                                모든 토글을 닫아준다. ( 지정된 클래스는 예외 )
+                            </button>
+                        </textarea>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Class</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    .sp--toggle
+                                </td>
+                                <td>
+                                    토글의 컨테이너 요소.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--toggle-btn
+                                </td>
+                                <td>
+                                    토글 컨테이너에 영향을 주는 버튼
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    .sp--toggle-on
+                                </td>
+                                <td>
+                                    토글이 활성화 됐음을 인지시키는 클래스
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Attribute</div>
+                        <table class="sp--document-table">
+                            <thead>
+                                <tr>
+                                    <td style="width:250px;">
+                                        name
+                                    </td>
+                                    <td>
+                                        description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    data-target
+                                </td>
+                                <td>
+                                    default : 'div' ( string )<br />
+                                    버튼의 부모를 찾아서 토글을 수행한다.<br />
+                                    없다면 스스로를 토글한다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-scope
+                                </td>
+                                <td>
+                                   default : '' ( string )<br />
+                                   현재는 1개의 옵션만 존재 ( chain )<br />
+                                   체인으로 연결된 토글은 부모끼리 서로 상호동작한다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    data-class
+                                </td>
+                                <td>
+                                    default : '' ( string )<br />
+                                    특정 클래스를 토글하고 싶을때 정의한다.<br />
+                                    기본적으로 토글의 명칭은 ".sp--toggle-on" 이다.<br />
+                                    만약 .test 라는 클래스를 토글하고 싶다면,<br />
+                                    data-class=".test" 라고 정의하자.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="sp--document-box">
+                        <div class="sp--document-subject">Etc</div>
+                        <p class="sp--document-message">
+                            토글의 애니메이션은 설계된 바 없다.<br />
+                            기본적으로 토글은 숨김, 보여줌의 형태가 아닌<br />
+                            활성화, 비활성화의 형태로 마크업 된다. 때문에 컨테이너의 애니메이션은 의미 없다.<br />
+                            <br />
+                            토글과 쿠키를 헷갈리지 말자. 완전 다른 기능이다.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- include : footer -->
+                <footer data-class="os-theme-light" w3-include-html="../include/footer.html"></footer>
+
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>
