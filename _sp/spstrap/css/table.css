@@ -254,6 +254,12 @@
     border-left: 0;
     border-right: 0;
 }
+.sp--table[solid*="notop"] tbody > tr:first-child {
+    border-top: 0;
+}
+.sp--table[solid*="nobottom"] tbody > tr:last-child {
+    border-bottom: 0;
+}
 
 .sp--table thead th {
     top: -1px;

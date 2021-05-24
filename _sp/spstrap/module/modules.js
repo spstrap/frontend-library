@@ -17,6 +17,6 @@ export { SP_SLIDER } from './slider.js';
 export { SP_BROWSER } from './browser.js';
 export { SP_SCROLLBAR } from './scrollbar.js';
 export { SP_SCROLL } from './scroll.js';
+export { SP_VIDEO } from './video.js';
 export { SP_AJAX } from './ajax.js';
 export { SP_INTERFACE } from './interface.js';
-export { SP_VIDEO } from './video.js';

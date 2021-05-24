@@ -92,3 +92,9 @@
 	top: 0;
 	left: 100%;
 }
+
+@media only screen and (min-width: 1px) and (max-width: 800px) {
+    .sp--modal-contents {
+		width: 100%;
+	}
+}

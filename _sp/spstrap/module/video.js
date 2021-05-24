@@ -42,9 +42,47 @@ class SP_VIDEO {
 
         const _ = this;
 
+		_.makeVideo();
         _.youtubeInit();
 
     }
+
+	/*
+	** 비디오 플랫폼 만들기
+	** vimeo="xxx"
+	** youtube="xxx"
+	** 이 형태를 재가공한다.
+	*/
+	makeVideo() {
+
+		const _ = this;
+
+		let value, platform, content;
+		let array = document.querySelectorAll(_.var.video.make +`:not(${_.var.trim(_.var.init.videomake)})`);
+        array.forEach( element => {
+
+            if (element.getAttribute('youtube')) {
+                platform = 'youtube';
+                value = element.getAttribute('youtube');
+            } else if (element.getAttribute('vimeo')) {
+                platform = 'vimeo';
+                value = element.getAttribute('vimeo');
+            }
+
+			if (platform) {
+				element.classList.add('sp--video');
+				element.setAttribute('data-platform', platform);
+				element.setAttribute('data-videoid', value);
+
+				_.youtubeInit();
+			}
+
+            // 기 수행 체크
+            element.classList.add(_.var.trim(_.var.init.videomake));
+
+        });
+
+	}
 
     /*
      * 유튜브 준비
@@ -70,9 +108,13 @@ class SP_VIDEO {
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
         // callback done
-		window.onYouTubeIframeAPIReady = () => {
-            _.youtubeMakePlayer();
-		};
+		if (typeof window.YT === 'object' ){
+			_.youtubeMakePlayer();
+		} else {
+			window.onYouTubeIframeAPIReady = () => {
+				_.youtubeMakePlayer();
+			};
+		}
 
     }
 
@@ -95,7 +137,7 @@ class SP_VIDEO {
         let progress = [];
 
         // 팝업창 버튼 이벤트
-        document.querySelectorAll(`${_.var.video.container}[data-flatform="youtube"]:not(${_.var.init.video})`).forEach( container => {
+        document.querySelectorAll(`${_.var.video.container}[data-platform="youtube"]:not(${_.var.init.video})`).forEach( container => {
 
             data = container.dataset;
             videoid = data.videoid;

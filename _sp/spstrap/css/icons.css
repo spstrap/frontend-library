@@ -624,7 +624,7 @@
 .sp--hamburger-inner::after {
     width: inherit;
     height: 2px;
-    background-color: #000;
+    background-color: var(--primary-color);
     border-radius: 4px;
     position: absolute;
     transition: transform 0.15s ease;

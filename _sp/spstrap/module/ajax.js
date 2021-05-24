@@ -9,6 +9,7 @@ import {
     SP_EVENT,
     SP_COOKIE,
     SP_SCROLLBAR,
+    SP_VIDEO,
 } from './modules.js';
 
 /*
@@ -37,7 +38,8 @@ class SP_AJAX {
         _.slider = SP_SLIDER;
         _.event = SP_EVENT;
         _.cookie = SP_COOKIE;
-        _.scrollbar = SP_SCROLLBAR
+        _.scrollbar = SP_SCROLLBAR;
+        _.video = SP_VIDEO
 
         _.init();
 
@@ -399,6 +401,9 @@ class SP_AJAX {
         }
         if (callback.indexOf('scrollbar') != -1) {
             _.scrollbar.init();
+        }
+        if (callback.indexOf('video') != -1) {
+            _.video.init();
         }
 
     }

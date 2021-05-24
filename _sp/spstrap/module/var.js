@@ -68,6 +68,7 @@ const SP_VAR = {
         gotobtn: '.sp--initialized-gotobtn',
         video: '.sp--initialized-video',
         videobtn: '.sp--initialized-videobtn',
+        videomake: '.sp--initialized-videomake',
         triggerbtn: '.sp--initialized-triggerbtn',
         messagebtn: '.sp--initialized-messagebtn',
     },
@@ -290,6 +291,7 @@ const SP_VAR = {
      */
     video: {
         container: '.sp--video',
+		make: '.sp--video-make',
         btn: '.sp--video-btn',
         volume: 50,
         progress: {
