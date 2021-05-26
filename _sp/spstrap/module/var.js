@@ -70,7 +70,7 @@ const SP_VAR = {
         videobtn: '.sp--initialized-videobtn',
         videomake: '.sp--initialized-videomake',
         triggerbtn: '.sp--initialized-triggerbtn',
-        messagebtn: '.sp--initialized-messagebtn',
+        messagebtn: '.sp--initialized-messagebtn'
     },
 
     /*
@@ -218,6 +218,7 @@ const SP_VAR = {
      */
     scrollnav: {
         btn: '.sp--scroll-btn',
+		navbtn: '.sp--scroll-navbtn',
         active: '.sp--scroll-btn-on',
     },
 

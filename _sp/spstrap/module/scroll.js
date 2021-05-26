@@ -200,6 +200,15 @@ class SP_SCROLL {
             // 네비게이션에 등록할 아이템이라면 등록해주자.
             if (data.navigation) {
 
+				// 네비게이션 명칭
+				if (!data.navname) {
+					if (container.querySelector(_.var.scrollnav.navbtn +':not(:empty)')){
+						data.navname = container.querySelector(_.var.scrollnav.navbtn +':not(:empty)').innerHTML;
+					} else {
+						return;
+					}
+				}
+
                 // 네비게이션 컨텐츠 상태 체크
                 navclass = data.class;
                 navstatus = _.handler.getStyle(container) || '' ;
@@ -209,7 +218,7 @@ class SP_SCROLL {
 
                     rnd = _.handler.getRndString(10, 'numeng');
                     navgap = data.gap && _.regex.isNumber(data.gap) ? data.gap : 0 ;
-                    navbutton = `<a href="#!" class="${_.var.trim(_.var.scrollnav.btn)} ${navclass}" data-gap="${navgap}" data-btn="${rnd}">${data.navname}</a>`;
+                    navbutton = `<a href="#!" class="${_.var.trim(_.var.scrollnav.btn)} ${navclass}" data-gap="${navgap}" data-btn="${rnd}"><span>${data.navname}</span></a>`;
                     navigation = document.querySelector(data.navigation);
                     navclass = data.class;
 
@@ -238,6 +247,7 @@ class SP_SCROLL {
                 // 컨테이너 정보를 업데이트 한다.
                 height = container.offsetHeight;
                 container.setAttribute('data-height', height);
+				container.removeAttribute('data-navigation');
 
             }
 
