@@ -656,8 +656,8 @@ button.sp--btn {
     white-space: nowrap;
     -webkit-transition : color var(--animate-duration) var(--cubic-ease-in), 
                          border var(--animate-duration) var(--cubic-ease-in);
-    transition : color var(--animate-duration) var(--cubic-ease-in), 
-                 border var(--animate-duration) var(--cubic-ease-in);
+            transition : color var(--animate-duration) var(--cubic-ease-in), 
+                        border var(--animate-duration) var(--cubic-ease-in);
 }
 .sp--btn[bg="white"] {
     background-color: var(--white-color);
@@ -709,31 +709,31 @@ button.sp--btn {
 .sp--btn[theme^="fill"][theme*="horizontal"]:before {
     transform: translate3d(0, 0, 0) scale(0, 1);
     -webkit-transition-origin: center center;
-    transform-origin: center center;
+             transform-origin: center center;
 }
 .sp--btn[theme^="fill"][theme*="top"]:before {
     -webkit-transition-origin: center top;
-    transform-origin: center top;
+             transform-origin: center top;
 }
 .sp--btn[theme^="fill"][theme*="right"]:before {
     -webkit-transform: translate3d(0, 0, 0) scale(0, 1);
-    transform: translate3d(0, 0, 0) scale(0, 1);
+            transform: translate3d(0, 0, 0) scale(0, 1);
     -webkit-transition-origin: right center;
-    transform-origin: right center;
+             transform-origin: right center;
 }
 .sp--btn[theme^="fill"][theme*="bottom"]:before {
     -webkit-transition-origin: center bottom;
-    transform-origin: center bottom;
+             transform-origin: center bottom;
 }
 .sp--btn[theme^="fill"][theme*="left"]:before {
     -webkit-transform: translate3d(0, 0, 0) scale(0, 1);
-    transform: translate3d(0, 0, 0) scale(0, 1);
+            transform: translate3d(0, 0, 0) scale(0, 1);
     -webkit-transition-origin: left center;
-    transform-origin: left center;
+             transform-origin: left center;
 }
 .sp--btn[theme^="fill"]:hover:before {
     -webkit-transform: translate3d(0, 0, 0) scale(1.001, 1.001);
-    transform: translate3d(0, 0, 0) scale(1.001, 1.001);
+            transform: translate3d(0, 0, 0) scale(1.001, 1.001);
 }
 .sp--btn[theme^="fill"][theme*="light"] {
     color: var(--dark-color);
@@ -1068,11 +1068,11 @@ li:hover > .sp--btn[effect="primary-text"],
     background-color: var(--dark-color);
     opacity: 0;
     -webkit-transform: scale(0, 1);
-    transform: scale(0, 1);
+            transform: scale(0, 1);
     -webkit-transition: opacity var(--animate-duration) var(--cubic-ease-in),
                         transform var(--animate-duration) var(--cubic-ease-in);
-    transition: opacity var(--animate-duration) var(--cubic-ease-in),
-                transform var(--animate-duration) var(--cubic-ease-in);
+            transition: opacity var(--animate-duration) var(--cubic-ease-in),
+                        transform var(--animate-duration) var(--cubic-ease-in);
 }
 .sp--btn[effect^="underline"]:hover:before,
 li:hover > .sp--btn[effect^="underline"]:before,

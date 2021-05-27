@@ -1,7 +1,7 @@
 /*
 * 모드
 */
- 'use strict';
+'use strict';
 
 /*
  * 레이아웃 구성
@@ -44,12 +44,12 @@
         let style = document.createElement('style');
         let styleHTML;
             styleHTML  = '#ie-not-support {';
-            styleHTML += '    position:fixed;';
+            styleHTML += '    position:fixed; z-index: 99999;';
             styleHTML += '    top:0; left:0; right:0; bottom:0;';
-            styleHTML += '    background-color:rgba(0,0,0,0.3);';
+            styleHTML += '    background-color: rgba(255,255,255,.95);';
             styleHTML += '}';
             styleHTML += '#ie-not-support > ul {';
-            styleHTML += '    display:table; width:100%; height:100%;';
+            styleHTML += '    display:table; width:100%; height:100%; background-color:rgba(0,0,0,0.25);';
             styleHTML += '}';
             styleHTML += '#ie-not-support > ul > li {';
             styleHTML += '    display:table-cell; text-align:center; vertical-align:middle; padding:0 0 5% 0;';
@@ -58,7 +58,7 @@
             styleHTML += '    display:block; padding:15px 0 0 0; font-size:21px;';
             styleHTML += '}';
             styleHTML += '#ie-not-support .browser-description {';
-            styleHTML += '    display:inline-block; padding:50px 100px; background-color:#fff; border-radius:10px;';
+            styleHTML += '    display:inline-block; padding:70px 150px; background-color:#fff; border-radius:10px;';
             styleHTML += '}';
             styleHTML += '#ie-not-support .browser-description span {';
             styleHTML += '    color:#ff3300;';
@@ -69,8 +69,11 @@
             styleHTML += '#ie-not-support .browser-description ul li {';
             styleHTML += '    display:table-cell; font-size:11px; color:#999; padding:0 20px;';
             styleHTML += '}';
-            styleHTML += '#ie-not-support > ul > li > p {';
+            styleHTML += '#ie-not-support .browser-description ul li p {';
             styleHTML += '    padding:15px 0 0 0; font-size:11px; color:#999;';
+            styleHTML += '}';
+            styleHTML += '#ie-not-support > ul > li > p {';
+            styleHTML += '    padding:15px 0 0 0; font-size:11px; color:#fff;';
             styleHTML += '}';
             styleHTML += '#ie-not-support > ul > li img.support {';
             styleHTML += '    width:60px;';
@@ -93,7 +96,7 @@
             contentHtml += '        <img src="'+ folder +'/image/browser/explorer.svg" class="not-support">';
             contentHtml += '        <strong>브라우저 업데이트 필요 !!</strong>';
             contentHtml += '        <hr />';
-            contentHtml += '        <span>이 브라우저(IE)</span>는 더이상 지원되지 않습니다.<br />';
+            contentHtml += '        <span>이 브라우저 (OLD IE)</span>는 더이상 지원되지 않습니다.<br />';
             contentHtml += '        브라우저를 업데이트해서 최적화된 쇼핑을 즐겨보세요.<br /><br /><br />';
             contentHtml += '        <ul>';
             contentHtml += '            <li><img src="'+ folder +'/image/browser/chrome.svg" class="support"><p>크롬 (추천)</p></li>';

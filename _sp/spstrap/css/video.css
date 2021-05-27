@@ -104,12 +104,12 @@
     opacity: 0;
     -ms-filter: alpha(opacity=0);
         filter: alpha(opacity=0);
-    -webkit-transition : transform var(--animate-duration) var(--cubic-ease-in),
-                         visibility var(--animate-duration) var(--cubic-ease-in),
-                         transform var(--animate-duration) var(--cubic-ease-in);
-            transition : opacity var(--animate-duration) var(--cubic-ease-in), 
-                         visibility var(--animate-duration) var(--cubic-ease-in),
-                         transform var(--animate-duration) var(--cubic-ease-in);
+    -webkit-transition: transform var(--animate-duration) var(--cubic-ease-in),
+                        visibility var(--animate-duration) var(--cubic-ease-in),
+                        transform var(--animate-duration) var(--cubic-ease-in);
+            transition: opacity var(--animate-duration) var(--cubic-ease-in), 
+                        visibility var(--animate-duration) var(--cubic-ease-in),
+                        transform var(--animate-duration) var(--cubic-ease-in);
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
 }

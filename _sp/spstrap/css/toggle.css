@@ -249,11 +249,11 @@
     background-color: var(--dark-color);
     opacity: 0;
     -webkit-transform: scale(0, 1);
-    transform: scale(0, 1);
+            transform: scale(0, 1);
     -webkit-transition: opacity var(--animate-duration) var(--cubic-ease-in),
                         transform var(--animate-duration) var(--cubic-ease-in);
-    transition: opacity var(--animate-duration) var(--cubic-ease-in),
-                transform var(--animate-duration) var(--cubic-ease-in);
+            transition: opacity var(--animate-duration) var(--cubic-ease-in),
+                        transform var(--animate-duration) var(--cubic-ease-in);
 }
 .sp--toggle.sp--toggle-on[active*="underline"]::before {
     opacity: 1;

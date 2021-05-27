@@ -34,7 +34,7 @@
 }
 .sp--form select {
     -webkit-appearance: none;
-    appearance: none;
+            appearance: none;
     background-image: url(../image/form/select-arrow.svg);
     background-position-x: right;
     background-position-y: center;

@@ -93,16 +93,16 @@
     color: var(--primary-color);
 }
 .sp--icon[rotate^="45"]::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 .sp--icon[rotate^="90"]::before {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
 }
 .sp--icon[rotate^="135"]::before {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
 }
 .sp--icon[rotate^="180"]::before {
     -webkit-transform: rotate(180deg);
