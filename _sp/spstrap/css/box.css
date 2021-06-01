@@ -206,9 +206,9 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: -1px;
     bottom: 0;
-    border-left: 1px solid var(--light-color);
+    border-left: 1px solid var(--opacity-black-few);
 }
 .sp--box[gap^="xs"][theme*="split"]:not([gap*="-x"]) > ul > li + li::before {
     top: var(--padding-xs);

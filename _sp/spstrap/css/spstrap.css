@@ -22,6 +22,8 @@
 @import "./dropdown.css";
 @import "./modal.css";
 @import "./video.css";
+@import "../library/swiperjs/swiper-bundle.min.css";
+@import "../library/scrollbar/OverlayScrollbars.css";
 
 /*
  * max index : 99999 : modal

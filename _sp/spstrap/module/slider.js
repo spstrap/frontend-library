@@ -39,9 +39,9 @@ class SP_SLIDER {
         /*
          * load css after init ( promiss )
          */
-        _.handler.importCss('/library/swiperjs/swiper-bundle.min.css').then( function() {
+        //_.handler.importCss('/library/swiperjs/swiper-bundle.min.css').then( function() {
             _.init();
-        });
+        //});
 
     }
 
