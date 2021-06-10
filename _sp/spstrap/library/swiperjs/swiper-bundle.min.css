@@ -128,12 +128,9 @@
 /*
  * swiper-vertical-slider
  */
-.swiper-vertical-slider img {
-    max-width: none;
-    height: inherit;
-}
 .swiper-vertical-slider .swiper-slide {
     overflow: hidden;
+    max-height: 100vh;
 }
 
 /*

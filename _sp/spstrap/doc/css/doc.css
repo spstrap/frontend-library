@@ -148,6 +148,6 @@
 }
 
 .sp--document-contents button:not([icon]):not(.swiper-pagination-bullet) {
-    padding: .5em 1em !important;
+    padding: .5em 0 !important;
     border: 1px solid #333 !important;
 }

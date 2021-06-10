@@ -314,6 +314,14 @@ class SP_SLIDER {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
                     },
+                    on: {
+                        observerUpdate: function(swiper) {
+                            _.heightUpdate(swiper, 'observerUpdate');
+                        },
+                        beforeResize: function(swiper) {
+                            _.heightUpdate(swiper, 'beforeResize');
+                        }
+                    }
                 }
                 break;
             case 'multiple-slides-per-view' :
@@ -327,7 +335,7 @@ class SP_SLIDER {
                     navigation: {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
-                    },
+                    }
                 }
                 break;
             case 'centered-slides' :
@@ -369,6 +377,14 @@ class SP_SLIDER {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
                     },
+                    on: {
+                        observerUpdate: function(swiper) {
+                            _.heightUpdate(swiper, 'observerUpdate');
+                        },
+                        beforeResize: function(swiper) {
+                            _.heightUpdate(swiper, 'beforeResize');
+                        }
+                    }
                 }
                 break;
             case 'loop-mode-with-multiple-slides-per-group' :
@@ -437,6 +453,14 @@ class SP_SLIDER {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
                     },
+                    on: {
+                        observerUpdate: function(swiper) {
+                            _.heightUpdate(swiper, 'observerUpdate');
+                        },
+                        beforeResize: function(swiper) {
+                            _.heightUpdate(swiper, 'beforeResize');
+                        }
+                    }
                 }
                 break;
             case 'lazy-loading-images' :
@@ -552,20 +576,42 @@ class SP_SLIDER {
      * 슬라이더 높이 업데이트
      * 멀티 로우 타입일때만 업데이트 된다.
      */
-    heightUpdate(swiper, options) {
+    heightUpdate(swiper, scope) {
 
         const _ = this;
 
         let container = swiper.wrapperEl;
-        let column = options.slidesPerColumn || 1 ;
-        let between = options.spaceBetween * 2 || 0 ;
-        let firstElement = swiper.slides[0].firstElementChild;
+        let perColumn = swiper.options.slidesPerColumn ? swiper.options.slidesPerColumn || 1 : 1 ;
+        let between = swiper.options.spaceBetween ? swiper.options.spaceBetween * 2 || 0 : 0 ;
+        let firstElement, blockSize, endHeight;
+        if (swiper.slides.length) {
 
-        if (firstElement) {
+            setTimeout(() => {
 
-            let blockSize = firstElement.offsetHeight;
-            container.style.height = blockSize * column + between + 'px';
+                // 멀티 로우인 경우에만 높이를 특이하게 계산한다.
+                if (swiper.options.type === 'multi-row-slides-layout') {
 
+                    blockSize = 0;
+                    swiper.slides.forEach( slides => {
+                        if (slides.firstElementChild) {
+                            blockSize = _.regex.getNumber(_.handler.getStyle(slides.firstElementChild).blockSize) > blockSize 
+                                        ? _.regex.getNumber(_.handler.getStyle(slides.firstElementChild).blockSize) : blockSize ;
+                        }
+                    });
+
+                // 일반 슬라이더라면 한개만 계산한다.
+                } else {
+
+                    firstElement = swiper.slides[0].firstElementChild;
+                    blockSize = _.regex.getNumber(_.handler.getStyle(firstElement).blockSize) || 0 ;
+
+                }
+                endHeight = blockSize * perColumn + between + 'px';
+                container.style.height = endHeight;
+                swiper.update();
+
+            }, 1);
+            
         }
 
     }
@@ -595,6 +641,7 @@ class SP_SLIDER {
         _.swiperChain[chain] = slider;
 
         // 실행
+        slider.options = options;
         slider.on('init', function(swiper) {   
             
             this.el.addEventListener('mouseenter', e => {
@@ -621,11 +668,6 @@ class SP_SLIDER {
             // 현재 윈도우에 들어왔을때만 실행한다.
             if (!_.swiper.stop && !_.handler.inScreen(this.el)) {
                 slider.autoplay.stop();
-            }
-
-            // 멀티 로우 일 경우는 높이를 업데이트 해준다.
-            if (options.type === 'multi-row-slides-layout') {
-                _.heightUpdate(swiper, options)
             }
 
             // 준비가 완료되면 필요없는 클래스를 삭제한다.
@@ -685,10 +727,7 @@ class SP_SLIDER {
         // 옵저버 업데이트
         slider.on('resize', function(swiper) {       
 
-            // 멀티 로우 일 경우는 높이를 업데이트 해준다.
-            if (options.type === 'multi-row-slides-layout') {
-                _.heightUpdate(swiper, options)
-            }
+            //
 
         });
 
